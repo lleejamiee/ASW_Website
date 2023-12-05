@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Jamie Corstorphine",
+        "imageUrl": "./src/components/teampage/staff_data/images/jamie_corstorphine.jpg",
+        "linkedInUrl": "https://www.linkedin.com/in/jamie-corstorphine-063396130/",
+        "role": "Secretary"
+    },
+    {
+        "name": "Jamie Lee",
+        "imageUrl": "./src/components/teampage/staff_data/images/jamie_lee.jpg",
+        "linkedInUrl": "https://www.linkedin.com/in/jamie-lee-b8465b270/",
+        "role": "Vice-President"
+    }
+]
