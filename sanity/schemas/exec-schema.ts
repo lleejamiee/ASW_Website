@@ -28,3 +28,5 @@ const executive = {
         }
     ]
 }
+
+export default executive;
