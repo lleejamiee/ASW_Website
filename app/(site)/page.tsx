@@ -1,18 +1,20 @@
-import { getProjects } from "@/sanity/sanity-utils";
-
-//export const revalidate = 60;
-
-export default async function Home() {
-    const projects = await getProjects();
-
-    //console.log("projects: ", projects);
-
+export default function Home() {
     return (
-        <div className="max-w-5x1 mx-auto">
-            <h1>ASW Website</h1>
-            {projects.map((project) => (
-                <div key={project.name}>{project.name}</div>
-            ))}
-        </div>
+        <>
+            <head>
+                <link rel="layout" href="app/(site)/css/layout.css" />
+            </head>
+            <body>
+                <div className="section1">
+                    <div className="flex items-center h-screen ml-15">
+                        <img
+                            className="object-center-left h-2/5 aspect-square"
+                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+                            alt="logo"
+                        />
+                    </div>
+                </div>
+            </body>
+        </>
     );
 }
