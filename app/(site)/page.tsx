@@ -1,3 +1,7 @@
+import NavBar from "./component/NavBar";
+import "@/app/(site)/css/layout.css";
+import logo from "@/app/(site)/photos/logo.png";
+
 export default function Home() {
     return (
         <>
@@ -5,6 +9,7 @@ export default function Home() {
                 <link rel="layout" href="app/(site)/css/layout.css" />
             </head>
             <body>
+                <NavBar />
                 <div className="section1">
                     <div className="flex items-center h-screen ml-15">
                         <img
@@ -14,6 +19,8 @@ export default function Home() {
                         />
                     </div>
                 </div>
+                <div className="section2">2024 General Sponsor</div>
+                <div className="section3">Our Events</div>
             </body>
         </>
     );

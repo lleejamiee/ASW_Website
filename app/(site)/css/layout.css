@@ -1,14 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer components {
-    .section1 {
-        background-image: linear-gradient(rgba(245, 234, 223, 0.8), rgba(245, 234, 223, 0.8)), url('../photos/background.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 100vw;
-        height: 100vh;
-    }
+.ml-15 {
+    margin-left: 15%;
 }
+
+.section1 {
+    background-image: linear-gradient(rgba(245, 234, 223, 0.8), rgba(245, 234, 223, 0.8)), url('../photos/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.section2 {
+    background-color: #fffcf7;
+    width: 100vw;
+    height: 100vh;
+}
+
+.section3 {
+    background-color: #aba08f;
+    width: 100vw;
+    height: 100vh;
+}
+
