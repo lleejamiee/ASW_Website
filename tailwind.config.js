@@ -13,7 +13,17 @@ module.exports = {
         ],
     },
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                NeueMachinaLight: ["NeueMachina-Light", "sans-serif"],
+            },
+            fontFamily: {
+                NeueMachinaRegular: ["NeueMachina-Regular", "sans-serif"],
+            },
+            fontFamily: {
+                NeueMachinaUltrabold: ["NeueMachina-Ultrabold", "sans-serif"],
+            },
+        },
     },
     plugins: [],
 };

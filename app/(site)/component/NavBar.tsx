@@ -1,21 +1,26 @@
 "use client";
 
-import { useState } from "react";
-
 const NavBar = () => {
-    const [click, setClick] = useState(false);
-    const handleClick = () => setClick(!click);
-
-    const closeMenu = () => setClick(false);
-
     return (
-        <nav>
-            <ul>
+        <div className="navbar">
+            <ul className="pages">
                 <a href="/">
                     <li>Home</li>
                 </a>
+                <a href="/">
+                    <li>About</li>
+                </a>
+                <a href="/">
+                    <li>Team</li>
+                </a>
+                <a href="/">
+                    <li>Events</li>
+                </a>
+                <a href="/">
+                    <li>Join Us</li>
+                </a>
             </ul>
-        </nav>
+        </div>
     );
 };
 

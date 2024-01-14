@@ -17,6 +17,7 @@ export default function Home() {
                             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
                             alt="logo"
                         />
+                        <div>ASW Introduction</div>
                     </div>
                 </div>
                 <div className="section2">2024 General Sponsor</div>
