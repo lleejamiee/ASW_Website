@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    position: fixed;
+    margin-left: 60%;
+    height: 8%;
+    width: 40%;
+    border-bottom: 1px solid #000;
+    justify-content: space-evenly;
+    font-family: "NeueMachina-Light";
+}
+
+.pages {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.pages > a {
+    display: flex;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.pages > a > li {
+    display: flex;
+}

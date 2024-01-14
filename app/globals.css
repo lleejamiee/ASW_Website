@@ -4,15 +4,15 @@
 
 @font-face {
     font-family: NeueMachina-Light;
-    src: url("../app/(site)/assets/NeueMachina-Light.ttf");
+    src: url("../app/(site)/assets/font/NeueMachina-Light.ttf");
 }
 
 @font-face {
     font-family: NeueMachina-Regular;
-    src: url("../app/(site)/assets/NeueMachina-Regular.ttf");
+    src: url("../app/(site)/assets/font/NeueMachina-Regular.ttf");
 }
 
 @font-face {
     font-family: NeueMachina-Ultrabold;
-    src: url("../app/(site)/assets/NeueMachina-Ultrabold.ttf");
+    src: url("../app/(site)/assets/font/NeueMachina-Ultrabold.ttf");
 }

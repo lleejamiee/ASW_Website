@@ -1,12 +1,12 @@
 import NavBar from "./component/NavBar";
-import "@/app/(site)/css/layout.css";
-import logo from "@/app/(site)/photos/logo.png";
+import "@/app/(site)/css/homepageLayout.css";
+import "@/app/(site)/css/navbarLayout.css";
 
 export default function Home() {
     return (
         <>
             <head>
-                <link rel="layout" href="app/(site)/css/layout.css" />
+                <link rel="layout" href="app/(site)/css/homepageLayout.css" />
             </head>
             <body>
                 <NavBar />
