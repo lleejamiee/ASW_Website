@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @font-face {
+    font-family: NeueMachina-Light;
+    src: url("../app/(site)/assets/font/NeueMachina-Light.ttf");
+}
+
+@font-face {
+    font-family: NeueMachina-Regular;
+    src: url("../app/(site)/assets/font/NeueMachina-Regular.ttf");
+}
+
+@font-face {
+    font-family: NeueMachina-Ultrabold;
+    src: url("../app/(site)/assets/font/NeueMachina-Ultrabold.ttf");
+} */

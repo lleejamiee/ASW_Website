@@ -1,29 +1,42 @@
-import { getProjects } from "@/sanity/sanity-utils";
+import { getExecutives } from "@/sanity/sanity-utils";
 import Image from "next/image";
 
-//export const revalidate = 60;
 
 export default async function Home() {
-    const projects = await getProjects();
+  const executives = await getExecutives();
 
-    console.log("projects: ", projects);
+  console.log("Executives: ", executives);
 
-    return (
-        <div className="max-w-5x1 mx-auto">
-            <h1>ASW Website test</h1>
-            {projects.map((project) => (
-                <div key={project.name}>{project.name}
-                {project.image && ( 
-                    <Image
-                        src={project.image}
-                        alt={project.name}
-                        width={250}
-                        height={100}
-                        />
-                    )}
-                    </div>
-                
-            ))}
-        </div>
-    );
+  return (
+    <div className="max-w-5xl mx-auto">
+      <h1 className="text-7xl font-extrabold">Staff Page</h1>
+      <div className="flex flex-wrap justify-center items-center p-5 pt-20">
+        {executives.map((executive) => (
+          <div key={executive.name} className="executive-container m-4">
+            {executive.image && (
+              <div className="border-b-2 border-solid border-493725 w-64">
+                <div className="flex items-center justify-center">
+                  <Image
+                    src={executive.image}
+                    alt={executive.name}
+                    width={175}
+                    height={175}
+                    className="pb-2 pl-8 pr-8"
+                  />
+                </div>
+              </div>
+            )}
+
+            <div className="flex flex-col items-center justify-center mt-2">
+              <p>{executive.name}</p>
+              <a href={executive.url}>
+                link
+                {/* <LinkedinIcon size={32} round={true} /> */}
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
