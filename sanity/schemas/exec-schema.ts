@@ -22,6 +22,11 @@ const executive = {
             ]
         },
         {
+            name: 'role',
+            title: 'Role',
+            type: 'string'
+        },
+        {
             name: 'url',
             title: 'URL',
             type: 'url'
