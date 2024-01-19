@@ -23,6 +23,21 @@ module.exports = {
             fontFamily: {
                 NeueMachinaUltrabold: ["NeueMachina-Ultrabold", "sans-serif"],
             },
+            fontFamily: {
+                LiteraturnayaBoldItalic: [
+                    "Literaturnaya-Bold-Italic",
+                    "sans-serif",
+                ],
+            },
+            fontFamily: {
+                LiteraturnayaBold: ["Literaturnaya-Bold", "sans-serif"],
+            },
+            fontFamily: {
+                LiteraturnayaItalic: ["Literaturnaya-Italic", "sans-serif"],
+            },
+            fontFamily: {
+                LiteraturnayaPlain: ["Literaturnaya-Plain", "sans-serif"],
+            },
         },
     },
     plugins: [],

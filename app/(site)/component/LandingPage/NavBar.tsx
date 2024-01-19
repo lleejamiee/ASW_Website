@@ -1,4 +1,4 @@
-"use client";
+import "@/app/(site)/css/navbarLayout.css";
 
 const NavBar = () => {
     return (
