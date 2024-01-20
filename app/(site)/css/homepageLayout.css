@@ -6,6 +6,14 @@
     margin-left: 55%;
 }
 
+.h-75 {
+    height: 72%;
+}
+
+.PaddingLeft-5 {
+    padding-left: 5%;
+}
+
 .ASWIntroduction {
     background-image: linear-gradient(rgba(245, 234, 223, 0.8), rgba(245, 234, 223, 0.8)), url('../assets/photos/background.jpg');
     background-size: cover;
@@ -23,6 +31,15 @@
     object-position: left center;
     object-fit: contain;
     aspect-ratio: 1 / 1;
+}
+
+.ASWIntroductionContent {
+    margin-left: 15%;
+    margin-right: 10%;
+    font-family: "Literaturnaya-Regular";
+    color: #493725;
+    font-size: x-large;
+    text-align: center;
 }
 
 .GeneralSponsors {
@@ -43,15 +60,15 @@
     width: 100vw;
     font-family: "Literaturnaya-Bold";
     font-size: xxx-large;
-    color: #493725;
-    padding-top: 3%;
+    color: rgb(73, 55, 37);
+    padding-top: 2%;
 }
 
 .Diamond {
     display: flex;
     justify-content: center;
     width: 100vw;
-    font-family: "Literaturnaya-Plain";
+    font-family: "Literaturnaya-Regular";
     font-size: xx-large;
     color: #F4F6FC;
     -webkit-text-stroke-color: black;
@@ -78,17 +95,11 @@
     position: relative;
 }
 
-.section3 {
-    background-color: #aba08f;
-    width: 100vw;
-    height: 100vh;
-}
-
 .Platinum {
     display: flex;
     justify-content: center;
     width: 100vw;
-    font-family: "Literaturnaya-Plain";
+    font-family: "Literaturnaya-Regular";
     font-size: xx-large;
     color: #C0C0C0;
     -webkit-text-stroke-color: black;
@@ -99,9 +110,63 @@
     display: flex;
     justify-content: center;
     width: 100vw;
-    font-family: "Literaturnaya-Plain";
+    font-family: "Literaturnaya-Regular";
     font-size: xx-large;
     color: #FFDC32;
     -webkit-text-stroke-color: black;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.OurEvents {
+    background-color: #aba08f;
+    width: 100vw;
+    height: 100vh;
+}
+
+.OurEventsHeading {
+    display: flex;
+    font-family: "Literaturnaya-Bold";
+    font-size: xxx-large;
+    color: #FFFCF7;
+    padding-top: 4%;
+    padding-left: 5%;
+}
+
+.EventImageContainer {
+    display: flex;
+    width: 52%;
+    height: auto;
+    place-self: end;
+}
+
+.EventTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 48%;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+}
+
+.EventTypeHeading {
+    display: flex;
+    font-family: "Literaturnaya-Regular";
+    color: #FFFCF7;
+    font-size: x-large;
+}
+
+.EventTypeContent {
+    display: flex;
+    font-family: "NeueMachina-Regular";
+    color: hsl(38, 100%, 98%);
+}
+
+.EventTypeContainer {
+    display: flex;
+    height: 25%;
+    flex-direction: column;
+    justify-content: space-between;
 }

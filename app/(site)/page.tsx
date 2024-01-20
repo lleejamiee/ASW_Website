@@ -1,6 +1,7 @@
 import ASWIntroduction from "./component/LandingPage/ASWIntroduction";
 import GeneralSponsors from "./component/LandingPage/GeneralSponsors";
 import NavBar from "./component/LandingPage/NavBar";
+import OurEvents from "./component/LandingPage/OurEvents";
 
 export default function Home() {
     return (
@@ -12,7 +13,7 @@ export default function Home() {
                 <NavBar />
                 <ASWIntroduction />
                 <GeneralSponsors />
-                <div className="section3">Our Events</div>
+                <OurEvents />
             </body>
         </>
     );

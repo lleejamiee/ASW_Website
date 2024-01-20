@@ -14,7 +14,7 @@ export default async function ASWIntroduction() {
                         <Image src={intro.image} alt={intro.name} fill={true} />
                     )}
                 </div>
-                <div className="ml-15">
+                <div className="ASWIntroductionContent">
                     <PortableText value={intro.content} />
                 </div>
             </div>

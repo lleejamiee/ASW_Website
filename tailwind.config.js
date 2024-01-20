@@ -36,7 +36,7 @@ module.exports = {
                 LiteraturnayaItalic: ["Literaturnaya-Italic", "sans-serif"],
             },
             fontFamily: {
-                LiteraturnayaPlain: ["Literaturnaya-Plain", "sans-serif"],
+                LiteraturnayaRegular: ["Literaturnaya-Regular", "sans-serif"],
             },
         },
     },
