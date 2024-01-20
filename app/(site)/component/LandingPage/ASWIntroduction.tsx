@@ -9,15 +9,9 @@ export default async function ASWIntroduction() {
     return (
         <div className="ASWIntroduction">
             <div className="flex items-center h-screen">
-                <div className="relative h-2/5 aspect-square ml-15">
+                <div className="ASWLogo">
                     {intro.image && (
-                        <Image
-                            src={intro.image}
-                            alt={intro.name}
-                            layout="fill"
-                            objectFit="cover"
-                            objectPosition="left center"
-                        />
+                        <Image src={intro.image} alt={intro.name} fill={true} />
                     )}
                 </div>
                 <div className="ml-15">

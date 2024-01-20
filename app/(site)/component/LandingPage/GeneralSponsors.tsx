@@ -8,25 +8,60 @@ export default async function GeneralSponsors() {
     const platinum = await getProject("platinum");
     const gold = await getProject("gold");
 
-    // console.log("Gallery: ", diamond.gallery);
-
     return (
         <div className="GeneralSponsors">
             <div className="SponsorHeading">
                 <PortableText value={heading.content} />
             </div>
             <div className="Diamond">{diamond.name}</div>
-            <div className="flex items-center relative h-1/5 w-screen">
+            <div className="LogoContainer">
                 {diamond.gallery.map(
-                    (url) =>
-                        ({ url } && (
-                            <div className="CompanyLogo relative h-full aspect-square">
+                    (item) =>
+                        ({ item } && (
+                            <div key={item.url} className="CompanyLogo">
                                 <Image
-                                    src={url}
+                                    src={item.url}
                                     alt="Diamond"
-                                    layout="fill"
-                                    objectFit="cover"
-                                    objectPosition="left center"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    style={{ width: "auto", height: "100%" }}
+                                />
+                            </div>
+                        ))
+                )}
+            </div>
+            <div className="Platinum">{platinum.name}</div>
+            <div className="LogoContainer">
+                {platinum.gallery.map(
+                    (item) =>
+                        ({ item } && (
+                            <div key={item.url} className="CompanyLogo">
+                                <Image
+                                    src={item.url}
+                                    alt="Platinum"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    style={{ width: "auto", height: "100%" }}
+                                />
+                            </div>
+                        ))
+                )}
+            </div>
+            <div className="Gold">{gold.name}</div>
+            <div className="LogoContainer">
+                {gold.gallery.map(
+                    (item) =>
+                        ({ item } && (
+                            <div key={item.url} className="CompanyLogo">
+                                <Image
+                                    src={item.url}
+                                    alt="Gold"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    style={{ width: "auto", height: "100%" }}
                                 />
                             </div>
                         ))

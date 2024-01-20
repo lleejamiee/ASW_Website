@@ -31,7 +31,7 @@ export async function getProject(slug: string): Promise<Project> {
             "slug": slug.current,
             "image": image.asset->url,
             "gallery": gallery[] {
-                "url": asset->url
+                'url': asset->url
             },
             url,
             content

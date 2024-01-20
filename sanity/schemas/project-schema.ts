@@ -33,7 +33,6 @@ const project = {
             type: "array",
             of: [{ type: "image" }],
             options: {
-                layout: "grid",
                 hotspot: true,
             },
         },

@@ -15,11 +15,26 @@
     height: 100vh;
 }
 
+.ASWLogo {
+    position: relative;
+    height: 40%;
+    width: auto;
+    margin-left: 15%;
+    object-position: left center;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+}
+
 .GeneralSponsors {
+    display: flex;
+    flex-direction: column;
     background-color: #fffcf7;
     width: 100vw;
     height: 100vh;
+    min-height: 100vh;
     justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .SponsorHeading {
@@ -29,7 +44,7 @@
     font-family: "Literaturnaya-Bold";
     font-size: xxx-large;
     color: #493725;
-    padding-top: 6%;
+    padding-top: 3%;
 }
 
 .Diamond {
@@ -43,10 +58,24 @@
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
+.LogoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    object-fit: contain;
+    position: relative;
+    width: 100vw;
+    height: 12%;
+}
+
 .CompanyLogo {
     display: flex;
-    justify-content: center;
-    /* align-items: center; */
+    height: 100%;
+    width: auto;
+    align-items: center;
+    object-fit: contain;
+    position: relative;
 }
 
 .section3 {
@@ -55,3 +84,24 @@
     height: 100vh;
 }
 
+.Platinum {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-family: "Literaturnaya-Plain";
+    font-size: xx-large;
+    color: #C0C0C0;
+    -webkit-text-stroke-color: black;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.Gold {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-family: "Literaturnaya-Plain";
+    font-size: xx-large;
+    color: #FFDC32;
+    -webkit-text-stroke-color: black;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
