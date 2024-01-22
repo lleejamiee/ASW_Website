@@ -28,6 +28,15 @@ const project = {
             ],
         },
         {
+            name: "gallery",
+            title: "Gallery",
+            type: "array",
+            of: [{ type: "image" }],
+            options: {
+                hotspot: true,
+            },
+        },
+        {
             name: "url",
             title: "URL",
             type: "url",

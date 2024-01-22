@@ -1,43 +1,21 @@
-import { getExecutives } from "@/sanity/sanity-utils";
-import Image from "next/image";
 
+import ASWIntroduction from "./component/LandingPage/ASWIntroduction";
+import GeneralSponsors from "./component/LandingPage/GeneralSponsors";
+import NavBar from "./component/LandingPage/NavBar";
+import OurEvents from "./component/LandingPage/OurEvents";
 
-export default async function Home() {
-  const executives = await getExecutives();
+export default function Home() {
+    return (
+        <>
+            <head>
+                <link rel="layout" href="app/(site)/css/homepageLayout.css" />
+            </head>
+            <body>
+                <NavBar />
+                <ASWIntroduction />
+                <GeneralSponsors />
+                <OurEvents />
+            </body>
+        </>
+    );
 
-  console.log("Executives: ", executives);
-
-  return (
-    <div className="max-w-5xl mx-auto">
-      <h1 className="text-7xl font-extrabold">Staff Page</h1>
-      <div className="flex flex-wrap justify-center items-center p-5 pt-20">
-        {executives.map((executive) => (
-          <div key={executive.name} className="executive-container m-4">
-            {executive.image && (
-              <div className="border-b-2 border-solid border-493725 w-64">
-                <div className="flex items-center justify-center">
-                  <Image
-                    src={executive.image}
-                    alt={executive.name}
-                    width={175}
-                    height={175}
-                    className="pb-2 pl-8 pr-8"
-                  />
-                </div>
-              </div>
-            )}
-
-            <div className="flex flex-col items-center justify-center mt-2">
-              <p>{executive.name}</p>
-              <p>{executive.role}</p>
-              <a href={executive.url}>
-                link
-                {/* <LinkedinIcon size={32} round={true} /> */}
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}

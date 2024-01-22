@@ -13,7 +13,32 @@ module.exports = {
         ],
     },
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                NeueMachinaLight: ["NeueMachina-Light", "sans-serif"],
+            },
+            fontFamily: {
+                NeueMachinaRegular: ["NeueMachina-Regular", "sans-serif"],
+            },
+            fontFamily: {
+                NeueMachinaUltrabold: ["NeueMachina-Ultrabold", "sans-serif"],
+            },
+            fontFamily: {
+                LiteraturnayaBoldItalic: [
+                    "Literaturnaya-Bold-Italic",
+                    "sans-serif",
+                ],
+            },
+            fontFamily: {
+                LiteraturnayaBold: ["Literaturnaya-Bold", "sans-serif"],
+            },
+            fontFamily: {
+                LiteraturnayaItalic: ["Literaturnaya-Italic", "sans-serif"],
+            },
+            fontFamily: {
+                LiteraturnayaRegular: ["Literaturnaya-Regular", "sans-serif"],
+            },
+        },
     },
     plugins: [],
 };
