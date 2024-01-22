@@ -70,6 +70,7 @@ export async function getExecutives(): Promise<Executive[]> {
             _createdAt,
             name,
             "image": image.asset->url,
+            role,
             url
         }`
     );
