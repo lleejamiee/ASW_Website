@@ -3,5 +3,6 @@ export type Executive = {
     _createdAt: Date;
     name: string;
     image: string;
+    role: string;
     url: string;
 };

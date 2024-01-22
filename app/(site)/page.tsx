@@ -29,6 +29,7 @@ export default async function Home() {
 
             <div className="flex flex-col items-center justify-center mt-2">
               <p>{executive.name}</p>
+              <p>{executive.role}</p>
               <a href={executive.url}>
                 link
                 {/* <LinkedinIcon size={32} round={true} /> */}
