@@ -1,3 +1,4 @@
+
 import ASWIntroduction from "./component/LandingPage/ASWIntroduction";
 import GeneralSponsors from "./component/LandingPage/GeneralSponsors";
 import NavBar from "./component/LandingPage/NavBar";
@@ -17,4 +18,4 @@ export default function Home() {
             </body>
         </>
     );
-}
+
