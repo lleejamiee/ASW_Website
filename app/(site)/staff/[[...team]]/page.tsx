@@ -8,8 +8,8 @@ export default async function Home() {
   console.log("Executives: ", executives);
 
   return (
-    <div className="max-w-5xl mx-auto">
-      <h1 className="text-7xl font-extrabold">Staff Page</h1>
+    <div  className="max-w-5xl mx-auto">
+      <div className="flex font-Literaturnaya-Bold text-xxxl pt-4 pl-5">Staff Page</div>
       <div className="flex flex-wrap justify-center items-center p-5 pt-20">
         {executives.map((executive) => (
           <div key={executive.name} className="executive-container m-4">
