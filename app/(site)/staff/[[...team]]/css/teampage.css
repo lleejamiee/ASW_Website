@@ -6,10 +6,16 @@
     padding-top: 4%;
     padding-left: 5%;
 }
-.execDetails{
+
+.ExecList{
     display: flex;
-flex-direction: column;
-align-items: center;
+flex-wrap: wrap;
 justify-content: center;
-margin-top: 2px;
+align-items: center;
+padding: 5px;
+padding-top: 20px;
+}
+
+.execDetails{
+    color: #FFFCF7;
 }
