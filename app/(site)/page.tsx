@@ -1,18 +1,21 @@
-import { getProjects } from "@/sanity/sanity-utils";
 
-//export const revalidate = 60;
+import ASWIntroduction from "./component/LandingPage/ASWIntroduction";
+import GeneralSponsors from "./component/LandingPage/GeneralSponsors";
+import NavBar from "./component/LandingPage/NavBar";
+import OurEvents from "./component/LandingPage/OurEvents";
 
-export default async function Home() {
-    const projects = await getProjects();
-
-    //console.log("projects: ", projects);
-
+export default function Home() {
     return (
-        <div className="max-w-5x1 mx-auto">
-            <h1>ASW Website</h1>
-            {projects.map((project) => (
-                <div key={project.name}>{project.name}</div>
-            ))}
-        </div>
+        <>
+            <head>
+                <link rel="layout" href="app/(site)/css/homepageLayout.css" />
+            </head>
+            <body>
+                <NavBar />
+                <ASWIntroduction />
+                <GeneralSponsors />
+                <OurEvents />
+            </body>
+        </>
     );
-}
+    }

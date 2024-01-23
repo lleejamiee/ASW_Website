@@ -1,0 +1,15 @@
+.staffHeader{
+    display: flex;
+    font-family: "Literaturnaya-Bold";
+    font-size: xxx-large;
+    color: #FFFCF7;
+    padding-top: 4%;
+    padding-left: 5%;
+}
+.execDetails{
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 2px;
+}
