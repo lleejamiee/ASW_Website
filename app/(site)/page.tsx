@@ -1,7 +1,8 @@
+import Footer from "./component/Footer";
 import ASWIntroduction from "./component/LandingPage/ASWIntroduction";
 import GeneralSponsors from "./component/LandingPage/GeneralSponsors";
-import NavBar from "./component/LandingPage/NavBar";
 import OurEvents from "./component/LandingPage/OurEvents";
+import NavBar from "./component/NavBar";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
                 <ASWIntroduction />
                 <GeneralSponsors />
                 <OurEvents />
+                <Footer />
             </body>
         </>
     );
