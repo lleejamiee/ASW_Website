@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @font-face {
+
     font-family: NeueMachina-Light;
     src: url("../app/(site)/assets/font/NeueMachina-Light.ttf");
 }
@@ -15,4 +18,12 @@
 @font-face {
     font-family: NeueMachina-Ultrabold;
     src: url("../app/(site)/assets/font/NeueMachina-Ultrabold.ttf");
+
+}
+
+body {
+    background-color: #fffcf7;
+    font-family: "Literaturnaya-Bold";
+    color: rgb(73, 55, 37);
+    
 }

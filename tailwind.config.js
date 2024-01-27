@@ -38,6 +38,11 @@ module.exports = {
             fontFamily: {
                 LiteraturnayaRegular: ["Literaturnaya-Regular", "sans-serif"],
             },
+            colors: {
+                cream_bg: "#FFFCF7",
+                brown_bg: "#aba08f",
+                brown_txt: "#493725",
+            },
         },
     },
     plugins: [],
