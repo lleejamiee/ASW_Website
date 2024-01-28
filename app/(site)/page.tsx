@@ -5,16 +5,11 @@ import OurEvents from "./(components)/LandingPage/OurEvents";
 
 export default function Home() {
     return (
-        <>
-            <head>
-                <link rel="layout" href="app/(site)/css/homepageLayout.css" />
-            </head>
-            <body>
-                <NavBar />
-                <ASWIntroduction />
-                <GeneralSponsors />
-                <OurEvents />
-            </body>
-        </>
+        <body>
+            <NavBar />
+            <ASWIntroduction />
+            <GeneralSponsors />
+            <OurEvents />
+        </body>
     );
 }
