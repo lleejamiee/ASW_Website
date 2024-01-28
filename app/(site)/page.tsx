@@ -1,8 +1,7 @@
-
-import ASWIntroduction from "./component/LandingPage/ASWIntroduction";
-import GeneralSponsors from "./component/LandingPage/GeneralSponsors";
-import NavBar from "./component/LandingPage/NavBar";
-import OurEvents from "./component/LandingPage/OurEvents";
+import ASWIntroduction from "./(components)/LandingPage/ASWIntroduction";
+import GeneralSponsors from "./(components)/LandingPage/GeneralSponsors";
+import NavBar from "./(components)/NavBar";
+import OurEvents from "./(components)/LandingPage/OurEvents";
 
 export default function Home() {
     return (
@@ -18,4 +17,4 @@ export default function Home() {
             </body>
         </>
     );
-    }
+}
