@@ -1,6 +1,6 @@
 import { PortableTextBlock } from "sanity";
 
-export type Events = {
+export type Event = {
     _id: string;
     _createdAt: Date;
     name: string;
@@ -11,4 +11,10 @@ export type Events = {
     content: PortableTextBlock[];
 };
 
-// url: string; alt: string
+export type Events = {
+    _id: string;
+    _createdAt: Date;
+    year: string;
+    slug: string;
+    event: Event[];
+};

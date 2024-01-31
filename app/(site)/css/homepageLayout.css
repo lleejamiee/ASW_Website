@@ -15,7 +15,7 @@
 }
 
 .ASWIntroduction {
-    background-image: linear-gradient(rgba(245, 234, 223, 0.8), rgba(245, 234, 223, 0.8)), url('../assets/photos/background.jpg');
+    background-image: linear-gradient(#f5eadfcc, #f5eadfcc), url('../assets/photos/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -60,7 +60,7 @@
     width: 100vw;
     font-family: "Literaturnaya-Bold";
     font-size: xxx-large;
-    color: rgb(73, 55, 37);
+    color: #493725;
     padding-top: 2%;
 }
 
@@ -161,7 +161,7 @@
 .EventTypeContent {
     display: flex;
     font-family: "NeueMachina-Regular";
-    color: hsl(38, 100%, 98%);
+    color: #fffbf5;
 }
 
 .EventTypeContainer {

@@ -1,18 +1,18 @@
-const event = {
+export const event = {
     name: "event",
-    title: "Events",
+    title: "Event",
     type: "document",
     fields: [
         {
             name: "name",
-            title: "Name",
+            title: "Event Name",
             type: "string",
         },
         {
             name: "slug",
             title: "Slug",
             type: "slug",
-            options: { souce: "name" },
+            options: { source: "name", maxLength: 96 },
         },
         {
             name: "image",
@@ -70,4 +70,27 @@ const event = {
     ],
 };
 
-export default event;
+export const events = {
+    name: "events",
+    title: "Events",
+    type: "document",
+    fields: [
+        {
+            name: "year",
+            title: "Year",
+            type: "string",
+        },
+        {
+            name: "slug",
+            title: "Slug",
+            type: "slug",
+            options: { source: "year", maxLength: 96 },
+        },
+        {
+            name: "event",
+            title: "Event",
+            type: "array",
+            of: [{ type: "reference", to: [{ type: "event" }] }],
+        },
+    ],
+};

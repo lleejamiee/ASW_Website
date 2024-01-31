@@ -15,7 +15,7 @@ const NavBar = () => {
                     <li>Events</li>
                 </Link>
                 <a href="/">
-                    <li>Join Us</li>
+                    <li>Sign Up</li>
                 </a>
             </ul>
         </div>
