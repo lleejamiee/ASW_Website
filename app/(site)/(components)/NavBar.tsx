@@ -1,22 +1,25 @@
-import "@/app/(site)/css/navbarLayout.css";
 import Link from "next/link";
+import "@/app/(site)/css/navbarLayout.css";
 
 const NavBar = () => {
     return (
         <div className="navbar">
             <ul className="pages">
-                <Link href="/">
-                    <li>Home</li>
-                </Link>
-                <a href="/staff">
-                    <li>Team</li>
-                </a>
-                <Link href="/events">
-                    <li>Events</li>
-                </Link>
-                <a href="/">
-                    <li>Sign Up</li>
-                </a>
+                <li>
+                    <Link href="/">Home</Link>
+                </li>
+                <li>
+                    <Link href="/about">About</Link>
+                </li>
+                <li>
+                    <Link href="/staff">Team</Link>
+                </li>
+                <li>
+                    <Link href="/events">Events</Link>
+                </li>
+                <li>
+                    <Link href="/join">Join Us</Link>
+                </li>
             </ul>
         </div>
     );
