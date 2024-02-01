@@ -1,6 +1,8 @@
 .staffHeader{
     display: flex;
-    font-family: "Literaturnaya-Bold";
+
+    font-family: "LiteraturnayaBold";
+
     font-size: xxx-large;
     color: #FFFCF7;
     padding-top: 4%;
@@ -16,6 +18,3 @@ padding: 5px;
 padding-top: 20px;
 }
 
-.execDetails{
-    color: #FFFCF7;
-}
