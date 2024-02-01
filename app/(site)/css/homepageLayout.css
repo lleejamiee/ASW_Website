@@ -15,7 +15,7 @@
 }
 
 .ASWIntroduction {
-    background-image: linear-gradient(rgba(245, 234, 223, 0.8), rgba(245, 234, 223, 0.8)), url('../assets/photos/background.jpg');
+    background-image: linear-gradient(#f5eadfcc, #f5eadfcc), url('../assets/photos/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,7 +45,7 @@
 .GeneralSponsors {
     display: flex;
     flex-direction: column;
-    background-color: #fffcf7;
+    background-color: #fbf8f2;
     width: 100vw;
     height: 100vh;
     min-height: 100vh;
@@ -161,7 +161,7 @@
 .EventTypeContent {
     display: flex;
     font-family: "NeueMachina-Regular";
-    color: hsl(38, 100%, 98%);
+    color: #fffbf5;
 }
 
 .EventTypeContainer {

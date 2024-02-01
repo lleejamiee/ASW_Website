@@ -21,6 +21,7 @@
 
 }
 
+
 @font-face {
 
     font-family: Literaturnaya-Bold;
@@ -37,6 +38,7 @@
     src: url("../app/(site)/assets/font/Literaturnaya-Italic.ttf");
 
 }
+
 
 body {
     background-color: #fffcf7;

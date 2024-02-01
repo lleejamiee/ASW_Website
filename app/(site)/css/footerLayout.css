@@ -1,0 +1,44 @@
+.joinUs {
+    display: flex;
+    flex-direction: column;
+    height: 9rem;
+    background-color: #f5eadfcc;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: "NeueMachina-Ultrabold";
+    font-size: large;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    object-fit: contain;
+    position: relative;
+    width: 40vw;
+    height: 25%;
+}
+
+.logo {
+    display: flex;
+    height: 100%;
+    aspect-ratio: 1/1;
+    align-items: center;
+    object-fit: contain;
+    position: relative;
+}
+
+.poweredBy {
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    background-color: #e1d0bfcc;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "NeueMachina-Regular";
+    font-size: small;
+}
