@@ -1,7 +1,8 @@
 .BackgroundColour {
     display: flex;
+    flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     background-color: #fbf8f2;
 }
 
@@ -12,4 +13,55 @@
     color: #493725;
     padding-top: 4%;
     padding-left: 5%;
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100vw;
+    height: auto;
+}
+
+.AccordionContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 10%;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.Accordion{
+    display: flex;
+    width: 75%;
+    justify-content: center;
+    border-width: 4px;
+    border-color: rgb(224, 212, 199);
+    border-style: double;
+    --tw-bg-opacity: 1;
+    background-color: rgb(251 248 242 / var(--tw-bg-opacity));
+    font-family: "NeueMachina-Regular";
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+    padding-top: 0.5rem/* 8px */;
+    padding-bottom: 0.5rem/* 8px */;
+    padding-left: 1rem/* 16px */;
+    padding-right: 1rem/* 16px */;
+    border-radius: 9999px;
+}
+
+.hover\:Accordion:hover {
+    display: flex;
+    --tw-bg-opacity: 1;
+    background-color: rgb(224 212 199 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+    padding-top: 0.5rem/* 8px */;
+    padding-bottom: 0.5rem/* 8px */;
+    padding-left: 1rem/* 16px */;
+    padding-right: 1rem/* 16px */;
+    border-radius: 9999px;
 }

@@ -15,8 +15,13 @@ export const event = {
             options: { source: "name", maxLength: 96 },
         },
         {
-            name: "image",
-            tile: "Image",
+            name: "date",
+            title: "Date",
+            type: "string",
+        },
+        {
+            name: "thumbnail",
+            tile: "Thumbnail",
             type: "image",
             options: { hotspot: true },
             fields: [

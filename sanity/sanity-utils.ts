@@ -90,7 +90,8 @@ export async function getEvents(): Promise<Event[]> {
             _createdAt,
             name,
             "slug": slug.current,
-            "image": image.asset->url,
+            date,
+            "thumbnail": image.asset->url,
             "gallery": gallery.images[] {
                 "url": asset->url,
                 "altText": alt
@@ -109,7 +110,8 @@ export async function getEvent(slug: string): Promise<Event> {
             _createdAt,
             name,
             "slug": slug.current,
-            "image": image.asset->url,
+            date,
+            "thumbnail": image.asset->url,
             "gallery": gallery[] {
                 "url": image.asset->url,
                 "altText": alt
@@ -146,7 +148,8 @@ export async function getEventYear(slug: string): Promise<Event> {
               _id,
               name,
               "slug": slug.current,
-              "image": image.asset->url,
+              date,
+              "thumbnail": image.asset->url,
               "gallery": gallery.images[] {
                 "url": image.asset->url,
                 "altText": altText

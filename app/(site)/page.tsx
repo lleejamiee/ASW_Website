@@ -15,7 +15,6 @@ export default function Home() {
                 <ASWIntroduction />
                 <GeneralSponsors />
                 <OurEvents />
-                <Footer />
             </body>
         </>
     );
