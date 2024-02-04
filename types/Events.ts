@@ -5,7 +5,9 @@ export type Event = {
     _createdAt: Date;
     name: string;
     slug: string;
+    date: string;
     image: string;
+    thumbnail: string;
     gallery: { url: string; altText: string }[];
     url: string;
     content: PortableTextBlock[];
@@ -16,5 +18,5 @@ export type Events = {
     _createdAt: Date;
     year: string;
     slug: string;
-    event: Event[];
+    events: Event[];
 };

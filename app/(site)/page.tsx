@@ -1,4 +1,3 @@
-import Footer from "./(components)/Footer";
 import ASWIntroduction from "./(components)/LandingPage/ASWIntroduction";
 import GeneralSponsors from "./(components)/LandingPage/GeneralSponsors";
 import OurEvents from "./(components)/LandingPage/OurEvents";

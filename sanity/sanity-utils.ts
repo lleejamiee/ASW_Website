@@ -131,13 +131,17 @@ export async function getEventYears(): Promise<Events[]> {
             _createdAt,
             year,
             slug,
-            "events": events[]
+            "events": event[] -> {
+                _id,
+                name,
+                date
+            }
           }`
     );
 }
 
 // Returns single event year. E.g, when slug = 2017, this will retreive all the events from 2017.
-export async function getEventYear(slug: string): Promise<Event> {
+export async function getEventYear(slug: string): Promise<Events> {
     return createClient(clientConfig).fetch(
         groq`*[_type == "events" && slug.current == $slug][0] {
             _id,

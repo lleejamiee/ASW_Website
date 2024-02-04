@@ -17,7 +17,13 @@ export const event = {
         {
             name: "date",
             title: "Date",
-            type: "string",
+            type: "date",
+            options: {
+                dateFormat: "Do MMMM YYYY",
+                // timeFormat: "HH:mm",
+                // timeStep: 15,
+                calendarTodayLable: "Today",
+            },
         },
         {
             name: "thumbnail",

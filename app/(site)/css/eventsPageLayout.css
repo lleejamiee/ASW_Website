@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: auto;
+    min-height: 71vh;
     background-color: #fbf8f2;
 }
 
@@ -17,51 +17,39 @@
 
 .Container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding-top: 40px;
     padding-bottom: 40px;
     width: 100vw;
     height: auto;
 }
 
-.AccordionContainer {
+.TabsContainer {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 10%;
-    align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    width: auto;
+    height: auto;
+    padding-left: 5%;
 }
 
-.Accordion{
+.Tab {
     display: flex;
-    width: 75%;
     justify-content: center;
-    border-width: 4px;
-    border-color: rgb(224, 212, 199);
-    border-style: double;
-    --tw-bg-opacity: 1;
-    background-color: rgb(251 248 242 / var(--tw-bg-opacity));
+    width: 250px;
+    height: 40px;
     font-family: "NeueMachina-Regular";
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity));
-    padding-top: 0.5rem/* 8px */;
-    padding-bottom: 0.5rem/* 8px */;
-    padding-left: 1rem/* 16px */;
-    padding-right: 1rem/* 16px */;
-    border-radius: 9999px;
-}
+    border-width: 4px;
+    border-style: double;
+    border-color: #e0d4c7;
+    background-color: #fbf8f2;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
-.hover\:Accordion:hover {
-    display: flex;
-    --tw-bg-opacity: 1;
-    background-color: rgb(224 212 199 / var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity));
-    padding-top: 0.5rem/* 8px */;
-    padding-bottom: 0.5rem/* 8px */;
-    padding-left: 1rem/* 16px */;
-    padding-right: 1rem/* 16px */;
-    border-radius: 9999px;
+    &:hover {
+        background-color: rgb(224 212 199);
+    }
+
+    &__selected {
+        background-color: rgb(224 212 199);
+    }
 }
