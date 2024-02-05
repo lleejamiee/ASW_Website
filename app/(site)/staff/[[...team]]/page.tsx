@@ -3,7 +3,7 @@ import { getExecutives, getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import "@/app/(site)/css/teampageLayout.css";
-
+import LinkedIn from "/app/(site)/assets/photos/LinkedIn.png";
 
 export default async function Home() {
 
@@ -20,7 +20,7 @@ export default async function Home() {
 
       <div className="staffHeader"><PortableText value={heading.content}/></div>
 
-      <div className=" execList flex flex-wrap justify-center items-center p-5 pt-20">
+      <div className="execList flex flex-wrap justify-center items-center p-5 pt-20">
         {executives.map((executive) => (
           <div key={executive.name} className="executive-container m-4">
             {executive.image && (
@@ -45,8 +45,8 @@ export default async function Home() {
               <p>{executive.name}</p>
               <p>{executive.role}</p>
               <a href={executive.url}>
-                link
-                {/* <LinkedinIcon size={32} round={true} /> */}
+              <Image src={LinkedIn} alt="LinkedIn" />
+
               </a>
             </div>
           </div>
