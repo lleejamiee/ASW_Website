@@ -1,11 +1,13 @@
 
 import { getExecutives, getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
-
 import Image from "next/image";
+import "@/app/(site)/css/teampageLayout.css";
 
 
 export default async function Home() {
+
+  
   const executives = await getExecutives();
 
   const heading = await getProject("team-page-heading")
@@ -16,9 +18,9 @@ export default async function Home() {
   return (
     <div  className="max-w-5xl mx-auto">
 
-      <div className="staffHeader font-LiteraturnayaBold"><PortableText value={heading.content}/></div>
+      <div className="staffHeader"><PortableText value={heading.content}/></div>
 
-      <div className="flex flex-wrap justify-center items-center p-5 pt-20">
+      <div className=" execList flex flex-wrap justify-center items-center p-5 pt-20">
         {executives.map((executive) => (
           <div key={executive.name} className="executive-container m-4">
             {executive.image && (

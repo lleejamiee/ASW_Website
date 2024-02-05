@@ -1,0 +1,14 @@
+.staffHeader{
+    display: flex;
+    font-family: 'Literaturnaya-Bold';
+    color: #493725;
+    font-size: xxx-large;
+    padding-top: 4%;
+    padding-left: 5%;
+}
+
+.execList{
+font-family: 'NeueMachina-Regular';
+}
+
+
