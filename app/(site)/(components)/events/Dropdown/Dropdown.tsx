@@ -5,14 +5,7 @@ import { DropdownPropsContext } from "./DropdownContext";
 export const Dropdown: React.FC = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const refToggleDropdown = useRef<HTMLButtonElement>(null);
-    const { state } = useContext(DropdownPropsContext);
-
-    const eventYears = () => {
-        const years = state.years;
-        console.log("Event years", state.years);
-
-        return years?.map((year) => <li key={year}>{year}</li>);
-    };
+    const { state, dispatch } = useContext(DropdownPropsContext);
 
     useEffect(() => {
         addEventListener("click", handleClickOutsideDropdown);
@@ -21,6 +14,18 @@ export const Dropdown: React.FC = () => {
             removeEventListener("click", handleClickOutsideDropdown);
         };
     });
+
+    const eventYears = () => {
+        const years = state.years;
+
+        return years?.map((year) => (
+            <button onClick={() => handleSelectedYear(year)}>{year}</button>
+        ));
+    };
+
+    const handleSelectedYear = (year: string) => {
+        dispatch({ type: "SET_SELECTED_YEAR", payload: year });
+    };
 
     const handleClickOutsideDropdown = (event: MouseEvent) => {
         if (isDropdownOpen) {

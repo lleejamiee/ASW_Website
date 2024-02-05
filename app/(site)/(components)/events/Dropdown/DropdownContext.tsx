@@ -14,7 +14,7 @@ export interface DropdownProps {
  * Represents that state made available via reducer
  */
 export type DropdownPropsState = {
-    selectedYear: DropdownProps | null;
+    selectedYear: string | null;
     years: string[] | null;
 };
 
@@ -23,7 +23,7 @@ export type DropdownPropsState = {
  * The key(SET_SELECTED_YEAR) represents the action type. The value(SelectedYear) represents the payloads.
  */
 export type ActionsMap = {
-    SET_SELECTED_YEAR: DropdownProps;
+    SET_SELECTED_YEAR: string;
     SET_YEARS: string[];
 };
 

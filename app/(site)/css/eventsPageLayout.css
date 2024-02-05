@@ -97,27 +97,39 @@
 .DropdownContent {
     display: none;
     position: absolute;
+    max-width: 138.5px;
     background-color: #fbf8f2;
-    padding-right: 47px;
-    padding-left: 48px;
+    padding-right: 45px;
+    padding-left: 45px;
     padding-top: 5px;
     padding-bottom: 5px;
     border-style: solid;
     border-width: 2px;
     border-color: #e0d4c7;
-    width: fit-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    font-family: "NeueMachina-Regular";
 
     &:hover {
         background-color: #D7CEBF;
     }
 }
-  
-  .Dropdown:hover .DropdownContent {
+
+.DropdownContent button {
     display: block;
-  }
+    padding-top: 3px;
+    padding-bottom: 3px;
+    &:hover{
+        font-family: "NeueMachina-Ultrabold";
+    }
+}
   
-  .Dropdown:hover .DropdownButton {
+.Dropdown:hover .DropdownButton {
+    display: block;
     background-color: #D7CEBF;
-  }
+}
+
+.Dropdown:hover .DropdownContent {
+    display: block;
+    background-color: #fbf8f2;
+}

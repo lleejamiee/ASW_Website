@@ -5,7 +5,7 @@ import { DropdownPropsContext } from "../Dropdown/DropdownContext";
 
 export function PastEvents() {
     const [eventYears, setEventYears] = useState<string[]>([""]);
-    const { dispatch } = useContext(DropdownPropsContext);
+    const { state, dispatch } = useContext(DropdownPropsContext);
 
     useEffect(() => {
         const fetchEventYears = async () => {
@@ -21,7 +21,7 @@ export function PastEvents() {
         };
 
         fetchEventYears();
-    }, [dispatch]);
+    }, []);
 
     return (
         <div className="EventsContainer">
