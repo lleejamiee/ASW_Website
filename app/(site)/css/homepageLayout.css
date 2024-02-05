@@ -1,0 +1,199 @@
+.ml-15 {
+    margin-left: 15%;
+}
+
+.ml-55 {
+    margin-left: 55%;
+}
+
+.h-75 {
+    height: 72%;
+}
+
+.PaddingLeft-5 {
+    padding-left: 5%;
+}
+
+.ASWIntroduction {
+    background-image: linear-gradient(#f5eadfcc, #f5eadfcc), url('../assets/photos/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.ASWLogo {
+    position: relative;
+    height: 40%;
+    width: auto;
+    margin-left: 15%;
+    object-position: left center;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+}
+
+.ASWIntroductionContent {
+    margin-left: 15%;
+    margin-right: 10%;
+    font-family: "Literaturnaya-Regular";
+    color: #493725;
+    font-size: x-large;
+    text-align: center;
+}
+
+.GeneralSponsors {
+    display: flex;
+    flex-direction: column;
+    background-color: #fbf8f2;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.SponsorHeading {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-family: "Literaturnaya-Bold";
+    font-size: xxx-large;
+    color: #493725;
+    padding-top: 2%;
+}
+
+.Diamond {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-family: "Literaturnaya-Regular";
+    font-size: xx-large;
+    color: #F4F6FC;
+    -webkit-text-stroke-color: black;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.LogoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    object-fit: contain;
+    position: relative;
+    width: 100vw;
+    height: 12%;
+}
+
+.CompanyLogo {
+    display: flex;
+    height: 100%;
+    width: auto;
+    align-items: center;
+    object-fit: contain;
+    position: relative;
+}
+
+.Platinum {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-family: "Literaturnaya-Regular";
+    font-size: xx-large;
+    color: #C0C0C0;
+    -webkit-text-stroke-color: black;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.Gold {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-family: "Literaturnaya-Regular";
+    font-size: xx-large;
+    color: #FFDC32;
+    -webkit-text-stroke-color: black;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.OurEvents {
+    background-color: #aba08f;
+    width: 100vw;
+    height: 100vh;
+}
+
+.OurEventsHeading {
+    display: flex;
+    font-family: "Literaturnaya-Bold";
+    font-size: xxx-large;
+    color: #FFFCF7;
+    padding-top: 4%;
+    padding-left: 5%;
+}
+
+.EventImageContainer {
+    display: flex;
+    width: 52%;
+    height: auto;
+    place-self: end;
+}
+
+.EventTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 48%;
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+}
+
+.EventTypeHeading {
+    display: flex;
+    font-family: "Literaturnaya-Regular";
+    color: #FFFCF7;
+    font-size: x-large;
+}
+
+.EventTypeContent {
+    display: flex;
+    font-family: "NeueMachina-Regular";
+    color: #fffbf5;
+}
+
+.EventTypeContainer {
+    display: flex;
+    height: 25%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Button{
+    display: flex;
+    font-family: "NeueMachina-Regular";
+    --tw-bg-opacity: 1;
+    background-color: rgb(73 55 37 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    padding-top: 0.5rem/* 8px */;
+    padding-bottom: 0.5rem/* 8px */;
+    padding-left: 1rem/* 16px */;
+    padding-right: 1rem/* 16px */;
+    border-radius: 9999px;
+}
+
+.hover\:Button:hover {
+    display: flex;
+    --tw-bg-opacity: 1;
+    background-color: rgb(123 100 78 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    padding-top: 0.5rem/* 8px */;
+    padding-bottom: 0.5rem/* 8px */;
+    padding-left: 1rem/* 16px */;
+    padding-right: 1rem/* 16px */;
+    border-radius: 9999px;
+}
