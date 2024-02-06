@@ -137,6 +137,7 @@
     width: 52%;
     height: auto;
     place-self: end;
+    position: relative;
 }
 
 .EventTextContainer {

@@ -1,11 +1,11 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { DropdownComponent } from "./DropdownComponent";
-import { DropdownPropsContext } from "./DropdownContext";
+import { EventsPropsContext } from "../EventsContext";
 
 export const Dropdown: React.FC = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const refToggleDropdown = useRef<HTMLButtonElement>(null);
-    const { state, dispatch } = useContext(DropdownPropsContext);
+    const { state, dispatch } = useContext(EventsPropsContext);
 
     useEffect(() => {
         addEventListener("click", handleClickOutsideDropdown);

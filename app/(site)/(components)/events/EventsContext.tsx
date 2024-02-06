@@ -5,17 +5,19 @@ import React, { createContext, useReducer } from "react";
 /**
  * DropdownProps type that will go into the state
  */
-export interface DropdownProps {
+export interface EventsProps {
     selectedYear: string;
     years: string[] | null;
+    _id: string;
 }
 
 /**
  * Represents that state made available via reducer
  */
-export type DropdownPropsState = {
+export type EventsPropsState = {
     selectedYear: string;
     years: string[] | null;
+    _id: string;
 };
 
 /**
@@ -25,6 +27,7 @@ export type DropdownPropsState = {
 export type ActionsMap = {
     SET_SELECTED_YEAR: string;
     SET_YEARS: string[];
+    SET_SELECTED_ID: string;
 };
 
 /**
@@ -40,27 +43,28 @@ export type Actions = {
     };
 }[keyof ActionsMap];
 
-export const initialDropdownPropsState: DropdownPropsState = {
+export const initialEventsPropsState: EventsPropsState = {
     selectedYear: "",
     years: null,
+    _id: "",
 };
 
-export const DropdownPropsContext = createContext<{
-    state: DropdownPropsState;
+export const EventsPropsContext = createContext<{
+    state: EventsPropsState;
     dispatch: React.Dispatch<Actions>;
-}>({ state: initialDropdownPropsState, dispatch: () => undefined });
+}>({ state: initialEventsPropsState, dispatch: () => undefined });
 
 /**
  * Parent component that will provide all its component children with the access to the state and dispatch functions.
  * All children within the sam SelectedYearProvider will have the same state available to them.
  */
-export const DropdownPropsProvider: React.FC<{ children: React.ReactNode }> = ({
+export const EventsPropsProvider: React.FC<{ children: React.ReactNode }> = ({
     children,
 }) => {
-    const dropdownPropsReducer = (
-        state: DropdownPropsState,
+    const eventsPropsReducer = (
+        state: EventsPropsState,
         action: Actions
-    ): DropdownPropsState => {
+    ): EventsPropsState => {
         switch (action.type) {
             case "SET_SELECTED_YEAR":
                 return { ...state, selectedYear: action.payload };
@@ -68,19 +72,22 @@ export const DropdownPropsProvider: React.FC<{ children: React.ReactNode }> = ({
             case "SET_YEARS":
                 return { ...state, years: action.payload };
 
+            case "SET_SELECTED_ID":
+                return { ...state, _id: action.payload };
+
             default:
                 return state;
         }
     };
 
     const [state, dispatch] = useReducer(
-        dropdownPropsReducer,
-        initialDropdownPropsState
+        eventsPropsReducer,
+        initialEventsPropsState
     );
 
     return (
-        <DropdownPropsContext.Provider value={{ state, dispatch }}>
+        <EventsPropsContext.Provider value={{ state, dispatch }}>
             {children}
-        </DropdownPropsContext.Provider>
+        </EventsPropsContext.Provider>
     );
 };

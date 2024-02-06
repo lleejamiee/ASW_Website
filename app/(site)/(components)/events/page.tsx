@@ -1,14 +1,14 @@
 import "@/app/(site)/css/eventsPageLayout.css";
 import TabsPage from "./Tabs/TabsPage";
-import { DropdownPropsProvider } from "./Dropdown/DropdownContext";
+import { EventsPropsProvider } from "./EventsContext";
 
 export default function Events() {
     return (
-        <DropdownPropsProvider>
+        <EventsPropsProvider>
             <div className="BackgroundColour">
                 <div className="Heading">ASW Events</div>
                 <TabsPage />
             </div>
-        </DropdownPropsProvider>
+        </EventsPropsProvider>
     );
 }

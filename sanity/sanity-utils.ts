@@ -103,23 +103,22 @@ export async function getEvents(): Promise<Event[]> {
 }
 
 // Returns single Event
-export async function getEvent(slug: string): Promise<Event> {
+export async function getEvent(_id: string): Promise<Event> {
     return createClient(clientConfig).fetch(
-        groq`*[_type == "event" && slug.current == $slug][0]{
+        groq`*[_type == "event" && _id == $_id][0]{
             _id,
             _createdAt,
             name,
             "slug": slug.current,
             date,
-            "thumbnail": image.asset->url,
-            "gallery": gallery[] {
-                "url": image.asset->url,
-                "altText": alt
+            "gallery": gallery.images[] {
+                "url": asset->url,
+                "altText": alt,
             },
             url,
             content
         }`,
-        { slug }
+        { _id }
     );
 }
 

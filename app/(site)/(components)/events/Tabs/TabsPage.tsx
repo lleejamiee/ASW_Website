@@ -4,10 +4,10 @@ import { useContext, useState } from "react";
 import { Tab, Tabs } from "./Tabs";
 import { UpcomingEvents } from "../Events/UpcomingEvents";
 import { PastEvents } from "../Events/PastEvents";
-import { DropdownPropsContext } from "../Dropdown/DropdownContext";
+import { EventsPropsContext } from "../EventsContext";
 
 export default function TabsPage() {
-    const { dispatch } = useContext(DropdownPropsContext);
+    const { dispatch } = useContext(EventsPropsContext);
 
     const tabs: Tab[] = [
         { id: 0, label: "Upcoming Events" },

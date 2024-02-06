@@ -1,14 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { Dropdown } from "../Dropdown/Dropdown";
 import { getEventYear, getEventYears } from "@/sanity/sanity-utils";
-import { DropdownPropsContext } from "../Dropdown/DropdownContext";
+import { EventsPropsContext } from "../EventsContext";
 import { Events } from "@/types/Events";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export function PastEvents() {
     const [eventYears, setEventYears] = useState<string[]>([""]);
-    const { dispatch } = useContext(DropdownPropsContext);
+    const { dispatch } = useContext(EventsPropsContext);
 
     useEffect(() => {
         const fetchEventYears = async () => {
@@ -34,24 +33,23 @@ export function PastEvents() {
     );
 }
 
-export const DisplayPastEventsList = () => {
+export function DisplayPastEventsList() {
     const [eventsList, setEventsList] = useState<Events>();
-    const { state } = useContext(DropdownPropsContext);
+    const { state } = useContext(EventsPropsContext);
+    const router = useRouter();
 
     useEffect(() => {
         const fetchEventsList = async () => {
             const events = await getEventYear(state.selectedYear);
 
             setEventsList(events);
-            console.log(events);
         };
 
         fetchEventsList();
     }, [state.selectedYear]);
 
     const handleClick = (_id: string) => {
-        const router = useRouter();
-        router.push(`/${_id}`);
+        router.push("events/" + [_id]);
     };
 
     return (
@@ -59,16 +57,14 @@ export const DisplayPastEventsList = () => {
             {eventsList ? (
                 <div className="EventsListContainer">
                     {eventsList.events.map((event) => (
-                        <Link href={"/" + event._id}>
-                            <button
-                                key={event._id}
-                                className="EventContainer"
-                                onClick={() => handleClick(event._id)}
-                            >
-                                <h1>{event.name}</h1>
-                                <p>{event.date}</p>
-                            </button>
-                        </Link>
+                        <button
+                            key={event._id}
+                            className="EventContainer"
+                            onClick={() => handleClick(event._id)}
+                        >
+                            <h1>{event.name}</h1>
+                            <p>{event.date}</p>
+                        </button>
                     ))}
                 </div>
             ) : (
@@ -76,4 +72,4 @@ export const DisplayPastEventsList = () => {
             )}
         </>
     );
-};
+}

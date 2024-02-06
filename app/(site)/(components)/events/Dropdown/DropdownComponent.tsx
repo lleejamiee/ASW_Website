@@ -1,5 +1,3 @@
-import { memo } from "react";
-
 import { CSSTransition } from "react-transition-group";
 import classNames from "classnames";
 import React, { useRef } from "react";
