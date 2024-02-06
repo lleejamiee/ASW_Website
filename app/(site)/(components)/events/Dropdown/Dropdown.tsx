@@ -48,7 +48,11 @@ export const Dropdown: React.FC = () => {
                 ref={refToggleDropdown}
                 onClick={handleToggleDropdown}
             >
-                Year
+                {state.selectedYear === "" ? (
+                    <>Year</>
+                ) : (
+                    <>{state.selectedYear}</>
+                )}
             </button>
             <DropdownComponent isOpen={isDropdownOpen}>
                 <ul className="DropdownContent">{eventYears()}</ul>

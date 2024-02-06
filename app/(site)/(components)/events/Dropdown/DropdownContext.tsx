@@ -6,7 +6,7 @@ import React, { createContext, useReducer } from "react";
  * DropdownProps type that will go into the state
  */
 export interface DropdownProps {
-    selectedYear: string | null;
+    selectedYear: string;
     years: string[] | null;
 }
 
@@ -14,7 +14,7 @@ export interface DropdownProps {
  * Represents that state made available via reducer
  */
 export type DropdownPropsState = {
-    selectedYear: string | null;
+    selectedYear: string;
     years: string[] | null;
 };
 
@@ -41,7 +41,7 @@ export type Actions = {
 }[keyof ActionsMap];
 
 export const initialDropdownPropsState: DropdownPropsState = {
-    selectedYear: null,
+    selectedYear: "",
     years: null,
 };
 

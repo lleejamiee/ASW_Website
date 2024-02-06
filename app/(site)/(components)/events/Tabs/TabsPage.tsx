@@ -1,11 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Tab, Tabs } from "./Tabs";
 import { UpcomingEvents } from "../Events/UpcomingEvents";
 import { PastEvents } from "../Events/PastEvents";
+import { DropdownPropsContext } from "../Dropdown/DropdownContext";
 
 export default function TabsPage() {
+    const { dispatch } = useContext(DropdownPropsContext);
+
     const tabs: Tab[] = [
         { id: 0, label: "Upcoming Events" },
         { id: 1, label: "Past Events" },
@@ -15,6 +18,10 @@ export default function TabsPage() {
 
     const handleTabClick = (id: number) => {
         setSelectedTabId(id);
+
+        if (selectedTabId === 0) {
+            dispatch({ type: "SET_SELECTED_YEAR", payload: "" });
+        }
     };
 
     return (
