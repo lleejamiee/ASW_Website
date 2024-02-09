@@ -4,7 +4,7 @@ import "../globals.css";
 import NavBar from "./(components)/NavBar";
 import Footer from "./(components)/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "ASW",
@@ -25,7 +25,7 @@ export default function RootLayout({
                     content="width=device-width, initial-scale=1.0"
                 />
             </head>
-            <body className={inter.className}>
+            <body>
                 <header>
                     <NavBar />
                 </header>

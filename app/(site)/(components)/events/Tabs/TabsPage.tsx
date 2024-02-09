@@ -19,23 +19,7 @@ export default function TabsPage() {
 
     const handleTabClick = (id: number) => {
         setSelectedTabId(id);
-
-        if (selectedTabId === 0) {
-            dispatch({ type: "SET_SELECTED_YEAR", payload: "" });
-        }
     };
-
-    useEffect(() => {
-        if (selectedTabId === 0) {
-            dispatch({ type: "SET_IS_UPCOMING_EVENT", payload: true });
-            console.log("TabsPage", state.isUpcomingEvent);
-        }
-
-        if (selectedTabId === 1) {
-            dispatch({ type: "SET_IS_UPCOMING_EVENT", payload: false });
-            console.log("TabsPage", state.isUpcomingEvent);
-        }
-    }, [selectedTabId]);
 
     return (
         <div className="Container">

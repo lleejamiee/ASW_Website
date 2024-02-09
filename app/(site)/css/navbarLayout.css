@@ -16,12 +16,6 @@
     justify-content: space-evenly;
 }
 
-.pages > a {
-    display: flex;
-    display: inline-block;
-    white-space: nowrap;
-}
-
-.pages > a > li {
+.pagesList{
     display: flex;
 }

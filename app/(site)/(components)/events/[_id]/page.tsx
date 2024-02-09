@@ -9,9 +9,10 @@ import {
     ChevronLeftCircle,
     ChevronRightCircle,
 } from "lucide-react";
+import moment from "moment";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { FC, useContext, useEffect, useState } from "react";
-import { EventsPropsContext } from "../EventsContext";
+import { FC, useEffect, useState } from "react";
 
 interface EventPageProps {
     params: { _id: string };
@@ -20,10 +21,10 @@ interface EventPageProps {
 const EventPage: FC<EventPageProps> = ({ params }) => {
     const [event, setEvent] = useState<Event>();
     const [activeIndex, setActiveIndex] = useState(0);
-    const { state } = useContext(EventsPropsContext);
+    const currentDate = moment().format("YYYY-MM-DD");
     const router = useRouter();
 
-    console.log(state.isUpcomingEvent);
+    const isUpcomingEvent = event && event.date >= currentDate;
 
     const updateIndex = (newIndex: number) => {
         const numImages = event?.gallery.length || 0;
@@ -45,7 +46,6 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
     };
 
     useEffect(() => {
-        console.log("isUpcomingEvent: ", state.isUpcomingEvent);
         const fetchEvent = async () => {
             const fetchedEvent = await getEvent(params._id);
 
@@ -53,7 +53,7 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
         };
 
         fetchEvent();
-    }, [params._id, state]);
+    }, [params._id]);
 
     return (
         <div className="Background">
@@ -74,7 +74,7 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
                             }}
                         >
                             {event?.gallery.map((image) => (
-                                <div className="CarouselItem">
+                                <div key={image.url} className="CarouselItem">
                                     <img
                                         className="CarouselImg"
                                         src={image.url}
@@ -115,15 +115,17 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
                     <div className="Date">{event?.date}</div>
                     {event && (
                         <div className="Description">
-                            <p>
+                            <span>
                                 <PortableText value={event.content} />
-                            </p>
+                            </span>
                         </div>
                     )}
-                    {state.isUpcomingEvent && (
-                        <button className="SignUpButton">
-                            Click here to sign up!
-                        </button>
+                    {isUpcomingEvent && (
+                        <Link href={event.url} target="_blank">
+                            <button className="SignUpButton">
+                                Click here to sign up!
+                            </button>
+                        </Link>
                     )}
                 </div>
             </div>

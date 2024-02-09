@@ -5,16 +5,16 @@ const NavBar = () => {
     return (
         <div className="navbar">
             <ul className="pages">
-                <li>
+                <li className="pagesList">
                     <Link href="/">Home</Link>
                 </li>
-                <li>
+                <li className="pagesList">
                     <Link href="/staff">Team</Link>
                 </li>
-                <li>
+                <li className="pagesList">
                     <Link href="/events">Events</Link>
                 </li>
-                <li>
+                <li className="pagesList">
                     <Link href="/">Join Us</Link>
                 </li>
             </ul>
