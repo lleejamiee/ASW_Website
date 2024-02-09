@@ -3,21 +3,13 @@
 import React, { createContext, useReducer } from "react";
 
 /**
- * DropdownProps type that will go into the state
- */
-export interface EventsProps {
-    selectedYear: string;
-    years: string[] | null;
-    _id: string;
-}
-
-/**
  * Represents that state made available via reducer
  */
-export type EventsPropsState = {
+export type EventsState = {
     selectedYear: string;
     years: string[] | null;
     _id: string;
+    isUpcomingEvent: boolean;
 };
 
 /**
@@ -28,6 +20,7 @@ export type ActionsMap = {
     SET_SELECTED_YEAR: string;
     SET_YEARS: string[];
     SET_SELECTED_ID: string;
+    SET_IS_UPCOMING_EVENT: boolean;
 };
 
 /**
@@ -43,14 +36,15 @@ export type Actions = {
     };
 }[keyof ActionsMap];
 
-export const initialEventsPropsState: EventsPropsState = {
+export const initialEventsPropsState: EventsState = {
     selectedYear: "",
     years: null,
     _id: "",
+    isUpcomingEvent: false,
 };
 
 export const EventsPropsContext = createContext<{
-    state: EventsPropsState;
+    state: EventsState;
     dispatch: React.Dispatch<Actions>;
 }>({ state: initialEventsPropsState, dispatch: () => undefined });
 
@@ -62,9 +56,9 @@ export const EventsPropsProvider: React.FC<{ children: React.ReactNode }> = ({
     children,
 }) => {
     const eventsPropsReducer = (
-        state: EventsPropsState,
+        state: EventsState,
         action: Actions
-    ): EventsPropsState => {
+    ): EventsState => {
         switch (action.type) {
             case "SET_SELECTED_YEAR":
                 return { ...state, selectedYear: action.payload };
@@ -74,6 +68,9 @@ export const EventsPropsProvider: React.FC<{ children: React.ReactNode }> = ({
 
             case "SET_SELECTED_ID":
                 return { ...state, _id: action.payload };
+
+            case "SET_IS_UPCOMING_EVENT":
+                return { ...state, isUpcomingEvent: action?.payload };
 
             default:
                 return state;

@@ -3,7 +3,15 @@
 import "@/app/(site)/css/eventPageLayout.css";
 import { getEvent } from "@/sanity/sanity-utils";
 import { Event } from "@/types/Events";
-import { FC, useEffect, useState } from "react";
+import { PortableText } from "@portabletext/react";
+import {
+    ArrowBigLeft,
+    ChevronLeftCircle,
+    ChevronRightCircle,
+} from "lucide-react";
+import { useRouter } from "next/navigation";
+import { FC, useContext, useEffect, useState } from "react";
+import { EventsPropsContext } from "../EventsContext";
 
 interface EventPageProps {
     params: { _id: string };
@@ -11,45 +19,33 @@ interface EventPageProps {
 
 const EventPage: FC<EventPageProps> = ({ params }) => {
     const [event, setEvent] = useState<Event>();
-    let slideIndex = 1;
+    const [activeIndex, setActiveIndex] = useState(0);
+    const { state } = useContext(EventsPropsContext);
+    const router = useRouter();
 
-    showSlides(slideIndex);
+    console.log(state.isUpcomingEvent);
 
-    function plusSlides(n: number) {
-        showSlides((slideIndex += n));
-    }
+    const updateIndex = (newIndex: number) => {
+        const numImages = event?.gallery.length || 0;
+        let newIndexAdjusted = newIndex;
 
-    function currentSlide(n: number) {
-        showSlides((slideIndex = n));
-    }
+        if (numImages === 0) return;
 
-    function showSlides(n: number) {
-        let slides: HTMLCollectionOf<HTMLDivElement> =
-            document.getElementsByClassName(
-                "myCarousel"
-            ) as HTMLCollectionOf<HTMLDivElement>;
-
-        if (slides.length === 0) {
-            return;
+        if (newIndex < 0) {
+            newIndexAdjusted = numImages - 1;
+        } else if (newIndex >= numImages) {
+            newIndexAdjusted = 0;
         }
 
-        if (n > slides.length) {
-            slideIndex = 1;
-        }
-        if (n < 1) {
-            slideIndex = slides.length;
-        }
+        setActiveIndex(newIndexAdjusted);
+    };
 
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-
-        if (slides[slideIndex - 1]) {
-            slides[slideIndex - 1].style.display = "block";
-        }
-    }
+    const handleClick = () => {
+        router.push("/events");
+    };
 
     useEffect(() => {
+        console.log("isUpcomingEvent: ", state.isUpcomingEvent);
         const fetchEvent = async () => {
             const fetchedEvent = await getEvent(params._id);
 
@@ -57,32 +53,79 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
         };
 
         fetchEvent();
-    }, [params._id]);
+    }, [params._id, state]);
 
     return (
         <div className="Background">
-            <div className="Heading">{event?.name}</div>
+            <button
+                className="BackToEventsButton"
+                onClick={() => handleClick()}
+            >
+                <ArrowBigLeft /> Back to Events
+            </button>
             <div className="Container">
-                <div className="CarouselContainer fade">
-                    {event?.gallery ? (
-                        event?.gallery.map((image) => <img src={image.url} />)
-                    ) : (
-                        <div>Nothing</div>
+                <div className="SideContainer">
+                    <div className="CarouselContainer">
+                        <div
+                            className="Inner"
+                            style={{
+                                transform:
+                                    "translate(-" + activeIndex * 100 + "%)",
+                            }}
+                        >
+                            {event?.gallery.map((image) => (
+                                <div className="CarouselItem">
+                                    <img
+                                        className="CarouselImg"
+                                        src={image.url}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {event && event?.gallery.length > 1 && (
+                        <div className="CarouselButton">
+                            <button
+                                className="ButtonArrow"
+                                onClick={() => {
+                                    updateIndex(activeIndex - 1);
+                                }}
+                            >
+                                <span>
+                                    <ChevronLeftCircle />
+                                </span>
+                            </button>
+
+                            <button
+                                className="ButtonArrow"
+                                onClick={() => {
+                                    updateIndex(activeIndex + 1);
+                                }}
+                            >
+                                <span>
+                                    <ChevronRightCircle />
+                                </span>
+                            </button>
+                        </div>
                     )}
                 </div>
-
-                {event?.gallery && event?.gallery.length > 1 ? (
-                    <>
-                        <a className="prev" onClick={() => plusSlides(-1)}>
-                            &#10094;
-                        </a>
-                        <a className="next" onClick={() => plusSlides(1)}>
-                            &#10095;
-                        </a>
-                    </>
-                ) : (
-                    <></>
-                )}
+                <div className="EventDetail">
+                    <div className="Heading">{event?.name}</div>
+                    <div className="Date">{event?.date}</div>
+                    {event && (
+                        <div className="Description">
+                            <p>
+                                <PortableText value={event.content} />
+                            </p>
+                        </div>
+                    )}
+                    {state.isUpcomingEvent && (
+                        <button className="SignUpButton">
+                            Click here to sign up!
+                        </button>
+                    )}
+                </div>
             </div>
         </div>
     );

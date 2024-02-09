@@ -24,12 +24,20 @@
     height: auto;
 }
 
+.SideContainer {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding-left: 5%;
+    align-items: center;
+}
+
 .TabsContainer {
     display: flex;
     flex-direction: column;
-    width: auto;
-    height: auto;
-    padding-left: 5%;
+    width: fit-content;
+    height: fit-content;
 }
 
 .Tab {
@@ -72,8 +80,10 @@
 }
 
 .Dropdown {
+    padding-top: 3%;
     position: relative;
     display: inline-block;
+    width: fit-content;
 }
 
 .DropdownButton {
@@ -86,7 +96,7 @@
     border-style: solid;
     border-width: 2px;
     border-color: #e0d4c7;
-    width: fit-content;
+    width: 250px;
     font-family: "NeueMachina-Regular";
 
     &:hover {
@@ -97,10 +107,8 @@
 .DropdownContent {
     display: none;
     position: absolute;
-    max-width: 138.5px;
+    width: 250px;
     background-color: #fbf8f2;
-    padding-right: 45px;
-    padding-left: 45px;
     padding-top: 5px;
     padding-bottom: 5px;
     border-style: solid;
@@ -119,6 +127,8 @@
     display: block;
     padding-top: 3px;
     padding-bottom: 3px;
+    width: 250px;
+    align-items: center;
     &:hover{
         font-family: "NeueMachina-Ultrabold";
     }
@@ -137,8 +147,8 @@
 .EventsListContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    height: auto;
+    height: fit-content;
+    margin-bottom: 20px;
 }
 
 .EventContainer {
@@ -146,8 +156,8 @@
     flex-direction: column;
     border-radius: 2px;
     border-color: black;
-    height: auto;
-    margin-bottom: 20px;
+    height: fit-content;
+    margin-top: 20px;
 
     &:hover {
         background-color: #D7CEBF;

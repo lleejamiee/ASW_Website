@@ -14,11 +14,6 @@ interface TabProps {
 }
 
 const TabsComponent: React.FC<TabProps> = ({ selectedId, tabs, onClick }) => {
-    // const yearsSorted = eventYears
-    //     .map((year) => Number(year.year))
-    //     .sort()
-    //     .reverse();
-
     return (
         <div className="TabsContainer">
             {tabs &&

@@ -1,33 +1,29 @@
 import { useContext, useEffect, useState } from "react";
-import { Dropdown } from "../Dropdown/Dropdown";
-import { getEventYear, getEventYears } from "@/sanity/sanity-utils";
+import { getEventYear } from "@/sanity/sanity-utils";
 import { EventsPropsContext } from "../EventsContext";
 import { Events } from "@/types/Events";
 import { useRouter } from "next/navigation";
+import { getPastEvents } from "@/app/(site)/util/fetchEvents";
 
 export function PastEvents() {
-    const [eventYears, setEventYears] = useState<string[]>([""]);
     const { dispatch } = useContext(EventsPropsContext);
 
     useEffect(() => {
         const fetchEventYears = async () => {
-            const events = await getEventYears();
+            const events = await getPastEvents();
             const filteredYears = events?.map((event) => event.year);
             const sortedYears = filteredYears?.sort().reverse();
 
             if (sortedYears) {
-                setEventYears(sortedYears);
-
                 dispatch({ type: "SET_YEARS", payload: sortedYears });
             }
         };
 
         fetchEventYears();
-    }, [dispatch, eventYears]);
+    }, []);
 
     return (
         <div className="EventsContainer">
-            <Dropdown />
             <DisplayPastEventsList />
         </div>
     );

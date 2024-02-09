@@ -1,9 +1,9 @@
 import { getEventYear, getEventYears } from "@/sanity/sanity-utils";
+import moment from "moment";
 
 const date = new Date();
-const currentDate =
-    date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
-const currentYear = date.getFullYear.toString();
+const currentDate = moment().format("YYYY-MM-DD");
+const currentYear = date.getFullYear().toString();
 
 export const getUpcomingEvents = async () => {
     const events = await getEventYear(currentYear);
@@ -15,6 +15,6 @@ export const getPastEvents = async () => {
     const events = await getEventYears();
 
     return events.filter((event) =>
-        event.events.filter((event) => event.date < currentDate)
+        event.events.every((dates) => dates.date < currentDate)
     );
 };

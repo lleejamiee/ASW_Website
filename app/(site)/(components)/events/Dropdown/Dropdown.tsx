@@ -19,7 +19,9 @@ export const Dropdown: React.FC = () => {
         const years = state.years;
 
         return years?.map((year) => (
-            <button onClick={() => handleSelectedYear(year)}>{year}</button>
+            <button key={year} onClick={() => handleSelectedYear(year)}>
+                {year}
+            </button>
         ));
     };
 
