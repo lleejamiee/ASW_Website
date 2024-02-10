@@ -31,6 +31,7 @@ export default async function GeneralSponsors() {
                         ))
                 )}
             </div>
+            <hr className="hr" />
             <div className="Platinum">{platinum.name}</div>
             <div className="LogoContainer">
                 {platinum.gallery.map(
@@ -49,6 +50,7 @@ export default async function GeneralSponsors() {
                         ))
                 )}
             </div>
+            <hr className="hr" />
             <div className="Gold">{gold.name}</div>
             <div className="LogoContainer">
                 {gold.gallery.map(

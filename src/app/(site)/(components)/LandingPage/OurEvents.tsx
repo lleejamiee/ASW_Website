@@ -49,7 +49,7 @@ export default async function OurEvents() {
                     )}
                 </div>
             </div>
-            <div className="PaddingLeft-5">
+            <div className="PaddingLeft-5 w-fit">
                 <Link href={"/events"}>
                     <button className="Button hover:Button">
                         View more events
