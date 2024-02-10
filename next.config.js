@@ -15,6 +15,22 @@ const nextConfig = {
                 },
             ],
         });
+        config.ignoreWarnings = [
+            { module: /node_modules\/node-fetch\/lib\/index\.tsx/ },
+            { file: /node_modules\/node-fetch\/lib\/index\.tsx/ },
+        ];
+
+        if (isServer) {
+            const originalEntry = config.entry;
+            config.entry = async () => {
+                const entries = await originalEntry();
+                // Add support for TypeScript files in the server entry point
+                if (entries["main.js"]) {
+                    entries["main.js"].unshift("./server.tsx");
+                }
+                return entries;
+            };
+        }
 
         return config;
     },

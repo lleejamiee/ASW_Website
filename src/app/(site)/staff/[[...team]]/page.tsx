@@ -1,8 +1,8 @@
 import { getExecutives, getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
-import "@/app/(site)/css/teampageLayout.css";
-import LinkedIn from "@/app/(site)/assets/photos/LinkedIn.png";
+import "@/src/app/(site)/css/teampageLayout.css";
+import LinkedIn from "@/src/app/(site)/assets/photos/LinkedIn.png";
 
 export default async function Home() {
     const executives = await getExecutives();

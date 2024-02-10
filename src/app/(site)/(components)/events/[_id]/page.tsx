@@ -1,6 +1,6 @@
 "use client";
 
-import "@/app/(site)/css/eventPageLayout.css";
+import "@/src/app/(site)/css/eventPageLayout.css";
 import { getEvent } from "@/sanity/sanity-utils";
 import { Event } from "@/types/Events";
 import { PortableText } from "@portabletext/react";
@@ -13,6 +13,7 @@ import moment from "moment";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState } from "react";
+import Image from "next/image";
 
 interface EventPageProps {
     params: { _id: string };
@@ -78,6 +79,7 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
                                     <img
                                         className="CarouselImg"
                                         src={image.url}
+                                        alt={"Event Image"}
                                     />
                                 </div>
                             ))}

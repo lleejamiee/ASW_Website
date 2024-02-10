@@ -22,12 +22,11 @@ export default function RootLayout({
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
-                {/* Add other head elements here */}
             </head>
             <body>
-                <header>
+                <nav>
                     <NavBar />
-                </header>
+                </nav>
                 <main>{children}</main>
                 <footer>
                     <Footer />

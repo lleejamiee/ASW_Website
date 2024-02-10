@@ -1,10 +1,10 @@
-import "@/app/(site)/css/footerLayout.css";
+import "@/src/app/(site)/css/footerLayout.css";
 import Image from "next/image";
 import React from "react";
-import Instagram from "/app/(site)/assets/photos/Instagram.png";
-import Facebook from "/app/(site)/assets/photos/Facebook.png";
-import LinkedIn from "/app/(site)/assets/photos/LinkedIn.png";
-import Outlook from "/app/(site)/assets/photos/Outlook.png";
+import Instagram from "/src/app/(site)/assets/photos/Instagram.png";
+import Facebook from "/src/app/(site)/assets/photos/Facebook.png";
+import LinkedIn from "/src/app/(site)/assets/photos/LinkedIn.png";
+import Outlook from "/src/app/(site)/assets/photos/Outlook.png";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();

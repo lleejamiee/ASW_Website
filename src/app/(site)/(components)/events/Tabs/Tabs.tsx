@@ -1,5 +1,5 @@
 import { memo } from "react";
-import "@/app/(site)/css/eventsPageLayout.css";
+import "@/src/app/(site)/css/eventsPageLayout.css";
 import classNames from "classnames";
 
 export interface Tab {

@@ -1,6 +1,6 @@
 import { getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
-import "@/app/(site)/css/homepageLayout.css";
+import "@/src/app/(site)/css/homepageLayout.css";
 import Image from "next/image";
 
 export default async function ASWIntroduction() {

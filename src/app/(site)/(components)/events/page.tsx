@@ -1,4 +1,4 @@
-import "@/app/(site)/css/eventsPageLayout.css";
+import "@/src/app/(site)/css/eventsPageLayout.css";
 import TabsPage from "./Tabs/TabsPage";
 import { EventsPropsProvider } from "./EventsContext";
 

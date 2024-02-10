@@ -1,5 +1,5 @@
-import "@/app/(site)/css/eventsPageLayout.css";
-import { getUpcomingEvents } from "@/app/(site)/util/fetchEvents";
+import "@/src/app/(site)/css/eventsPageLayout.css";
+import { getUpcomingEvents } from "@/src/app/(site)/util/fetchEvents";
 import { Event } from "@/types/Events";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";

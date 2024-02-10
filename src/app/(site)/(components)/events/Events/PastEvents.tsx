@@ -3,7 +3,7 @@ import { getEventYear } from "@/sanity/sanity-utils";
 import { EventsPropsContext } from "../EventsContext";
 import { Events } from "@/types/Events";
 import { useRouter } from "next/navigation";
-import { getPastEvents } from "@/app/(site)/util/fetchEvents";
+import { getPastEvents } from "@/src/app/(site)/util/fetchEvents";
 
 export function PastEvents() {
     const { dispatch } = useContext(EventsPropsContext);
@@ -20,7 +20,7 @@ export function PastEvents() {
         };
 
         fetchEventYears();
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className="EventsContainer">
