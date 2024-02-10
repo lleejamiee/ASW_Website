@@ -11,8 +11,8 @@ export default function Footer() {
 
     return (
         <>
-            <div className="joinUs">
-                <p className="flex">Join Us</p>
+            <div className="followUs">
+                <p className="flex">Follow Us</p>
                 <div className="logoContainer">
                     <div className="logo">
                         <a

@@ -1,0 +1,161 @@
+.Background {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding-bottom: 5%;
+    background-color: #fbf8f2;
+}
+
+.BackToEventsButton {
+    display: flex;
+    width: fit-content;
+    font-family: "NeueMachina-Regular";
+    color: #493725;
+    margin-top: 4%;
+    margin-left: 5%;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-width: 4px;
+    border-style: double;
+    border-color: #e0d4c7;
+
+    &:hover {
+        background-color: #D7CEBF;
+    }
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: fit-content;
+}
+
+.SideContainer {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 25vw;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    object-fit: contain;
+    position: relative;
+}
+
+.CarouselContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    position: relative;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+
+.Carousel {
+  overflow: hidden;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.05);
+}
+
+.Inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.CarouselItem {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.CarouselImg {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.CarouselButton {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.ButtonArrow {
+  align-items: center;
+}
+
+.EventDetail {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-width: 50vw;
+    width: fit-content;
+    height: fit-content;
+}
+
+.Heading {
+    display: flex;
+    font-family: "Literaturnaya-Bold";
+    font-size: xx-large;
+    color: #493725;
+    padding-top: 10%;
+    width: fit-content;
+}
+
+.Date {
+    display: flex;
+    font-family: "NeueMachina-Regular";
+    font-size: medium;
+    color: #493725;
+    padding-top: 1%;
+    width: fit-content;
+}
+
+.Description {
+    display: flex;
+    font-family: "NeueMachina-Regular";
+    font-size: large;
+    color: #493725;
+    padding-top: 5%;
+    width: fit-content;
+    max-width: 55vw;
+}
+
+.SignUpButton {
+    display: flex;
+    flex-direction: column;
+    font-family: "NeueMachina-Regular";
+    font-size: medium;
+    color: #493725;
+    width: fit-content;
+    padding-right: 45px;
+    padding-left: 45px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e0d4c7;
+    justify-self: end;
+    margin-top: 5%;
+
+    &:hover {
+        background-color: #D7CEBF;
+    }
+}

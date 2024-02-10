@@ -1,6 +1,7 @@
 import { getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function OurEvents() {
     const ourEvents = await getProject("our-events");
@@ -49,9 +50,11 @@ export default async function OurEvents() {
                 </div>
             </div>
             <div className="PaddingLeft-5">
-                <button className="bg-stone-700 hover:bg-stone-500 text-white font-bold py-2 px-4 rounded-full">
-                    View more events
-                </button>
+                <Link href={"/events"}>
+                    <button className="Button hover:Button">
+                        View more events
+                    </button>
+                </Link>
             </div>
         </div>
     );

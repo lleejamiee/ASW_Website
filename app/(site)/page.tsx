@@ -1,18 +1,17 @@
-
-import ASWIntroduction from "./component/LandingPage/ASWIntroduction";
-import GeneralSponsors from "./component/LandingPage/GeneralSponsors";
-import OurEvents from "./component/LandingPage/OurEvents";
-
+import ASWIntroduction from "./(components)/LandingPage/ASWIntroduction";
+import GeneralSponsors from "./(components)/LandingPage/GeneralSponsors";
+import OurEvents from "./(components)/LandingPage/OurEvents";
+import NavBar from "./(components)/NavBar";
 
 export default function Home() {
     return (
         <div>
-                <ASWIntroduction />
-                <GeneralSponsors />
-                <OurEvents />
-
-
+            <head>
+                <link rel="layout" href="app/(site)/css/homepageLayout.css" />
+            </head>
+            <ASWIntroduction />
+            <GeneralSponsors />
+            <OurEvents />
         </div>
-
     );
-    }
+}

@@ -110,6 +110,7 @@ $RECYCLE.BIN/
 *.sql
 *.sqlite
 *.sqlite3
+log.txt
 
 
 ############################

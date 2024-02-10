@@ -5,7 +5,7 @@ import Image from "next/image";
 import "@/app/(site)/css/navbarLayout.css";
 import { useEffect, useState } from "react";
 import LogoWithoutName from "@/app/(site)/assets/photos/LogoWithoutName.png";
-import { fetchMemberSignupLink } from "../utill/fetchMemberSignupLink";
+import { fetchMemberSignupLink } from "../util/fetchMemberSignupLink";
 
 const NavBar = () => {
     const [openMenu, setOpenMenu] = useState(false);
