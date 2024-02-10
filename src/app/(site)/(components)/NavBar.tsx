@@ -11,10 +11,12 @@ import { Menu } from "lucide-react";
 const NavBar = () => {
     const [openMenu, setOpenMenu] = useState(false);
     const [scrolling, setScrolling] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const [link, setLink] = useState("");
 
     const menuHandler = () => {
         setOpenMenu(!openMenu);
+        console.log(openMenu);
     };
 
     useEffect(() => {
@@ -35,58 +37,87 @@ const NavBar = () => {
             }
         };
 
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setIsMobile(true);
+            } else {
+                setIsMobile(false);
+            }
+        };
+
+        handleResize();
         window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleResize);
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleResize);
         };
     }, []);
 
     return (
         <>
-            <div className={scrolling ? "scrollNavbar" : "navbar"}>
-                <ul className={scrolling ? "scrollPages" : "pages"}>
-                    {scrolling && (
-                        <li className="logo">
-                            <Image
-                                src={LogoWithoutName}
-                                alt={"ASW Logo"}
-                                fill={true}
-                            />
+            {!isMobile && (
+                <div className={scrolling ? "scrollNavbar" : "navbar"}>
+                    <ul className={scrolling ? "scrollPages" : "pages"}>
+                        {scrolling && (
+                            <li className="logo">
+                                <Image
+                                    src={LogoWithoutName}
+                                    alt={"ASW Logo"}
+                                    fill={true}
+                                />
+                            </li>
+                        )}
+                        <li className="pagesList">
+                            <Link href="/">Home</Link>
                         </li>
-                    )}
-                    <li className="pagesList">
-                        <Link href="/">Home</Link>
-                    </li>
-                    <li className="pagesList">
-                        <Link href="/staff">Team</Link>
-                    </li>
-                    <li className="pagesList">
-                        <Link href="/events">Events</Link>
-                    </li>
-                    <li className="pagesList">
-                        <Link href={link} target="_blank">
-                            Become a Member
-                        </Link>
-                    </li>
-                </ul>
-
-                <div className="md:hidden">
-                    <button
-                        className="text-gray-700"
-                        onClick={menuHandler}
-                        aria-label="Menu"
-                    >
-                        {openMenu ? <Menu /> : <Menu />}
-                    </button>
+                        <li className="pagesList">
+                            <Link href="/staff">Team</Link>
+                        </li>
+                        <li className="pagesList">
+                            <Link href="/events">Events</Link>
+                        </li>
+                        <li className="pagesList">
+                            <Link href={link} target="_blank">
+                                Become a Member
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            {openMenu ? (
-                <div
-                    onClick={menuHandler}
-                    className="h-screen w-screen absolute top-0 left-0 z-10"
-                ></div>
-            ) : null}
+            )}
+            {isMobile && (
+                <div className={"scrollNavbar"}>
+                    <div className="logo">
+                        <Image
+                            src={LogoWithoutName}
+                            alt={"ASW Logo"}
+                            fill={true}
+                        />
+                    </div>
+                    <button className="menu" onClick={() => menuHandler()}>
+                        <Menu />
+                    </button>
+                    {openMenu && (
+                        <ul className={`overlay ${openMenu ? "show" : ""}`}>
+                            <li className="list" onClick={() => menuHandler()}>
+                                <Link href="/">Home</Link>
+                            </li>
+                            <li className="list" onClick={() => menuHandler()}>
+                                <Link href="/staff">Team</Link>
+                            </li>
+                            <li className="list" onClick={() => menuHandler()}>
+                                <Link href="/events">Events</Link>
+                            </li>
+                            <li className="list" onClick={() => menuHandler()}>
+                                <Link href={link} target="_blank">
+                                    Become a Member
+                                </Link>
+                            </li>
+                        </ul>
+                    )}
+                </div>
+            )}
         </>
     );
 };
