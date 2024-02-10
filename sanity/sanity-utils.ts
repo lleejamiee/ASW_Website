@@ -3,7 +3,7 @@ import { Page } from "@/types/Page";
 import { Executive } from "@/types/Executive";
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
-
+import { MemberSignUp } from "@/types/MemberSignUp";
 
 // Returns all the projects
 export async function getProjects(): Promise<Project[]> {
@@ -78,6 +78,16 @@ export async function getExecutives(): Promise<Executive[]> {
             "image": image.asset->url,
             role,
             url
+        }`
+    );
+}
+
+// Returns membership sign up link
+export async function getMemberSignUpLink(): Promise<MemberSignUp[]> {
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "membershipSignUpLink"] {
+            name,
+            link
         }`
     );
 }
