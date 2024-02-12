@@ -30,11 +30,31 @@ const project = {
         {
             name: "gallery",
             title: "Gallery",
-            type: "array",
-            of: [{ type: "image" }],
-            options: {
-                hotspot: true,
-            },
+            type: "object",
+            fields: [
+                {
+                    name: "images",
+                    title: "Images",
+                    type: "array",
+                    of: [
+                        {
+                            name: "image",
+                            title: "Image",
+                            type: "image",
+                            options: {
+                                hotspot: true,
+                            },
+                            fields: [
+                                {
+                                    name: "altText",
+                                    title: "Alternate Text",
+                                    type: "string",
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
         },
         {
             name: "url",

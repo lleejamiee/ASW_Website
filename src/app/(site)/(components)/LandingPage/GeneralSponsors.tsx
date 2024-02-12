@@ -1,12 +1,15 @@
 import { getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function GeneralSponsors() {
     const heading = await getProject("sponsor-heading");
     const diamond = await getProject("diamond");
     const platinum = await getProject("platinum");
     const gold = await getProject("gold");
+
+    console.log(platinum.gallery);
 
     return (
         <div className="GeneralSponsors">
@@ -18,7 +21,12 @@ export default async function GeneralSponsors() {
                 {diamond.gallery.map(
                     (item) =>
                         ({ item } && (
-                            <div key={item.url} className="CompanyLogo">
+                            <Link
+                                key={item.url}
+                                href={item.altText}
+                                target="_blank"
+                                className="CompanyLogo"
+                            >
                                 <Image
                                     src={item.url}
                                     alt="Diamond"
@@ -27,7 +35,7 @@ export default async function GeneralSponsors() {
                                     sizes="100%"
                                     style={{ width: "auto", height: "100%" }}
                                 />
-                            </div>
+                            </Link>
                         ))
                 )}
             </div>
@@ -37,16 +45,24 @@ export default async function GeneralSponsors() {
                 {platinum.gallery.map(
                     (item) =>
                         ({ item } && (
-                            <div key={item.url} className="CompanyLogo">
+                            <Link
+                                key={item.url}
+                                href={item.altText}
+                                target="_blank"
+                                className="CompanyLogo"
+                            >
                                 <Image
                                     src={item.url}
                                     alt="Platinum"
                                     width={0}
                                     height={0}
                                     sizes="100%"
-                                    style={{ width: "auto", height: "100%" }}
+                                    style={{
+                                        width: "auto",
+                                        height: "100%",
+                                    }}
                                 />
-                            </div>
+                            </Link>
                         ))
                 )}
             </div>
@@ -56,7 +72,12 @@ export default async function GeneralSponsors() {
                 {gold.gallery.map(
                     (item) =>
                         ({ item } && (
-                            <div key={item.url} className="CompanyLogo">
+                            <Link
+                                key={item.url}
+                                href={item.altText}
+                                target="_blank"
+                                className="CompanyLogo"
+                            >
                                 <Image
                                     src={item.url}
                                     alt="Gold"
@@ -65,7 +86,7 @@ export default async function GeneralSponsors() {
                                     sizes="100%"
                                     style={{ width: "auto", height: "100%" }}
                                 />
-                            </div>
+                            </Link>
                         ))
                 )}
             </div>

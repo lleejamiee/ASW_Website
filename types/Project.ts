@@ -6,7 +6,7 @@ export type Project = {
     name: string;
     slug: string;
     image: string;
-    gallery: { url: string }[];
+    gallery: { url: string; altText: string }[];
     url: string;
     content: PortableTextBlock[];
 };
