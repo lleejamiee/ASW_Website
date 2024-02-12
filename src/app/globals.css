@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+
+    font-family: NeueMachina-Light;
+    src: url("../app/(site)/assets/font/NeueMachina-Light.ttf");
+}
+
+@font-face {
+    font-family: NeueMachina-Regular;
+    src: url("../app/(site)/assets/font/NeueMachina-Regular.ttf");
+}
+
+@font-face {
+    font-family: NeueMachina-Ultrabold;
+    src: url("../app/(site)/assets/font/NeueMachina-Ultrabold.ttf");
+
+}
+
+@font-face {
+
+    font-family: Literaturnaya-Bold;
+    src: url("../app/(site)/assets/font/Literaturnaya-Bold.ttf");
+}
+
+@font-face {
+    font-family: Literaturnaya-Regular;
+    src: url("../app/(site)/assets/font/Literaturnaya-Regular.ttf");
+}
+
+@font-face {
+    font-family: Literaturnaya-Italic;
+    src: url("../app/(site)/assets/font/Literaturnaya-Italic.ttf");
+
+}
+

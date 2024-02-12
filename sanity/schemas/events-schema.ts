@@ -1,22 +1,33 @@
-const project = {
-    name: "project",
-    title: "Projects",
+export const event = {
+    name: "event",
+    title: "Event",
     type: "document",
     fields: [
         {
             name: "name",
-            title: "Name",
+            title: "Event Name",
             type: "string",
         },
         {
             name: "slug",
             title: "Slug",
             type: "slug",
-            options: { souce: "name" },
+            options: { source: "name", maxLength: 96 },
         },
         {
-            name: "image",
-            tile: "Image",
+            name: "date",
+            title: "Date",
+            type: "date",
+            options: {
+                dateFormat: "Do MMMM YYYY",
+                // timeFormat: "HH:mm",
+                // timeStep: 15,
+                calendarTodayLable: "Today",
+            },
+        },
+        {
+            name: "thumbnail",
+            tile: "Thumbnail",
             type: "image",
             options: { hotspot: true },
             fields: [
@@ -70,4 +81,27 @@ const project = {
     ],
 };
 
-export default project;
+export const events = {
+    name: "events",
+    title: "Events",
+    type: "document",
+    fields: [
+        {
+            name: "year",
+            title: "Year",
+            type: "string",
+        },
+        {
+            name: "slug",
+            title: "Slug",
+            type: "slug",
+            options: { source: "year", maxLength: 96 },
+        },
+        {
+            name: "event",
+            title: "Event",
+            type: "array",
+            of: [{ type: "reference", to: [{ type: "event" }] }],
+        },
+    ],
+};

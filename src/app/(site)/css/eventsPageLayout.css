@@ -1,0 +1,175 @@
+.BackgroundColour {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 71vh;
+    background-color: #fbf8f2;
+}
+
+.Heading {
+    display: flex;
+    font-family: "Literaturnaya-Bold";
+    font-size: xxx-large;
+    color: #493725;
+    padding-top: 4%;
+    padding-left: 5%;
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100vw;
+    height: auto;
+}
+
+.SideContainer {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding-left: 5%;
+    align-items: center;
+}
+
+.TabsContainer {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+}
+
+.Tab {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 40px;
+    font-family: "NeueMachina-Regular";
+    border-width: 4px;
+    border-style: double;
+    border-color: #e0d4c7;
+    background-color: #fbf8f2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    &:hover {
+        background-color: rgb(224 212 199);
+    }
+
+    &__selected {
+        background-color: rgb(224 212 199);
+    }
+}
+
+.EventsContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 5%;
+    width: 100%;
+    height: auto;
+    border-width: 4px;
+    border-style: double;
+    border-color: #e0d4c7;
+    background-color: #fbf8f2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Dropdown {
+    padding-top: 3%;
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+
+.DropdownButton {
+    background-color: #fbf8f2;
+    color: #493725;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e0d4c7;
+    width: 250px;
+    font-family: "NeueMachina-Regular";
+
+    &:hover {
+        background-color: #D7CEBF;
+    }
+}
+
+.DropdownContent {
+    display: none;
+    position: absolute;
+    width: 250px;
+    background-color: #fbf8f2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #e0d4c7;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: "NeueMachina-Regular";
+
+    &:hover {
+        background-color: #D7CEBF;
+    }
+}
+
+.DropdownContent button {
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 250px;
+    align-items: center;
+    &:hover{
+        font-family: "NeueMachina-Ultrabold";
+    }
+}
+  
+.Dropdown:hover .DropdownButton {
+    display: block;
+    background-color: #D7CEBF;
+}
+
+.Dropdown:hover .DropdownContent {
+    display: block;
+    background-color: #fbf8f2;
+}
+
+.EventsListContainer {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-bottom: 20px;
+}
+
+.EventContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    border-color: black;
+    height: fit-content;
+    margin-top: 20px;
+
+    &:hover {
+        background-color: #D7CEBF;
+    }
+}
+
+.EventsContainer h1 {
+    font-family: "Literaturnaya-Bold";
+    font-size: large;
+}
+
+.EventsContainer p {
+    font-family: "NeueMachina-Regular";
+    font-size: small;
+}
