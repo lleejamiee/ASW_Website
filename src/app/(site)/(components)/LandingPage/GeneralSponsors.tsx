@@ -9,8 +9,6 @@ export default async function GeneralSponsors() {
     const platinum = await getProject("platinum");
     const gold = await getProject("gold");
 
-    console.log(platinum.gallery);
-
     return (
         <div className="GeneralSponsors">
             <div className="SponsorHeading">
