@@ -203,3 +203,14 @@
     border-top: 1px solid #493725;
     padding-bottom: 2%;
 }
+
+@media only screen and (max-width: 768px) {
+    .ASWIntroduction {
+        background-image: linear-gradient(#f5eadfcc, #f5eadfcc), url('../assets/photos/background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+    }
+}
