@@ -4,16 +4,14 @@ import Image from "next/image";
 import "@/src/app/(site)/css/teampageLayout.css";
 import LinkedIn from "@/src/app/(site)/assets/photos/LinkedIn.png";
 
-export default async function Home() {
+export default async function Page() {
     const executives = await getExecutives();
 
     const heading = await getProject("team-page-heading");
 
-    console.log("Executives: ", executives);
-
     return (
-        <div className="max-w-5xl mx-auto">
-            <div className="staffHeader">
+        <>
+            <div className="TeamHeader">
                 <PortableText value={heading.content} />
             </div>
 
@@ -47,6 +45,6 @@ export default async function Home() {
                     </div>
                 ))}
             </div>
-        </div>
+        </>
     );
 }

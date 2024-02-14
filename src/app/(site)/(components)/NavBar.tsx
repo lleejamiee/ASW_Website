@@ -73,7 +73,7 @@ const NavBar = () => {
                             <Link href="/">Home</Link>
                         </li>
                         <li className="pagesList">
-                            <Link href="/staff">Team</Link>
+                            <Link href="/team">Team</Link>
                         </li>
                         <li className="pagesList">
                             <Link href="/events">Events</Link>
@@ -104,7 +104,7 @@ const NavBar = () => {
                                 <Link href="/">Home</Link>
                             </li>
                             <li className="list" onClick={() => menuHandler()}>
-                                <Link href="/staff">Team</Link>
+                                <Link href="/team">Team</Link>
                             </li>
                             <li className="list" onClick={() => menuHandler()}>
                                 <Link href="/events">Events</Link>
