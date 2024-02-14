@@ -51,9 +51,6 @@
     width: 100vw;
     height: fit-content;
     min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
     padding-bottom: 2%;
 }
 
@@ -68,19 +65,7 @@
     padding-bottom: 2%;
 }
 
-.Diamond {
-    display: flex;
-    justify-content:start;
-    background-color: #d0e3f5;
-    border-style: hidden;
-    object-position: left top;
-    border-radius: 0px 0px 15px 15px;
-    padding-top: 0;
-    padding: 1px;
-    font-family: "Literaturnaya-Regular";
-    font-size: xx-large;
-    color: #4AA5F8;
-}
+
 
 .LogoContainer {
     display: flex;
@@ -103,22 +88,66 @@
     position: relative;
 }
 
-.Platinum {
+
+.Diamond {
     display: flex;
-    justify-content: center;
-    width: 100vw;
+    background-color: #4aa5f8;
+    border-style: hidden;
+    width: 150px;
+    min-width: 150px;
+    padding-left: 10px;
+    border-radius: 0px 0px 15px 0px;
     font-family: "Literaturnaya-Regular";
     font-size: xx-large;
-    color: #797979;
+    color: #493725;
+}
+.hrDiamond {
+    display: block;
+    height: 3px;
+    width: 75vw;
+    border-bottom: 3px solid #4aa5f8;
+    padding-bottom: 0%;
+}
+
+.Platinum {
+    display: flex;
+    background-color: #797979;
+    border-style: hidden;
+    width: 150px;
+    min-width: 150px;
+    padding-left: 10px;
+    border-radius: 0px 0px 15px 0px;
+    font-family: "Literaturnaya-Regular";
+    font-size: xx-large;
+    color: #493725;
+}
+.hrPlatinum {
+    display: block;
+    height: 3px;
+    width: 75vw;
+    border-bottom: 3px solid #797979;
+    padding-bottom: 0%;
 }
 
 .Gold {
     display: flex;
-    justify-content: center;
-    width: 100vw;
+    background-color: #FFDC32;
+    border-style: hidden;
+    width: 150px;
+    min-width: 150px;
+    padding-left: 10px;
+    border-radius: 0px 0px 15px 0px;
     font-family: "Literaturnaya-Regular";
     font-size: xx-large;
-    color: #FFDC32;
+    color: #493725;
+}
+
+.hrGold {
+    display: block;
+    height: 3px;
+    width: 75vw;
+    border-bottom: 3px solid #FFDC32;
+    padding-bottom: 0%;
 }
 
 .OurEvents {
@@ -210,6 +239,8 @@
     border-bottom: 1px solid #493725;
     padding-bottom: 0%;
 }
+
+
 
 @media only screen and (max-width: 768px) {
     .ASWIntroduction {

@@ -16,7 +16,7 @@ export default async function GeneralSponsors() {
             <div className="SponsorHeading">
                 <PortableText value={heading.content} />
             </div>
-            <hr className="hr" />
+            <hr className="hrDiamond" />
             <div className="Diamond">{diamond.name}</div>
             <div className="LogoContainer">
                 {diamond.gallery.map(
@@ -40,7 +40,7 @@ export default async function GeneralSponsors() {
                         ))
                 )}
             </div>
-            <hr className="hr" />
+            <hr className="hrPlatinum" />
             <div className="Platinum">{platinum.name}</div>
             <div className="LogoContainer">
                 {platinum.gallery.map(
@@ -67,7 +67,7 @@ export default async function GeneralSponsors() {
                         ))
                 )}
             </div>
-            <hr className="hr" />
+            <hr className="hrGold" />
             <div className="Gold">{gold.name}</div>
             <div className="LogoContainer">
                 {gold.gallery.map(
