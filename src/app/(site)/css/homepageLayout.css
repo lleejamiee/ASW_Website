@@ -70,8 +70,13 @@
 
 .Diamond {
     display: flex;
-    justify-content: center;
-    width: 100vw;
+    justify-content:start;
+    background-color: #d0e3f5;
+    border-style: hidden;
+    object-position: left top;
+    border-radius: 0px 0px 15px 15px;
+    padding-top: 0;
+    padding: 1px;
     font-family: "Literaturnaya-Regular";
     font-size: xx-large;
     color: #4AA5F8;
@@ -200,10 +205,10 @@
 
 .hr {
     display: block;
-    height: 2px;
-    width: 80vw;
-    border-top: 1px solid #493725;
-    padding-bottom: 2%;
+    height: 3px;
+    width: 100vw;
+    border-bottom: 1px solid #493725;
+    padding-bottom: 0%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -224,5 +229,25 @@
         padding-right: 5%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .LogoContainer {
+        display:flex;
+        justify-content: center;
+        height: 100%;
+
+    }
+    
+    .CompanyLogo {
+        height: auto;
+        min-height: 250px;
+        width: 25%;
+        min-width: 100px;
+        min-height: 150px;
+        align-items: center;
+        object-fit: contain;
+        position: relative;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }

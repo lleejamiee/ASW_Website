@@ -16,6 +16,7 @@ export default async function GeneralSponsors() {
             <div className="SponsorHeading">
                 <PortableText value={heading.content} />
             </div>
+            <hr className="hr" />
             <div className="Diamond">{diamond.name}</div>
             <div className="LogoContainer">
                 {diamond.gallery.map(
