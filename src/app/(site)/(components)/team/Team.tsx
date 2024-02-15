@@ -45,6 +45,7 @@ export function Team() {
         fetchTeam();
     }, [state.selectedYear]);
 
+    // TODO: TeamDropdown needs conditional added after mobile version is done.
     return (
         <>
             <div className="HeaderContainer">
