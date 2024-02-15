@@ -21,6 +21,8 @@
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
+    align-items: center;
+    display: flex;
 }
 
 .ASWLogo {
@@ -49,9 +51,6 @@
     width: 100vw;
     height: fit-content;
     min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
     padding-bottom: 2%;
 }
 
@@ -64,15 +63,7 @@
     color: #493725;
     padding-top: 2%;
     padding-bottom: 2%;
-}
-
-.Diamond {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    font-family: "Literaturnaya-Regular";
-    font-size: xx-large;
-    color: #4AA5F8;
+    margin-top: 3%;
 }
 
 .LogoContainer {
@@ -83,41 +74,88 @@
     object-fit: contain;
     position: relative;
     width: 100vw;
-    height: 100px;
-    padding-bottom: 3%;
+    margin-bottom: 5%;
+    margin-top: 2%;
 }
 
 .CompanyLogo {
     display: flex;
-    height: 100%;
+    height: 100px; 
     width: auto;
     align-items: center;
     object-fit: contain;
     position: relative;
+    padding: 5px; /* Apply padding */
+    margin: 5px; /* Apply margin */
+}
+
+.Diamond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4aa5f8;
+    border-style: hidden;
+    width: 150px;
+    min-width: 150px;
+    font-family: "Literaturnaya-Regular";
+    font-size: xx-large;
+    color: #FFFCF7;
+}
+
+.hrDiamond {
+    display: block;
+    height: 3px;
+    width: 75vw;
+    border-bottom: 3px solid #4aa5f8;
+
 }
 
 .Platinum {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    align-items: center;
+    background-color: #797979;
+    border-style: hidden;
+    width: 150px;
+    min-width: 150px;
     font-family: "Literaturnaya-Regular";
     font-size: xx-large;
-    color: #797979;
+    color: #FFFCF7;
+}
+.hrPlatinum {
+    display: block;
+    height: 3px;
+    width: 75vw;
+    border-bottom: 3px solid #797979;
+
 }
 
 .Gold {
     display: flex;
     justify-content: center;
-    width: 100vw;
+    align-items: center;
+    background-color: #FFDC32;
+    border-style: hidden;
+    width: 150px;
+    min-width: 150px;
     font-family: "Literaturnaya-Regular";
     font-size: xx-large;
-    color: #FFDC32;
+    color: #FFFCF7;
+}
+
+.hrGold {
+    display: block;
+    height: 3px;
+    width: 75vw;
+    border-bottom: 3px solid #FFDC32;
+
 }
 
 .OurEvents {
     background-color: #aba08f;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
 }
 
 .OurEventsHeading {
@@ -127,6 +165,11 @@
     color: #FFFCF7;
     padding-top: 4%;
     padding-left: 5%;
+}
+
+.OurEventsContent{
+    display: flex;
+    flex-direction: row;
 }
 
 .EventImageContainer {
@@ -181,6 +224,7 @@
     padding-left: 1rem/* 16px */;
     padding-right: 1rem/* 16px */;
     border-radius: 9999px;
+    margin-left: 5%;
 }
 
 .hover\:Button:hover {
@@ -198,8 +242,122 @@
 
 .hr {
     display: block;
-    height: 2px;
-    width: 80vw;
-    border-top: 1px solid #493725;
-    padding-bottom: 2%;
+    height: 3px;
+    width: 100vw;
+    border-bottom: 1px solid #493725;
+    padding-bottom: 0%;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .ASWIntroduction {
+        display: block;
+        padding-top: 20%;
+    }
+
+    .ASWLogo {
+        height: 30%;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50%;
+    }
+
+    .ASWIntroductionContent {
+        padding-top: 10%;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: large;
+    }
+    
+    .GeneralSponsors {
+        text-align: center;
+    }
+    
+    .SponsorHeading {
+        padding-bottom: 5%;
+        margin-bottom: 5%; 
+    }
+    
+    .LogoContainer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+        min-width: 300px;
+    }
+    
+    .CompanyLogo {
+        height: 80px;
+        width: auto;
+        flex-shrink: 0;
+        align-items: center;
+        object-fit: contain;
+        position: relative;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+    
+    .Diamond, .Platinum, .Gold {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hrDiamond, .hrPlatinum, .hrGold {
+        width: 100vw;
+        margin-top: 5%; 
+    }
+
+    .OurEventsHeading {
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0%;
+    }
+    
+    .EventImageContainer {
+        display: block;
+        width: 100vw;
+        height: auto;
+        place-self: end;
+        position: relative;
+    }
+
+    .OurEventsContent{
+        display: block;
+    }
+
+    .EventTextContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: auto;
+        padding-top: 3%;
+        padding-left: 5%;
+        padding-right: 10%;
+        padding-bottom: 3%;
+    }
+
+    .EventTypeContainer {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5%;
+    }
+
+    .Button{
+        margin-top: 3%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3%;
+    }
 }

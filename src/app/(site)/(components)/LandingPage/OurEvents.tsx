@@ -12,7 +12,7 @@ export default async function OurEvents() {
     return (
         <div className="OurEvents">
             <div className="OurEventsHeading">{ourEvents.name}</div>
-            <div className="flex flex-row w-100vw h-75">
+            <div className="OurEventsContent">
                 <div className="EventTextContainer">
                     <div className="EventTypeContainer">
                         <div className="EventTypeHeading">{educate.name}</div>
@@ -47,9 +47,9 @@ export default async function OurEvents() {
                             style={{ width: "100%", height: "auto" }}
                         />
                     )}
-                </div>
             </div>
-            <div className="PaddingLeft-5 w-fit">
+            </div>
+            <div className="pb-1">
                 <Link href={"/events"}>
                     <button className="Button hover:Button">
                         View more events
