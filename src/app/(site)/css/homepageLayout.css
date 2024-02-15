@@ -94,12 +94,12 @@
 
 .Diamond {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #4aa5f8;
     border-style: hidden;
     width: 150px;
     min-width: 150px;
-    padding-left: 10px;
-
     font-family: "Literaturnaya-Regular";
     font-size: xx-large;
     color: #FFFCF7;
@@ -115,12 +115,12 @@
 
 .Platinum {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #797979;
     border-style: hidden;
     width: 150px;
     min-width: 150px;
-    padding-left: 10px;
-
     font-family: "Literaturnaya-Regular";
     font-size: xx-large;
     color: #FFFCF7;
@@ -135,12 +135,12 @@
 
 .Gold {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #FFDC32;
     border-style: hidden;
     width: 150px;
     min-width: 150px;
-    padding-left: 10px;
-
     font-family: "Literaturnaya-Regular";
     font-size: xx-large;
     color: #FFFCF7;
@@ -266,12 +266,14 @@
         margin-right: auto;
     }
     
-    .SponsorHeading {
+    .GeneralSponsors {
         text-align: center;
+    }
+
+    .SponsorHeading {
         padding-bottom: 5%;
     }
     
-
     .CompanyLogo {
         height: auto;
         min-height: 250px;
@@ -288,6 +290,7 @@
     .Diamond {
         margin-left: auto;
         margin-right: auto;
+        
     }
     
     .hrDiamond {
@@ -298,6 +301,7 @@
         margin-left: auto;
         margin-right: auto;
     }
+
     .hrPlatinum {
         width: 100vw;
     }
@@ -305,6 +309,7 @@
     .Gold {
         margin-left: auto;
         margin-right: auto;
+        text-align: center;
     }
     
     .hrGold {
