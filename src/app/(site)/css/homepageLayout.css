@@ -257,6 +257,8 @@
     }
 
     .ASWLogo {
+        height: 30%;
+        width: auto;
         margin-left: auto;
         margin-right: auto;
         height: 50%;
@@ -268,6 +270,7 @@
         padding-right: 5%;
         margin-left: auto;
         margin-right: auto;
+        font-size: large;
     }
     
     .GeneralSponsors {
@@ -283,10 +286,10 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        margin-left: auto; /* Center the container horizontally */
-        margin-right: auto; /* Center the container horizontally */
-        margin-bottom: 5%; /* Add margin to create space between logo container and horizontal rule */
-        min-width: 300px; /* Set a minimum width for the container */
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5%;
+        min-width: 300px;
     }
     
     .CompanyLogo {
