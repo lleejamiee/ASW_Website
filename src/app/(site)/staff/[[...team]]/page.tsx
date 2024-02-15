@@ -12,16 +12,16 @@ export default async function Home() {
     console.log("Executives: ", executives);
 
     return (
-        <div className="max-w-5xl mx-auto">
+        <div className="bg-[#fbf8f2]">
             <div className="staffHeader">
                 <PortableText value={heading.content} />
             </div>
 
-            <div className="execList flex flex-wrap justify-center items-center p-5 pt-20">
+            <div className="execList flex flex-wrap justify-center items-center p-5 pt-20 max-w-5xl mx-auto ">
                 {executives.map((executive) => (
                     <div
                         key={executive.name}
-                        className="executive-container m-4"
+                        className="executive-container m-4 w-64 h-72"
                     >
                         {executive.image && (
                             <div className="border-b-2 border-solid border-brown_txt w-64">
@@ -37,9 +37,9 @@ export default async function Home() {
                             </div>
                         )}
 
-                        <div className="flex flex-col items-center justify-center mt-2">
+                        <div className="flex flex-col items-center justify-center mt-2 ">
                             <p>{executive.name}</p>
-                            <p>{executive.role}</p>
+                            <p className="flex-wrap text-center	">{executive.role}</p>
                             <a href={executive.url}>
                                 <Image src={LinkedIn} alt="LinkedIn" />
                             </a>
