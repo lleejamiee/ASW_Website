@@ -55,7 +55,7 @@ export function Team() {
                 <div className="ExecContainer">
                     <div className="Heads">
                         {heads.map((head) => (
-                            <div className="ExecDetail">
+                            <div key={head._id} className="ExecDetail">
                                 <div className="ExecImage">
                                     <Image
                                         src={head.image}
@@ -78,7 +78,7 @@ export function Team() {
                     </div>
                     <div className="ExecList">
                         {team.map((team) => (
-                            <div className="ExecDetail">
+                            <div key={team._id} className="ExecDetail">
                                 <div className="ExecImage">
                                     <Image
                                         src={team.image}
