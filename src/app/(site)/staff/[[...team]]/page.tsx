@@ -17,7 +17,7 @@ export default async function Home() {
                 <PortableText value={heading.content} />
             </div>
 
-            <div className="execList flex flex-wrap justify-center items-center p-5 pt-20 max-w-5xl mx-auto ">
+            <div className="execList flex flex-wrap justify-center items-center p-5 pt-10 max-w-5xl mx-auto ">
                 {executives.map((executive) => (
                     <div
                         key={executive.name}
