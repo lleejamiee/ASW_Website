@@ -6,3 +6,11 @@ export type Executive = {
     role: string;
     url: string;
 };
+
+export type Executives = {
+    _id: string;
+    _createdAt: Date;
+    year: string;
+    slug: string;
+    executives: Executive[];
+};

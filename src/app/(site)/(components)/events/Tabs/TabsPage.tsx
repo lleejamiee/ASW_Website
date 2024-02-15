@@ -1,11 +1,11 @@
 "use client";
 
 import { useContext, useEffect, useState } from "react";
-import { Tab, Tabs } from "./Tabs";
+import { Tab, Tabs } from "../../../ui/Tabs";
 import { UpcomingEvents } from "../Events/UpcomingEvents";
 import { PastEvents } from "../Events/PastEvents";
 import { EventsPropsContext } from "../EventsContext";
-import { Dropdown } from "../Dropdown/Dropdown";
+import { EventsDropdown } from "../Dropdown/EventsDropdown";
 
 export default function TabsPage() {
     const { state, dispatch } = useContext(EventsPropsContext);
@@ -29,7 +29,7 @@ export default function TabsPage() {
                     tabs={tabs}
                     onClick={handleTabClick}
                 />
-                {selectedTabId === tabs[1].id && <Dropdown />}
+                {selectedTabId === tabs[1].id && <EventsDropdown />}
             </div>
             {selectedTabId === tabs[0].id && <UpcomingEvents />}
             {selectedTabId === tabs[1].id && <PastEvents />}
