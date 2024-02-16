@@ -1,4 +1,4 @@
-import "@/src/app/(site)/css/teamPageLayout.css";
+import "@/src/app/(site)/css/teampageLayout.css";
 import { TeamStateProvider } from "./TeamContext";
 import { Team } from "./Team";
 
