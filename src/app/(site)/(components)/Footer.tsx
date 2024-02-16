@@ -53,10 +53,7 @@ export default function Footer() {
                 <p className="flex">
                     Powered by ASW using React, TypeScript, NextJS, Sanity CMS
                 </p>
-                <p className="flex">
-                    &copy; {currentYear} AUT STEM Women, Inc. All rights
-                    reserved.
-                </p>
+                <p className="flex">&copy; {currentYear} AUT STEM Women</p>
             </div>
         </>
     );
