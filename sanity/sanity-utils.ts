@@ -1,6 +1,6 @@
 import { Project } from "@/types/Project";
 import { Page } from "@/types/Page";
-import { Executive } from "@/types/Executive";
+import { Executive, Executives } from "@/types/Executive";
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
 import { Event, Events } from "@/types/Events";
@@ -82,6 +82,34 @@ export async function getExecutives(): Promise<Executive[]> {
             role,
             url
         }`
+    );
+}
+
+// Returns executives from all year.
+export async function getExecutivesByAllYear(): Promise<Executives[]> {
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "executives"] {
+            _id,
+            _createdAt,
+            year,
+            slug
+        }`
+    );
+}
+
+// Returns executives by year.
+export async function getExecutiveByYear(year: string): Promise<Executives> {
+    return createClient(clientConfig).fetch(
+        groq`*[_type == "executives" && year == $year][0] {
+            "executives": executive[] -> {
+                _id,
+                name,
+                "image": image.asset->url,
+                role,
+                url
+            }
+        }`,
+        { year }
     );
 }
 
