@@ -82,17 +82,3 @@ export const EventsPropsProvider: React.FC<{ children: React.ReactNode }> = ({
         </EventsPropsContext.Provider>
     );
 };
-
-export const useEventsProps = () => {
-    const { dispatch } = useContext(EventsPropsContext);
-
-    const setAndReturnBoolean = (action: Actions): boolean => {
-        dispatch(action);
-
-        return true;
-    };
-
-    return {
-        setAndReturnBoolean,
-    };
-};
