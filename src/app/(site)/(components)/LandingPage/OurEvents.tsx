@@ -2,6 +2,7 @@ import { getProject } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import Link from "next/link";
+import "@/src/app/(site)/css/homepageLayout.css";
 
 export default async function OurEvents() {
     const ourEvents = await getProject("our-events");
@@ -47,7 +48,7 @@ export default async function OurEvents() {
                             style={{ width: "100%", height: "auto" }}
                         />
                     )}
-            </div>
+                </div>
             </div>
             <div className="pb-1">
                 <Link href={"/events"}>
