@@ -5,10 +5,8 @@ import { EventsPropsProvider } from "./EventsContext";
 export default function Events() {
     return (
         <EventsPropsProvider>
-            <div className="BackgroundColour">
                 <div className="EventsHeader">ASW Events</div>
                 <TabsPage />
-            </div>
         </EventsPropsProvider>
     );
 }
