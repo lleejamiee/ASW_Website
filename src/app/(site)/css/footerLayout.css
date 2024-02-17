@@ -8,6 +8,8 @@
     text-align: center;
     font-family: "NeueMachina-Ultrabold";
     font-size: large;
+    max-width: 100%;
+    min-width: 100%;
 }
 
 .logoContainer {
@@ -18,7 +20,7 @@
     justify-content: space-evenly;
     object-fit: contain;
     position: relative;
-    width: 40vw;
+    width: 40%;
     height: 25%;
 }
 
@@ -41,4 +43,6 @@
     text-align: center;
     font-family: "NeueMachina-Regular";
     font-size: small;
+    max-width: 100%;
+    min-width: 100%;
 }
