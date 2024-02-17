@@ -8,14 +8,16 @@ export default async function ASWIntroduction() {
 
     return (
         <div className="ASWIntroduction">
-                <div className="ASWLogo">
-                    {intro.image && (
-                        <Image src={intro.image} alt={intro.name} fill={true} />
-                    )}
-                </div>
-                <div className="ASWIntroductionContent">
+            <div className="ASWLogo">
+                {intro.image && (
+                    <Image src={intro.image} alt={intro.name} fill={true} />
+                )}
+            </div>
+            <div className="ASWIntroductionContent">
+                <span>
                     <PortableText value={intro.content} />
-                </div>
+                </span>
+            </div>
         </div>
     );
 }
