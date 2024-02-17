@@ -19,21 +19,27 @@ export default async function OurEvents() {
                         <div className="EventTypeHeading">{educate.name}</div>
                         <hr className="flex h-px bg-gray-200"></hr>
                         <div className="EventTypeContent">
-                            <PortableText value={educate.content} />
+                            <span>
+                                <PortableText value={educate.content} />
+                            </span>
                         </div>
                     </div>
                     <div className="EventTypeContainer">
                         <div className="EventTypeHeading">{social.name}</div>
                         <hr className="flex h-px bg-gray-200"></hr>
                         <div className="EventTypeContent">
-                            <PortableText value={social.content} />
+                            <span>
+                                <PortableText value={social.content} />
+                            </span>
                         </div>
                     </div>
                     <div className="EventTypeContainer">
                         <div className="EventTypeHeading">{network.name}</div>
                         <hr className="flex h-px bg-gray-200"></hr>
                         <div className="EventTypeContent">
-                            <PortableText value={network.content} />
+                            <span>
+                                <PortableText value={network.content} />
+                            </span>
                         </div>
                     </div>
                 </div>
