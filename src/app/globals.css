@@ -38,3 +38,14 @@
 
 }
 
+main{
+    background-color: #fbf8f2;
+    min-height: calc(100vh - 224px);;
+}
+
+footer {
+    position: relative;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+}

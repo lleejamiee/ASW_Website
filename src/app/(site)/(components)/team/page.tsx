@@ -4,7 +4,7 @@ import { Team } from "./Team";
 
 export default async function Page() {
     return (
-        <div className="Background">
+        <div>
             <div className="ExecutivesHeader">ASW Executives</div>
             <TeamStateProvider>
                 <Team />
