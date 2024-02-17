@@ -1,35 +1,27 @@
-.BackgroundColour {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    min-height: 71vh;
-    background-color: #fbf8f2;
-}
-
-.Heading {
+.EventsHeader {
     display: flex;
     font-family: "Literaturnaya-Bold";
     font-size: xxx-large;
     color: #493725;
     padding-top: 4%;
-    padding-left: 5%;
+    margin-left: 5%;
 }
 
-.Container {
+.EventDisplay {
     display: flex;
     flex-direction: row;
     padding-top: 40px;
     padding-bottom: 40px;
     width: 100vw;
     height: auto;
+    margin-left: 5%;
 }
 
-.SideContainer {
+.EventTypeSelector {
     display: flex;
     flex-direction: column;
     width: fit-content;
     height: fit-content;
-    padding-left: 5%;
     align-items: center;
 }
 
@@ -62,7 +54,7 @@
     }
 }
 
-.EventsContainer {
+.DisplayedEventsContainer {
     display: flex;
     flex-direction: column;
     margin-left: 40px;
@@ -79,14 +71,14 @@
     padding-right: 20px;
 }
 
-.EventsListContainer {
+.EventsList {
     display: flex;
     flex-direction: column;
     height: fit-content;
     margin-bottom: 20px;
 }
 
-.EventContainer {
+.EventSelector {
     display: flex;
     flex-direction: column;
     border-radius: 2px;
@@ -107,4 +99,30 @@
 .EventsContainer p {
     font-family: "NeueMachina-Regular";
     font-size: small;
+}
+
+@media only screen and (max-width: 768px) {
+    .EventsHeader {
+        display: block;
+        text-align: center;
+        padding-top: 8%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .EventDisplay {
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        height: auto;
+    }
+
+    .DisplayedEventsContainer {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

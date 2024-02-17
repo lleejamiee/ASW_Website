@@ -1,9 +1,6 @@
-.Background {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    padding-bottom: 5%;
-    background-color: #fbf8f2;
+.BackButtonContainer{
+ padding-top: 5%;
+  margin-bottom: 3%;
 }
 
 .BackToEventsButton {
@@ -11,7 +8,6 @@
     width: fit-content;
     font-family: "NeueMachina-Regular";
     color: #493725;
-    margin-top: 4%;
     margin-left: 5%;
     padding-right: 40px;
     padding-left: 40px;
@@ -26,29 +22,17 @@
     }
 }
 
-.Container {
+.CurrentEvent {
     display: flex;
     flex-direction: row;
     width: 100vw;
     height: fit-content;
 }
 
-.SideContainer {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    height: 25vw;
-    margin-top: 5%;
-    margin-bottom: 3%;
-    margin-left: 5%;
-    object-fit: contain;
-    position: relative;
-}
-
 .CarouselContainer {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 35%;
     height: 90%;
     position: relative;
     object-fit: contain;
@@ -56,6 +40,7 @@
     align-items: center;
     box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.05);
     overflow: hidden;
+    margin-left: 5%;
   }
 
 .Carousel {
@@ -67,12 +52,12 @@
   box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.05);
 }
 
-.Inner {
+.CarouselInner {
   white-space: nowrap;
   transition: transform 0.3s;
 }
 
-.CarouselItem {
+.CurrentImage {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -100,7 +85,7 @@
   align-items: center;
 }
 
-.EventDetail {
+.EventContent {
     display: flex;
     flex-direction: column;
     margin-left: 5%;
@@ -110,7 +95,7 @@
     height: fit-content;
 }
 
-.Heading {
+.CurrentEventTitle {
     display: flex;
     font-family: "Literaturnaya-Bold";
     font-size: xx-large;
@@ -119,7 +104,7 @@
     width: fit-content;
 }
 
-.Date {
+.CurrentEventDate {
     display: flex;
     font-family: "NeueMachina-Regular";
     font-size: medium;
@@ -128,7 +113,7 @@
     width: fit-content;
 }
 
-.Description {
+.CurrentEventDescription {
     display: flex;
     font-family: "NeueMachina-Regular";
     font-size: large;
@@ -158,4 +143,20 @@
     &:hover {
         background-color: #D7CEBF;
     }
+}
+
+@media only screen and (max-width: 768px) {
+  .BackButtonContainer{
+    padding-top: 12%;
+   }
+
+  .CarouselContainer {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .CurrentEvent {
+    flex-direction: column;
+  }
 }

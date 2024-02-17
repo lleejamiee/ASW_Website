@@ -23,7 +23,7 @@ export function PastEvents() {
     }, [dispatch]);
 
     return (
-        <div className="EventsContainer">
+        <div className="DisplayedEventsContainer">
             <DisplayPastEventsList />
         </div>
     );
@@ -51,11 +51,11 @@ export function DisplayPastEventsList() {
     return (
         <>
             {eventsList ? (
-                <div className="EventsListContainer">
+                <div className="EventsList">
                     {eventsList.events.map((event) => (
                         <button
                             key={event._id}
-                            className="EventContainer"
+                            className="EventSelector"
                             onClick={() => handleClick(event._id)}
                         >
                             <h1>{event.name}</h1>
