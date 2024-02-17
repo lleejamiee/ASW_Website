@@ -22,7 +22,7 @@ export default function TabsPage() {
     };
 
     return (
-        <div className="EventSelector">
+        <div className="EventDisplay">
             <div className="EventTypeSelector">
                 <Tabs
                     selectedId={selectedTabId}

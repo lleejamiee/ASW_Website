@@ -57,18 +57,17 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
     }, [params._id]);
 
     return (
-        <div className="Background">
+        <div className="BackgroundColour">
             <button
                 className="BackToEventsButton"
                 onClick={() => handleClick()}
             >
                 <ArrowBigLeft /> Back to Events
             </button>
-            <div className="Container">
-                <div className="SideContainer">
+            <div className="CurrentEvent">
                     <div className="CarouselContainer">
                         <div
-                            className="Inner"
+                            className="CarouselInner"
                             style={{
                                 transform:
                                     "translate(-" + activeIndex * 100 + "%)",
@@ -77,7 +76,7 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
                             {event?.gallery.map((image) => (
                                 <div key={image.url} className="CarouselItem">
                                     <img
-                                        className="CarouselImg"
+                                        className="CurrentImage"
                                         src={image.url}
                                         alt={"Event Image"}
                                     />
@@ -111,12 +110,11 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
                             </button>
                         </div>
                     )}
-                </div>
-                <div className="EventDetail">
-                    <div className="Heading">{event?.name}</div>
-                    <div className="Date">{event?.date}</div>
+                <div className="EventContent">
+                    <div className="CurrentEventTitle">{event?.name}</div>
+                    <div className="CurrentEventDate">{event?.date}</div>
                     {event && (
-                        <div className="Description">
+                        <div className="CurrentEventDescription">
                             <span>
                                 <PortableText value={event.content} />
                             </span>

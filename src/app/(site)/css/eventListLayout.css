@@ -1,10 +1,4 @@
-.BackgroundColour {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    min-height: 71vh;
-    background-color: #fbf8f2;
-}
+
 
 .EventsHeader {
     display: flex;
@@ -15,7 +9,7 @@
     padding-left: 5%;
 }
 
-.EventSelector {
+.EventDisplay {
     display: flex;
     flex-direction: row;
     padding-top: 40px;
@@ -62,7 +56,7 @@
     }
 }
 
-.EventsContainer {
+.DisplayedEventsContainer {
     display: flex;
     flex-direction: column;
     margin-left: 40px;
@@ -79,14 +73,14 @@
     padding-right: 20px;
 }
 
-.EventsListContainer {
+.EventsList {
     display: flex;
     flex-direction: column;
     height: fit-content;
     margin-bottom: 20px;
 }
 
-.EventContainer {
+.EventSelector {
     display: flex;
     flex-direction: column;
     border-radius: 2px;

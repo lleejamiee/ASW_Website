@@ -22,9 +22,9 @@ export function UpcomingEvents() {
     }, []);
 
     return (
-        <div className="EventsContainer">
+        <div className="DisplayedEventsContainer">
             {upcomingEvents ? (
-                <div className="EventsListContainer">
+                <div className="EventsList">
                     {upcomingEvents.map((event) => (
                         <button
                             key={event._id}
