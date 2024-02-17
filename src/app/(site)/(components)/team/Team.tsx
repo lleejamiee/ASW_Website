@@ -49,7 +49,7 @@ export function Team() {
     return (
         <>
             <div className="HeaderContainer">
-                <div className="TeamHeader">Team of {state.selectedYear}</div>
+                <div className="TeamHeader">Team of </div>
                 {state.years && <TeamDropdown />}
             </div>
             {team && heads && (

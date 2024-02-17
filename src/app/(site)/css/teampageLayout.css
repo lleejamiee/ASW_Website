@@ -12,16 +12,17 @@
     font-size: xxx-large;
     color: #493725;
     padding-top: 4%;
-    padding-left: 5%;
+    margin-left: 5%;
 }
 
 .HeaderContainer {
     display: flex;
-    width: 100%;
     flex-direction: row;
     align-items: center; 
-    justify-content: space-between;
-    padding-right: 5%;
+    width: 275px;
+    margin-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 20px;
 }
 
 .TeamHeader {
@@ -29,9 +30,7 @@
     font-family: "Literaturnaya-Bold";
     font-size: xx-large;
     color: #493725;
-    padding-top: 4%;
-    padding-left: 5%;
-    padding-bottom: 4%;
+    padding-right: 8px;
 }
 
 .ExecContainer {
@@ -82,4 +81,35 @@
     justify-content: space-around;
     grid-template-columns: repeat(4);
     font-family: "NeueMachina-Regular";
+}
+
+@media only screen and (max-width: 768px) {
+
+    .ExecutivesHeader{
+        padding-top: 8%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .HeaderContainer {
+        margin-left: auto;
+        margin-right: auto;
+        white-space: nowrap; /* Add this line */
+        justify-content: center; /* Add this line */
+    }
+
+    .ExecContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .Heads {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .ExecList {
+        display: flex;
+        flex-direction: column;
+    }
 }
