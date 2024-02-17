@@ -1,4 +1,4 @@
-import "@/src/app/(site)/css/eventsPageLayout.css";
+import "@/src/app/(site)/css/eventListLayout.css";
 import { getUpcomingEvents } from "@/src/app/(site)/util/fetchEvents";
 import { Event } from "@/types/Events";
 import { useRouter } from "next/navigation";

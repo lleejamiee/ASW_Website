@@ -6,7 +6,7 @@
     background-color: #fbf8f2;
 }
 
-.Heading {
+.EventsHeader {
     display: flex;
     font-family: "Literaturnaya-Bold";
     font-size: xxx-large;
@@ -15,7 +15,7 @@
     padding-left: 5%;
 }
 
-.Container {
+.EventSelector {
     display: flex;
     flex-direction: row;
     padding-top: 40px;
@@ -24,7 +24,7 @@
     height: auto;
 }
 
-.SideContainer {
+.EventTypeSelector {
     display: flex;
     flex-direction: column;
     width: fit-content;

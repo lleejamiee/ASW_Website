@@ -22,8 +22,8 @@ export default function TabsPage() {
     };
 
     return (
-        <div className="Container">
-            <div className="SideContainer">
+        <div className="EventSelector">
+            <div className="EventTypeSelector">
                 <Tabs
                     selectedId={selectedTabId}
                     tabs={tabs}
