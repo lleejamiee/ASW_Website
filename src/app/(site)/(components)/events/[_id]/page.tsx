@@ -57,13 +57,15 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
     }, [params._id]);
 
     return (
-        <div className="BackgroundColour">
-            <button
-                className="BackToEventsButton"
-                onClick={() => handleClick()}
-            >
-                <ArrowBigLeft /> Back to Events
-            </button>
+        <div>
+            <div className="BackButtonContainer">
+                <button
+                    className="BackToEventsButton"
+                    onClick={() => handleClick()}
+                >
+                    <ArrowBigLeft /> Back to Events
+                </button>
+            </div>
             <div className="CurrentEvent">
                     <div className="CarouselContainer">
                         <div
