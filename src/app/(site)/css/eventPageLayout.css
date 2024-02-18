@@ -25,7 +25,7 @@
 .CurrentEvent {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
     height: fit-content;
 }
 
@@ -90,7 +90,7 @@
     flex-direction: column;
     margin-left: 5%;
     margin-right: 5%;
-    min-width: 50vw;
+    min-width: 50%;
     width: fit-content;
     height: fit-content;
 }
@@ -120,7 +120,7 @@
     color: #493725;
     padding-top: 5%;
     width: fit-content;
-    max-width: 55vw;
+    max-width: 55%;
 }
 
 .SignUpButton {
@@ -151,7 +151,7 @@
    }
 
   .CarouselContainer {
-    width: 90vw;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
   }

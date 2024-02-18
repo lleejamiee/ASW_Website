@@ -16,6 +16,10 @@ export function PastEvents() {
 
             if (sortedYears) {
                 dispatch({ type: "SET_YEARS", payload: sortedYears });
+                dispatch({
+                    type: "SET_SELECTED_YEAR",
+                    payload: sortedYears[0],
+                });
             }
         };
 
