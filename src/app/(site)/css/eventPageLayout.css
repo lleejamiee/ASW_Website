@@ -32,8 +32,8 @@
 .CarouselContainer {
     display: flex;
     flex-direction: column;
-    width: 35%;
-    height: 90%;
+
+    height: 100%;
     position: relative;
     object-fit: contain;
     justify-content: center;
@@ -43,24 +43,15 @@
     margin-left: 5%;
   }
 
-.Carousel {
-  overflow: hidden;
-  width: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.05);
-}
-
 .CarouselInner {
   white-space: nowrap;
   transition: transform 0.3s;
 }
 
 .CarouselItem {
-  display: inline-block; /* Change display to inline-block */
-  width: 100%; /* Ensure each item takes up full width */
-  box-sizing: border-box; /* Ensure padding and border are included in width */
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .CurrentImage {
@@ -84,7 +75,9 @@
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #e0d4c7;
 }
 
 .ButtonArrow {
@@ -164,5 +157,6 @@
 
   .CurrentEvent {
     flex-direction: column;
+    padding-bottom: 15px;
   }
 }
