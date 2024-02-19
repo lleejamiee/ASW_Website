@@ -30,17 +30,20 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
     const updateIndex = (newIndex: number) => {
         const numImages = event?.gallery.length || 0;
         let newIndexAdjusted = newIndex;
-
+    
         if (numImages === 0) return;
-
+    
         if (newIndex < 0) {
             newIndexAdjusted = numImages - 1;
         } else if (newIndex >= numImages) {
             newIndexAdjusted = 0;
         }
-
+    
         setActiveIndex(newIndexAdjusted);
+        console.log("New activeIndex:", newIndexAdjusted); // Log the new active index
     };
+    
+    
 
     const handleClick = () => {
         router.push("/events");
@@ -67,26 +70,18 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
                 </button>
             </div>
             <div className="CurrentEvent">
-                    <div className="CarouselContainer">
-                        <div
-                            className="CarouselInner"
-                            style={{
-                                transform:
-                                    "translate(-" + activeIndex * 100 + "%)",
-                            }}
-                        >
-                            {event?.gallery.map((image) => (
-                                <div key={image.url} className="CarouselItem">
-                                    <img
-                                        className="CurrentImage"
-                                        src={image.url}
-                                        alt={"Event Image"}
-                                    />
-                                </div>
-                            ))}
-                        </div>
+                <div className="CarouselContainer">
+                <div className="CarouselInner" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
+                        {event?.gallery.map((image, index) => (
+                            <div key={image.url} className="CarouselItem">
+                                <img
+                                    className="CurrentImage"
+                                    src={image.url}
+                                    alt={"Event Image"}
+                                />
+                            </div>
+                        ))}
                     </div>
-
                     {event && event?.gallery.length > 1 && (
                         <div className="CarouselButton">
                             <button
@@ -112,6 +107,7 @@ const EventPage: FC<EventPageProps> = ({ params }) => {
                             </button>
                         </div>
                     )}
+                </div>
                 <div className="EventContent">
                     <div className="CurrentEventTitle">{event?.name}</div>
                     <div className="CurrentEventDate">{event?.date}</div>
