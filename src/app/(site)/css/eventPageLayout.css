@@ -57,6 +57,12 @@
   transition: transform 0.3s;
 }
 
+.CarouselItem {
+  display: inline-block; /* Change display to inline-block */
+  width: 100%; /* Ensure each item takes up full width */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
 .CurrentImage {
   display: inline-flex;
   flex-direction: column;
