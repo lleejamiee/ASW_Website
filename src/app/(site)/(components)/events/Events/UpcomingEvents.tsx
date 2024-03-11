@@ -28,7 +28,7 @@ export function UpcomingEvents() {
                     {upcomingEvents.map((event) => (
                         <button
                             key={event._id}
-                            className="EventContainer"
+                            className="EventSelector"
                             onClick={() => handleClick(event._id)}
                         >
                             <div>{event.name}</div>

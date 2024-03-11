@@ -251,6 +251,9 @@
     padding-bottom: 0%;
 }
 
+.moreEventsButton{
+    margin: 5px;
+}
 
 
 @media only screen and (max-width: 768px) {
