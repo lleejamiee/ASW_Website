@@ -56,7 +56,7 @@ export default async function OurEvents() {
                     )}
                 </div>
             </div>
-            <div className="pb-1">
+            <div className="pb-1 moreEventsButton">
                 <Link href={"/events"}>
                     <button className="Button hover:Button">
                         View more events
