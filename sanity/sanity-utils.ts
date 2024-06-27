@@ -1,13 +1,15 @@
-import { Project } from "@/types/Project";
 import { Executive, Executives } from "@/types/Executive";
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
 import { Event, Events } from "@/types/Events";
 import { MemberSignUp } from "@/types/MemberSignUp";
+import { Project } from "@/types/Project";
+
+const client = createClient(clientConfig);
 
 // Returns all the projects
 export async function getProjects(): Promise<Project[]> {
-    return createClient(clientConfig).fetch(
+    return client.fetch(
         groq`*[_type == "project"]{
             _id,
             _createdAt,

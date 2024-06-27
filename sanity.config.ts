@@ -3,7 +3,8 @@ import { deskTool } from "sanity/desk";
 import schemas from "./sanity/schemas";
 
 const config = defineConfig({
-    projectId: "b51fwwd4",
+    // I can do //@ts-ignore
+    projectId: "b51fwwd4", //or do as string on this line
     dataset: "production",
     title: "ASW Website",
     apiVersion: "2023-01-06",

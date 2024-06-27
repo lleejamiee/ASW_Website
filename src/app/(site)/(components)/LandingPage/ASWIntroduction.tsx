@@ -1,23 +1,16 @@
 import { getProject } from "@/sanity/sanity-utils";
-import { PortableText } from "@portabletext/react";
+
 import "@/src/app/(site)/css/homepageLayout.css";
 import Image from "next/image";
+import { ReactNode } from "react";
+import { Project } from "@/types/Project";
 
-export default async function ASWIntroduction() {
-    const intro = await getProject("asw-introduction");
+interface Props {
+    children: ReactNode;
+}
 
-    return (
-        <div className="ASWIntroduction">
-            <div className="ASWLogo">
-                {intro.image && (
-                    <Image src={intro.image} alt={intro.name} fill={true} />
-                )}
-            </div>
-            <div className="ASWIntroductionContent">
-                <span>
-                    <PortableText value={intro.content} />
-                </span>
-            </div>
-        </div>
-    );
+export default async function ASWIntroduction({ children }: Props) {
+    //const intro = await getProject("asw-introduction");
+
+    return <div className="ASWIntroduction">{children}</div>;
 }
