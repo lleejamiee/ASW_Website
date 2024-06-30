@@ -1,16 +1,10 @@
-import { getProject } from "@/sanity/sanity-utils";
-
-import "@/src/app/(site)/css/homepageLayout.css";
-import Image from "next/image";
+import styles from "@/src/app/(site)/css/home-page.module.css";
 import { ReactNode } from "react";
-import { Project } from "@/types/Project";
 
 interface Props {
     children: ReactNode;
 }
 
-export default async function ASWIntroduction({ children }: Props) {
-    //const intro = await getProject("asw-introduction");
-
-    return <div className="ASWIntroduction">{children}</div>;
+export default function ASWIntroduction({ children }: Props) {
+    return <div className={styles["introduction"]}>{children}</div>;
 }

@@ -1,18 +1,20 @@
 import ASWIntroduction from "./(components)/LandingPage/ASWIntroduction";
 import GeneralSponsors from "./(components)/LandingPage/GeneralSponsors";
 import OurEvents from "./(components)/LandingPage/OurEvents";
-import { Projects } from "./util/fetchProjects";
-
-console.log("Hello");
+import { Events, Introduction, Sponsors } from "./util/fetchProjects";
 
 export default function Home() {
     return (
-        <div>
+        <>
             <ASWIntroduction>
-                <Projects />
+                <Introduction />
             </ASWIntroduction>
-            <GeneralSponsors />
-            <OurEvents />
-        </div>
+            <GeneralSponsors>
+                <Sponsors />
+            </GeneralSponsors>
+            <OurEvents>
+                <Events />
+            </OurEvents>
+        </>
     );
 }

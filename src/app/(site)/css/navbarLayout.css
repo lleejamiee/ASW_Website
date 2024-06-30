@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    position: fixed;
+    position: sticky;
     margin-left: 60%;
     height: 8%;
     width: 40%;
@@ -63,7 +63,7 @@
     .scrollNavbar {
         background-color: #fbf8f2;
         display: flex;
-        position: fixed;
+        position: sticky;
         max-width: 100vw;
         height: 5%;
         font-family: "NeueMachina-Light";
