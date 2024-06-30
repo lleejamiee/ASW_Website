@@ -9,6 +9,11 @@ export const executive = {
             type: "string",
         },
         {
+            name: "year",
+            title: "Year",
+            type: "string",
+        },
+        {
             name: "image",
             title: "Image",
             type: "image",
@@ -30,31 +35,6 @@ export const executive = {
             name: "url",
             title: "URL",
             type: "url",
-        },
-    ],
-};
-
-export const executives = {
-    name: "executives",
-    title: "Executives",
-    type: "document",
-    fields: [
-        {
-            name: "year",
-            title: "Year",
-            type: "string",
-        },
-        {
-            name: "slug",
-            title: "Slug",
-            type: "slug",
-            options: { source: "year", maxLength: 96 },
-        },
-        {
-            name: "executive",
-            title: "Executive",
-            type: "array",
-            of: [{ type: "reference", to: [{ type: "executive" }] }],
         },
     ],
 };

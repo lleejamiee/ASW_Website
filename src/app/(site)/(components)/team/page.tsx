@@ -1,14 +1,12 @@
-import "@/src/app/(site)/css/teampageLayout.css";
-import { TeamStateProvider } from "./TeamContext";
 import { Team } from "./Team";
+import { TeamMembers } from "../../util/fetchExecutives";
 
-export default async function Page() {
+export default function Page() {
     return (
-        <div>
-            <div className="ExecutivesHeader">ASW Executives</div>
-            <TeamStateProvider>
-                <Team />
-            </TeamStateProvider>
-        </div>
+        <>
+            <Team>
+                <TeamMembers />
+            </Team>
+        </>
     );
 }

@@ -1,0 +1,86 @@
+.team-page {
+    background-color: #fbf8f2;
+    padding-bottom: 20px;
+}
+
+.heading {
+    font-family: "NeueMachina-Regular";
+    font-size: xxx-large;
+    padding: 40px 50px;
+    color: #493725;
+}
+
+.presidents-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-inline: 20%;
+    margin-block: 40px;
+    justify-content: space-around;
+}
+
+.executives-grid {
+    display: grid;
+    grid-template-columns: minmax(10%, 250px) repeat(auto-fit, 250px);
+    margin-block: 50px;
+    justify-content: space-evenly;
+}
+
+.name {
+    font-family: "NeueMachina-Regular";
+    font-size: x-large;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.role {
+    font-family: "NeueMachina-Light";
+    font-size: large;
+    text-align: center;
+}
+
+.photo {
+    display: block;
+    margin: auto;
+    width: 55%;
+    height: auto;
+}
+
+.execs-photo {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: auto;
+}
+
+.linkedIn-container {
+    display: block;
+}
+
+.linkedIn-logo {
+    display: block;
+    margin: auto;
+    width: 25px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .presidents-grid {
+        display: block;
+        margin: auto;
+    }
+
+    .linkedIn-logo {
+        margin-bottom: 50px;
+    }
+
+    .executives-grid {
+        display: block;
+        margin: auto;
+    }
+
+    .execs-photo {
+        width: 55%;
+    }
+
+}
