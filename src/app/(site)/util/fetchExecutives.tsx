@@ -5,7 +5,7 @@ import Image from "next/image";
 import LinkedIn from "@/src/app/(site)/assets/photos/LinkedIn.svg";
 
 export async function TeamMembers() {
-    const years: string = "2024"; // TODO: Make this dynamic
+    const years: string = "2024";
     const data = await getExecutives();
     const allExecutives: Executive[] = data.filter(
         (executive) => executive.year === years
