@@ -1,12 +1,9 @@
-import { Team } from "./Team";
-import { TeamMembers } from "../../util/fetchExecutives";
+import TeamMembers from "./Team";
 
 export default function Page() {
     return (
         <>
-            <Team>
-                <TeamMembers />
-            </Team>
+            <TeamMembers />
         </>
     );
 }

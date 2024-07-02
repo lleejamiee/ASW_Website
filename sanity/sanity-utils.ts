@@ -1,7 +1,7 @@
 import { Executive } from "@/types/Executive";
 import { createClient, groq } from "next-sanity";
 import clientConfig from "./config/client-config";
-import { Event, Events } from "@/types/Events";
+import { Event } from "@/types/Events";
 import { MemberSignUp } from "@/types/MemberSignUp";
 import { Project } from "@/types/Project";
 
@@ -63,11 +63,12 @@ export async function getExecutives(): Promise<Executive[]> {
 
 // Returns all Events
 export async function getEvents(): Promise<Event[]> {
-    return createClient(clientConfig).fetch(
+    return client.fetch(
         groq`*[_type == "event"]{
             _id,
             _createdAt,
             name,
+            year,
             "slug": slug.current,
             date,
             "thumbnail": image.asset->url,
@@ -98,49 +99,6 @@ export async function getEvent(_id: string): Promise<Event> {
             content
         }`,
         { _id }
-    );
-}
-
-// Returns events from all the years. E.g, this will return all the events that are stored in Events document in Event[].
-export async function getEventYears(): Promise<Events[]> {
-    return createClient(clientConfig).fetch(
-        groq`*[_type == "events"] {
-            _id,
-            _createdAt,
-            year,
-            slug,
-            "events": event[] -> {
-                _id,
-                name,
-                date
-            }
-          }`
-    );
-}
-
-// Returns single event year. E.g, when slug = 2017, this will retreive all the events from 2017.
-export async function getEventYear(slug: string): Promise<Events> {
-    return createClient(clientConfig).fetch(
-        groq`*[_type == "events" && slug.current == $slug][0] {
-            _id,
-            _createdAt,
-            year,
-            slug,
-            "events": event[]-> {
-              _id,
-              name,
-              "slug": slug.current,
-              date,
-              "thumbnail": image.asset->url,
-              "gallery": gallery.images[] {
-                "url": image.asset->url,
-                "altText": altText
-              },
-              url,
-              content
-            }
-          }`,
-        { slug }
     );
 }
 

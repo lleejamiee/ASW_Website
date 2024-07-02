@@ -1,0 +1,47 @@
+.event-detail {
+    background-color: #fbf8f2;
+    padding: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+}
+
+.left {
+    padding-left: 2rem;
+}
+
+.right {
+    padding-right: 15rem;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    overflow: hidden;
+}
+
+.image-container {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.image {
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+}
+
+.name {
+    margin-top: 0%;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-top: 1rem;
+}

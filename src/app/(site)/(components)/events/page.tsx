@@ -1,12 +1,9 @@
-import "@/src/app/(site)/css/eventListLayout.css";
-import TabsPage from "./Tabs/TabsPage";
-import { EventsPropsProvider } from "./EventsContext";
+import { Events } from "./Events";
 
-export default function Events() {
+export default function Page() {
     return (
-        <EventsPropsProvider>
-                <div className="EventsHeader">ASW Events</div>
-                <TabsPage />
-        </EventsPropsProvider>
+        <>
+            <Events />
+        </>
     );
 }

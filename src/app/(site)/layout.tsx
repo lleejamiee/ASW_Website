@@ -23,10 +23,7 @@ export default function RootLayout({
                     content="width=device-width, initial-scale=1.0"
                 />
             </head>
-            <body>
-                <nav>
-                    <NavBar />
-                </nav>
+            <body className="body">
                 <main>{children}</main>
                 <footer>
                     <Footer />

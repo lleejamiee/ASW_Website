@@ -15,6 +15,11 @@ export const event = {
             options: { source: "name", maxLength: 96 },
         },
         {
+            name: "year",
+            title: "Year",
+            type: "string",
+        },
+        {
             name: "date",
             title: "Date",
             type: "date",
@@ -77,31 +82,6 @@ export const event = {
             title: "Content",
             type: "array",
             of: [{ type: "block" }],
-        },
-    ],
-};
-
-export const events = {
-    name: "events",
-    title: "Events",
-    type: "document",
-    fields: [
-        {
-            name: "year",
-            title: "Year",
-            type: "string",
-        },
-        {
-            name: "slug",
-            title: "Slug",
-            type: "slug",
-            options: { source: "year", maxLength: 96 },
-        },
-        {
-            name: "event",
-            title: "Event",
-            type: "array",
-            of: [{ type: "reference", to: [{ type: "event" }] }],
         },
     ],
 };

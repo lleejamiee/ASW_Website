@@ -1,0 +1,62 @@
+.events-page {
+    display: block;
+    background-color: #fbf8f2;
+    padding: 2rem;
+}
+
+.events-heading {
+    font-family: "NeueMachina-Regular";
+    color: #493725;
+    font-size: xxx-large;
+    padding-left: 2rem;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 50px;
+}
+
+.year-list {
+    display: block;
+    margin-inline: auto;
+    font-family: "NeueMachina-Regular";
+}
+
+.events-list {
+    position: sticky;
+    scroll-behavior: smooth;
+    top: 0%;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.list {
+    display: block;
+    list-style-type: none;
+}
+
+.list-item {
+    padding-block: 0.5rem;
+}
+
+.sub-list {
+    margin: 0%;
+}
+
+@media only screen and (max-width: 768px) {
+    .events-heading {
+        padding-left: 0%;
+    }
+
+    .year-list {
+        margin: 0%;
+    }
+
+    .list {
+        padding: 0%;
+    }
+}
