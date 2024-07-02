@@ -1,0 +1,41 @@
+.follow-us {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #f5eadfcc;
+    text-align: center;
+    font-family: "NeueMachina-Ultrabold";
+    font-size: large;
+}
+
+.follow-us div {
+    display: flex;
+    padding-left: 30rem;
+    padding-right: 30rem;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.follow-us a {
+    display: flex;
+}
+
+.powered-by {
+    background-color: #e1d0bfcc;
+    text-align: center;
+    font-family: "NeueMachina-Regular";
+    font-size: small;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .follow-us div {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .powered-by {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

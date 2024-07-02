@@ -45,3 +45,25 @@
     justify-items: center;
     padding-top: 1rem;
 }
+
+@media only screen and (max-width: 768px) {
+    .event-detail {
+        min-height: 80vh;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        padding-top: 2rem;
+    }
+
+    .left {
+        padding-left: 0%;
+    }
+    
+    .right {
+        padding-right: 0%;
+    }
+
+    .carousel-container {
+        margin-left: 0%;
+    }
+}
