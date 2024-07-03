@@ -77,10 +77,8 @@ function renderYearList(years: string[]) {
     return (
         <ul className={styles.list}>
             {years.map((year) => (
-                <a key={year} href={`#${year}`} className={styles.link}>
-                    <li key={year} className={styles["list-item"]}>
-                        {year}
-                    </li>
+                <a key={year} href={`#${year}`}>
+                    <li key={year}>{year}</li>
                 </a>
             ))}
         </ul>

@@ -87,7 +87,6 @@
 .events-heading {
     font-family: "Literaturnaya-Bold";
     font-size: xxx-large;
-    color: #FFFCF7;
     padding-top: 3rem;
     padding-bottom: 50px;
     margin: 0%;
@@ -115,22 +114,15 @@
 
 .event-type-heading {
     font-family: "Literaturnaya-Regular";
-    color: #FFFCF7;
     font-size: x-large;
     padding-bottom: 10px;
-}
-
-.line {
-    width: 400px;
-    padding-bottom: 20px;
-    margin: 0%;
-    height: 0.1px;
+    border-bottom: 1px solid #fffbf5;
+    width: 50%;
 }
 
 .event-type-content {
     display: block;
     font-family: "NeueMachina-Regular";
-    color: #fffbf5;
     padding-bottom: 50px;
 }
 
@@ -223,9 +215,6 @@
     .event-type-heading {
         color: black;
         font-size: large;
-    }
-    
-    .line {
         width: 100%;
     }
     

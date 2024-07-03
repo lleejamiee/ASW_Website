@@ -15,36 +15,66 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     margin-top: 50px;
+    margin-right: 2rem;
 }
 
 .year-list {
     display: block;
-    margin-inline: auto;
     font-family: "NeueMachina-Regular";
+    padding-right: 2rem;
+    padding-left: 2rem;
 }
 
 .events-list {
-    position: sticky;
-    scroll-behavior: smooth;
-    top: 0%;
+    padding: 2rem;
+    background-color:antiquewhite;
+    border-radius: 2rem;
 }
 
 .link {
+    display: block;
+    width: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-decoration: none;
     color: black;
+}
+
+.link:hover dt {
+    font-weight: bold;
+}
+
+.link dt {
+    font-size: larger;
 }
 
 .list {
     display: block;
     list-style-type: none;
+    padding: 0%;
+    background-color:antiquewhite;
+    border-radius: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0%;
 }
 
-.list-item {
-    padding-block: 0.5rem;
+.list a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.list a:hover {
+    font-weight: bold;
 }
 
 .sub-list {
     margin: 0%;
+    padding-top: 0.5rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -52,11 +82,22 @@
         padding-left: 0%;
     }
 
+    .events-grid {
+        margin-right: 0%;
+    }
+
     .year-list {
         margin: 0%;
+        padding-left: 0%;
     }
 
     .list {
         padding: 0%;
+        background-color:#fbf8f2
+    }
+
+    .events-list {
+        background-color: #fbf8f2;
+        padding-top: 0%;
     }
 }

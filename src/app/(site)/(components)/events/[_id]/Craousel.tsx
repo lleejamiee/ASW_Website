@@ -9,7 +9,7 @@ export default function Carousel({
     gallery: { url: string; altText: string }[];
 }) {
     const [activeIndex, setActiveIndex] = useState(0);
-    const length = gallery.length;
+    const length = gallery?.length | 0;
 
     function updateIndex(newIndex: number) {
         let newActiveIndex;
@@ -34,7 +34,7 @@ export default function Carousel({
                             transform: `translateX(-${activeIndex * 100}%)`,
                         }}
                     >
-                        {gallery.map((image) => (
+                        {gallery?.map((image) => (
                             <img
                                 key={image.url}
                                 src={image.url}
@@ -44,22 +44,23 @@ export default function Carousel({
                         ))}
                     </div>
                 </div>
-                <div className={styles["button-grid"]}>
-                    <button
-                        onClick={() => {
-                            updateIndex(activeIndex - 1);
-                        }}
-                    >
-                        previous
-                    </button>
-                    <button
-                        onClick={() => {
-                            updateIndex(activeIndex + 1);
-                        }}
-                    >
-                        next
-                    </button>
-                </div>
+                {length > 1 && (
+                    <div className={styles["button-grid"]}>
+                        <i
+                            className="fa fa-solid fa-arrow-left fa-2x"
+                            onClick={() => {
+                                updateIndex(activeIndex - 1);
+                            }}
+                        ></i>
+
+                        <i
+                            className="fa fa-solid fa-arrow-right fa-2x"
+                            onClick={() => {
+                                updateIndex(activeIndex + 1);
+                            }}
+                        ></i>
+                    </div>
+                )}
             </div>
         </>
     );

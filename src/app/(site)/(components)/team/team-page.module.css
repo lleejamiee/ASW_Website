@@ -18,6 +18,12 @@
     margin-block: 40px;
 }
 
+.presidents-grid a {
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+
 .executives-grid {
     display: grid;
     grid-template-columns: minmax(10%, 250px) repeat(auto-fit, 250px);
@@ -55,7 +61,8 @@
 .linkedIn-logo {
     display: block;
     margin: auto;
-    width: 20px;
+    width: 25px;
+    height: auto;
 }
 
 @media only screen and (max-width: 768px) {

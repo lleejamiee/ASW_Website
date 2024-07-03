@@ -3,6 +3,14 @@
     padding: 2rem;
 }
 
+.return-button {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -15,6 +23,12 @@
 
 .right {
     padding-right: 15rem;
+}
+
+.right span {
+    display: block;
+    padding-top: 5rem;
+    font-size: larger;
 }
 
 .carousel-container {
@@ -46,10 +60,21 @@
     padding-top: 1rem;
 }
 
+.signup-button {
+    text-decoration: none;
+    color: black;
+}
+
 @media only screen and (max-width: 768px) {
     .event-detail {
         min-height: 80vh;
     }
+
+    .event-detail a {
+        margin-left: 0%;
+        margin-bottom: 0%;
+    }
+
     .grid {
         grid-template-columns: 1fr;
         padding-top: 2rem;
@@ -61,6 +86,11 @@
     
     .right {
         padding-right: 0%;
+    }
+
+    .right span {
+        padding-top: 1rem;
+        font-size: large;
     }
 
     .carousel-container {

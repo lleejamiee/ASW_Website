@@ -41,7 +41,6 @@ function RenderEventType(eventType: Project) {
     return (
         <>
             <h2 className={styles["event-type-heading"]}>{eventType.name}</h2>
-            <hr className={styles["line"]} />
             <span className={styles["event-type-content"]}>
                 <PortableText value={eventType.content} />
             </span>
