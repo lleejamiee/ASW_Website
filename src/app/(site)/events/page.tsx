@@ -3,7 +3,7 @@ import { Event } from "@/types/Events";
 import { Events, Years } from "../(components)/Events/Events";
 import styles from "@/src/app/(site)/(components)/Events/events-page.module.css";
 
-export default async function Page() {
+export default async function page() {
     const eventsMap = await getEventsMap();
     const yearList = getYearList(eventsMap);
 

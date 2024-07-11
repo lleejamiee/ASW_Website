@@ -1,6 +1,6 @@
 import TeamMembers from "../(components)/Team/TeamMembers";
 
-export default function Page() {
+export default function page() {
     return (
         <>
             <TeamMembers />
