@@ -1,5 +1,4 @@
 import styles from "@/src/app/(site)/(components)/Events/events-page.module.css";
-import { getEvents } from "@/sanity/sanity-utils";
 import { Event } from "@/types/Events";
 
 export function Events({

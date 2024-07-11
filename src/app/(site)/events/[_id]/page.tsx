@@ -1,4 +1,4 @@
-import EventDetails from "../../(components)/Events/EventDetail";
+import EventDetails from "../../(components)/Events/EventDetails";
 
 export default function Page({ params }: { params: { _id: string } }) {
     return (
