@@ -20,13 +20,13 @@ export default async function TeamMembers() {
     return (
         <div className={styles["team-page"]}>
             <h1 className={styles.heading}>ASW Executives</h1>
-            {renderPresidents(presidents)}
-            {renderExecutives(executives)}
+            <Presidents presidents={presidents} />
+            <Executives executives={executives} />
         </div>
     );
 }
 
-function renderPresidents(presidents: Executive[]) {
+function Presidents({ presidents }: { presidents: Executive[] }) {
     return (
         <>
             <div className={styles["presidents-grid"]}>
@@ -62,7 +62,7 @@ function renderPresidents(presidents: Executive[]) {
     );
 }
 
-function renderExecutives(executives: Executive[]) {
+function Executives({ executives }: { executives: Executive[] }) {
     return (
         <div className={styles["executives-grid"]}>
             {executives.map((executive) => (

@@ -20,17 +20,24 @@ export default async function GeneralSponsors() {
             <h1 className={styles["sponsor-heading"]}>
                 {heading && <PortableText value={heading.content} />}
             </h1>
-            {diamond && renderSponsorTier(diamond, diamondDivider)}
-            {platinum && renderSponsorTier(platinum, platinumDivider)}
-            {gold && renderSponsorTier(gold, goldDivider)}
+            {diamond && (
+                <SponsorTier sponsorTier={diamond} divider={diamondDivider} />
+            )}
+            {platinum && (
+                <SponsorTier sponsorTier={platinum} divider={platinumDivider} />
+            )}
+            {gold && <SponsorTier sponsorTier={gold} divider={goldDivider} />}
         </div>
     );
 }
 
-function renderSponsorTier(
-    sponsorTier: Project,
-    divider: string | StaticImport
-) {
+function SponsorTier({
+    sponsorTier,
+    divider,
+}: {
+    sponsorTier: Project;
+    divider: string | StaticImport;
+}) {
     return (
         <>
             <h2 className={styles["Diamond"]}>{sponsorTier.name}</h2>

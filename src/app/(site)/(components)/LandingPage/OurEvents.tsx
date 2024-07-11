@@ -17,9 +17,9 @@ export default async function OurEvents() {
             </h1>
             <div className={styles["events-grid"]}>
                 <div className={styles["left"]}>
-                    {educate && RenderEventType(educate)}
-                    {social && RenderEventType(social)}
-                    {network && RenderEventType(network)}
+                    {educate && <EventType eventType={educate} />}
+                    {social && <EventType eventType={social} />}
+                    {network && <EventType eventType={network} />}
                 </div>
                 <div className={styles["right"]}>
                     {heading && (
@@ -37,7 +37,7 @@ export default async function OurEvents() {
     );
 }
 
-function RenderEventType(eventType: Project) {
+function EventType({ eventType }: { eventType: Project }) {
     return (
         <>
             <h2 className={styles["event-type-heading"]}>{eventType.name}</h2>

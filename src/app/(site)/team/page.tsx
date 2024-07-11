@@ -1,4 +1,4 @@
-import TeamMembers from "./Team";
+import TeamMembers from "../(components)/Team/Team";
 
 export default function Page() {
     return (

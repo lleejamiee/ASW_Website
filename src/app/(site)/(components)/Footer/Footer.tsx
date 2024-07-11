@@ -18,22 +18,22 @@ export default function Footer() {
                         href="https://www.instagram.com/autstemwomen/"
                         target="_blank"
                     >
-                        {insertImage(Instagram, "Instagram")}
+                        {<Logo image={Instagram} name="Instagram" />}
                     </a>
                     <a
                         href="https://www.facebook.com/autstemwomen"
                         target="_blank"
                     >
-                        {insertImage(Facebook, "Facebook")}
+                        {<Logo image={Facebook} name="Facebook" />}
                     </a>
                     <a
                         href="https://nz.linkedin.com/company/aut-stem-women"
                         target="_blank"
                     >
-                        {insertImage(LinkedIn, "LinkedIn")}
+                        {<Logo image={LinkedIn} name="LinkedIn" />}
                     </a>
                     <a href="mailto:stemwomen@outlook.com" target="_blank">
-                        {insertImage(Email, "Email")}
+                        {<Logo image={Email} name="Email" />}
                     </a>
                 </div>
             </div>
@@ -47,6 +47,6 @@ export default function Footer() {
     );
 }
 
-function insertImage(image: string | StaticImport, name: string) {
+function Logo({ image, name }: { image: string | StaticImport; name: string }) {
     return <Image src={image} alt={name} height={40} width={40} />;
 }
