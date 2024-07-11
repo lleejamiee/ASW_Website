@@ -1,7 +1,7 @@
 import { getEvents } from "@/sanity/sanity-utils";
 import { Event } from "@/types/Events";
 import { Events, Years } from "../(components)/events/Events";
-import styles from "@/src/app/(site)/(components)/Events/events-page.module.css";
+import styles from "@/src/app/(site)/(components)/events/events-page.module.css";
 
 export default async function page() {
     const eventsMap = await getEventsMap();

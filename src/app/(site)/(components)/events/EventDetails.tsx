@@ -1,4 +1,4 @@
-import styles from "@/src/app/(site)/(components)/Events/event-detail.module.css";
+import styles from "@/src/app/(site)/(components)/events/event-detail.module.css";
 import { getEvent } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 import Carousel from "./Craousel";
