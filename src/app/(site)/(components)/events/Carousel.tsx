@@ -1,6 +1,8 @@
 "use client";
 
 import styles from "@/src/app/(site)/(components)/events/event-detail.module.css";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useState } from "react";
 
 export default function Carousel({
@@ -12,14 +14,7 @@ export default function Carousel({
     const length = gallery?.length | 0;
 
     function updateIndex(newIndex: number) {
-        let newActiveIndex;
-        if (newIndex < 0) {
-            newActiveIndex = length - 1;
-        } else if (newIndex >= length) {
-            newActiveIndex = 0;
-        } else {
-            newActiveIndex = newIndex;
-        }
+        const newActiveIndex = newIndex % length;
 
         setActiveIndex(newActiveIndex);
     }
@@ -46,19 +41,22 @@ export default function Carousel({
                 </div>
                 {length > 1 && (
                     <div className={styles["button-grid"]}>
-                        <i
-                            className="fa fa-solid fa-arrow-left fa-2x"
+                        <a
                             onClick={() => {
                                 updateIndex(activeIndex - 1);
                             }}
-                        ></i>
+                        >
+                            <ArrowBackIcon />
+                        </a>
 
-                        <i
+                        <a
                             className="fa fa-solid fa-arrow-right fa-2x"
                             onClick={() => {
                                 updateIndex(activeIndex + 1);
                             }}
-                        ></i>
+                        >
+                            <ArrowForwardIcon />
+                        </a>
                     </div>
                 )}
             </div>
