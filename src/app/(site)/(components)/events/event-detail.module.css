@@ -1,0 +1,105 @@
+.event-detail {
+    background-color: white;
+    padding: 2rem;
+}
+
+.event-detail p {
+    font-family: "DMSans";
+}
+
+.return-button {
+    font-family: "DMSans";
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+}
+
+.left {
+    padding-left: 2rem;
+}
+
+.right {
+    padding-right: 15rem;
+}
+
+.right span {
+    display: block;
+    font-size: larger;
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    overflow: hidden;
+}
+
+.image-container {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.image {
+    display: inline-flex;
+    width: 100%;
+    height: auto;
+}
+
+.name {
+    font-family: "Patua-One";
+    margin-top: 0%;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-top: 1rem;
+}
+
+.signup-button {
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    .event-detail {
+        min-height: 80vh;
+    }
+
+    .event-detail a {
+        margin-left: 0%;
+        margin-bottom: 0%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        padding-top: 2rem;
+    }
+
+    .left {
+        padding-left: 0%;
+    }
+    
+    .right {
+        padding-right: 0%;
+    }
+
+    .right span {
+        padding-top: 1rem;
+        font-size: large;
+    }
+
+    .carousel-container {
+        margin-left: 0%;
+    }
+}

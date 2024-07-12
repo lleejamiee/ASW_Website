@@ -1,0 +1,28 @@
+.sticky-header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.sticky-header nav {
+    color: black;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 25px 20px;
+    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.sticky-header a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: "DMSans";
+}
+
+.sticky-header a:hover {
+    color: #EC5B9B;
+}

@@ -1,95 +1,65 @@
 import { getProject } from "@/sanity/sanity-utils";
+import styles from "@/src/app/(site)/(components)/LandingPage/home-page.module.css";
+import { Project, projectSlug } from "@/types/Project";
 import { PortableText } from "@portabletext/react";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import goldDivider from "@/src/app/(site)/assets/photos/Gold.svg";
+import platinumDivider from "@/src/app/(site)/assets/photos/Platinum.svg";
+import diamondDivider from "@/src/app/(site)/assets/photos/Diamond.svg";
 import Image from "next/image";
-import Link from "next/link";
-import "@/src/app/(site)/css/homepageLayout.css";
 
 export default async function GeneralSponsors() {
-    const heading = await getProject("sponsor-heading");
-    const diamond = await getProject("diamond");
-    const platinum = await getProject("platinum");
-    const gold = await getProject("gold");
+    const heading = await getProject(projectSlug.sponsorHeadong);
+    const diamond = await getProject(projectSlug.diamond);
+    const platinum = await getProject(projectSlug.platinum);
+    const gold = await getProject(projectSlug.gold);
 
     return (
-        <div className="GeneralSponsors">
-            <div className="SponsorHeading">
-                <PortableText value={heading.content} />
-            </div>
-            <hr className="hrDiamond" />
-            <div className="Diamond">{diamond.name}</div>
-            <div className="LogoContainer">
-                {diamond.gallery.map(
-                    (item) =>
-                        ({ item } && (
-                            <Link
-                                key={item.url}
-                                href={item.altText}
-                                target="_blank"
-                                className="CompanyLogo"
-                            >
-                                <Image
-                                    src={item.url}
-                                    alt="Diamond"
-                                    width={0}
-                                    height={0}
-                                    sizes="100%"
-                                    style={{ width: "auto", height: "100%" }}
-                                />
-                            </Link>
-                        ))
-                )}
-            </div>
-            <hr className="hrPlatinum" />
-            <div className="Platinum">{platinum.name}</div>
-            <div className="LogoContainer">
-                {platinum.gallery.map(
-                    (item) =>
-                        ({ item } && (
-                            <Link
-                                key={item.url}
-                                href={item.altText}
-                                target="_blank"
-                                className="CompanyLogo"
-                            >
-                                <Image
-                                    src={item.url}
-                                    alt="Platinum"
-                                    width={0}
-                                    height={0}
-                                    sizes="100%"
-                                    style={{
-                                        width: "auto",
-                                        height: "100%",
-                                    }}
-                                />
-                            </Link>
-                        ))
-                )}
-            </div>
-            <hr className="hrGold" />
-            <div className="Gold">{gold.name}</div>
-            <div className="LogoContainer">
-                {gold.gallery.map(
-                    (item) =>
-                        ({ item } && (
-                            <Link
-                                key={item.url}
-                                href={item.altText}
-                                target="_blank"
-                                className="CompanyLogo"
-                            >
-                                <Image
-                                    src={item.url}
-                                    alt="Gold"
-                                    width={0}
-                                    height={0}
-                                    sizes="100%"
-                                    style={{ width: "auto", height: "100%" }}
-                                />
-                            </Link>
-                        ))
-                )}
-            </div>
+        <div className={styles["general-sponsors"]}>
+            <h1 className={styles["sponsor-heading"]}>
+                {heading && <PortableText value={heading.content} />}
+            </h1>
+            {diamond && (
+                <SponsorTier sponsorTier={diamond} divider={diamondDivider} />
+            )}
+            {platinum && (
+                <SponsorTier sponsorTier={platinum} divider={platinumDivider} />
+            )}
+            {gold && <SponsorTier sponsorTier={gold} divider={goldDivider} />}
         </div>
+    );
+}
+
+function SponsorTier({
+    sponsorTier,
+    divider,
+}: {
+    sponsorTier: Project;
+    divider: string | StaticImport;
+}) {
+    return (
+        <>
+            <div className={styles["divider"]}>
+                <Image src={divider} alt="divider" fill={true} />
+            </div>
+            <h2 className={styles["Diamond"]}>{sponsorTier.name}</h2>
+            <div className={styles["logo-grid"]}>
+                {sponsorTier.gallery.map((item) => (
+                    <a
+                        key={item.url}
+                        href={item.altText}
+                        target="_blank"
+                        className={styles["logo-box"]}
+                    >
+                        <img
+                            key={item.altText}
+                            src={item.url}
+                            alt={sponsorTier.name}
+                            className={styles["individual-logo"]}
+                        />
+                    </a>
+                ))}
+            </div>
+        </>
     );
 }

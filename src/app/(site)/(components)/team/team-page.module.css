@@ -1,0 +1,96 @@
+.team-page {
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.heading {
+    font-family: "Patua-One";
+    font-weight: lighter;
+    font-size: xxx-large;
+    padding: 40px 50px;
+    color: black;
+    margin: 0%;
+}
+
+.presidents-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-inline: 20%;
+    margin-block: 40px;
+}
+
+.presidents-grid a {
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+
+.executives-grid {
+    display: grid;
+    grid-template-columns: minmax(10%, 250px) repeat(auto-fit, 250px);
+    margin-block: 50px;
+    justify-content: space-evenly;
+}
+
+.executives-grid a {
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+
+.name {
+    font-family: "DMSans";
+    color: black;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.role {
+    font-family: "DMSans";
+    font-size: large;
+    text-align: center;
+    color: black;
+}
+
+.photo {
+    display: block;
+    margin: auto;
+    width: 55%;
+    height: auto;
+    border-radius: 50%;
+    border: 10px solid #EC5B9B
+}
+
+.execs-photo {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: auto;
+    border-radius: 50%;
+    border: 10px solid #EC5B9B
+}
+
+@media only screen and (max-width: 768px) {
+
+    .presidents-grid {
+        display: block;
+        margin: auto;
+    }
+
+    .linkedIn-logo {
+        margin-bottom: 50px;
+    }
+
+    .executives-grid {
+        display: block;
+        margin: auto;
+    }
+
+    .execs-photo {
+        width: 55%;
+    }
+
+}

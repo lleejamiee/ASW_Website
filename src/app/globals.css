@@ -1,51 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-
 @font-face {
-
-    font-family: NeueMachina-Light;
-    src: url("../app/(site)/assets/font/NeueMachina-Light.ttf");
+    font-family: Patua-One;
+    src: url("../app/(site)/assets/font/PatuaOne-Regular.ttf");
 }
 
 @font-face {
-    font-family: NeueMachina-Regular;
-    src: url("../app/(site)/assets/font/NeueMachina-Regular.ttf");
-}
-
-@font-face {
-    font-family: NeueMachina-Ultrabold;
-    src: url("../app/(site)/assets/font/NeueMachina-Ultrabold.ttf");
+    font-family: DMSans;
+    src: url("../app/(site)/assets/font/DMSans-VariableFont_opsz,wght.ttf");
 
 }
-
-@font-face {
-
-    font-family: Literaturnaya-Bold;
-    src: url("../app/(site)/assets/font/Literaturnaya-Bold.ttf");
-}
-
-@font-face {
-    font-family: Literaturnaya-Regular;
-    src: url("../app/(site)/assets/font/Literaturnaya-Regular.ttf");
-}
-
-@font-face {
-    font-family: Literaturnaya-Italic;
-    src: url("../app/(site)/assets/font/Literaturnaya-Italic.ttf");
-
-}
-
-main{
-    background-color: #fbf8f2;
-    min-height: calc(100vh - 224px);;
+.body {
+    margin: 0%;
+    min-width: 100%;
+    max-width: 100%;
+    scroll-behavior: smooth;
 }
 
 footer {
     position: relative;
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }

@@ -1,68 +1,48 @@
 import { getProject } from "@/sanity/sanity-utils";
+import styles from "@/src/app/(site)/(components)/LandingPage/home-page.module.css";
+import { Project, projectSlug } from "@/types/Project";
 import { PortableText } from "@portabletext/react";
-import Image from "next/image";
-import Link from "next/link";
-import "@/src/app/(site)/css/homepageLayout.css";
 
 export default async function OurEvents() {
-    const ourEvents = await getProject("our-events");
-    const educate = await getProject("educate");
-    const social = await getProject("social");
-    const network = await getProject("network");
+    const heading = await getProject(projectSlug.eventsHeading);
+    const educate = await getProject(projectSlug.educate);
+    const social = await getProject(projectSlug.social);
+    const network = await getProject(projectSlug.network);
 
     return (
-        <div className="OurEvents">
-            <div className="OurEventsHeading">{ourEvents.name}</div>
-            <div className="OurEventsContent">
-                <div className="EventTextContainer">
-                    <div className="EventTypeContainer">
-                        <div className="EventTypeHeading">{educate.name}</div>
-                        <hr className="flex h-px bg-gray-200"></hr>
-                        <div className="EventTypeContent">
-                            <span>
-                                <PortableText value={educate.content} />
-                            </span>
-                        </div>
-                    </div>
-                    <div className="EventTypeContainer">
-                        <div className="EventTypeHeading">{social.name}</div>
-                        <hr className="flex h-px bg-gray-200"></hr>
-                        <div className="EventTypeContent">
-                            <span>
-                                <PortableText value={social.content} />
-                            </span>
-                        </div>
-                    </div>
-                    <div className="EventTypeContainer">
-                        <div className="EventTypeHeading">{network.name}</div>
-                        <hr className="flex h-px bg-gray-200"></hr>
-                        <div className="EventTypeContent">
-                            <span>
-                                <PortableText value={network.content} />
-                            </span>
-                        </div>
-                    </div>
+        <div className={styles["our-events"]}>
+            <h1 className={styles["events-heading"]}>
+                {heading && heading.name}
+            </h1>
+            <div className={styles["events-grid"]}>
+                <div className={styles["left"]}>
+                    {educate && <EventType eventType={educate} />}
+                    {social && <EventType eventType={social} />}
+                    {network && <EventType eventType={network} />}
                 </div>
-                <div className="EventImageContainer">
-                    {ourEvents.image && (
-                        <Image
-                            src={ourEvents.image}
-                            alt={ourEvents.name}
-                            width={0}
-                            height={0}
-                            sizes="100%"
-                            style={{ width: "100%", height: "auto" }}
+                <div className={styles["right"]}>
+                    {heading && (
+                        <img
+                            src={heading.image}
+                            className={styles["event-image"]}
                         />
                     )}
                 </div>
             </div>
-            <div className="pb-1 moreEventsButton">
-                <Link href={"/events"}>
-                    <button className="Button hover:Button">
-                        View more events
-                    </button>
-                </Link>
-            </div>
+            <a href="/events" className={styles["more-events-button"]}>
+                View More Events
+            </a>
         </div>
+    );
+}
+
+function EventType({ eventType }: { eventType: Project }) {
+    return (
+        <>
+            <h2 className={styles["event-type-heading"]}>{eventType.name}</h2>
+            <span className={styles["event-type-content"]}>
+                <PortableText value={eventType.content} />
+            </span>
+        </>
     );
 }

@@ -1,0 +1,42 @@
+.follow-us {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+    text-align: center;
+    font-family: "DMSans";
+    font-size: large;
+}
+
+.follow-us div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-inline: 20%;
+
+}
+
+.follow-us a {
+    display: flex;
+}
+
+.powered-by {
+    background-color: #854B95;
+    color: white;
+    text-align: center;
+    font-family: "DMSans";
+    font-size: small;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .follow-us div {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .powered-by {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
