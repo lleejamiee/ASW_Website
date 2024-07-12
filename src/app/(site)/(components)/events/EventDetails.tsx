@@ -1,7 +1,8 @@
 import styles from "@/src/app/(site)/(components)/events/event-detail.module.css";
 import { getEvent } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
-import Carousel from "./Craousel";
+import Carousel from "./Carousel";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export default async function EventDetails({
     params,
@@ -14,7 +15,7 @@ export default async function EventDetails({
     return (
         <div className={styles["event-detail"]}>
             <a href="/events" className={styles["return-button"]}>
-                <i className="fa fa-arrow-left fa-3x" aria-hidden="true"></i>
+                <ArrowBackIcon />
                 Return to Events
             </a>
             <div className={styles.grid}>

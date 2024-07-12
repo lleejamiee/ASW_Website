@@ -1,6 +1,6 @@
-import { getProjects } from "@/sanity/sanity-utils";
+import { getProject } from "@/sanity/sanity-utils";
 import styles from "@/src/app/(site)/(components)/LandingPage/home-page.module.css";
-import { Project } from "@/types/Project";
+import { Project, projectSlug } from "@/types/Project";
 import { PortableText } from "@portabletext/react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import goldDivider from "@/src/app/(site)/assets/photos/Gold.svg";
@@ -9,11 +9,10 @@ import diamondDivider from "@/src/app/(site)/assets/photos/Diamond.svg";
 import Image from "next/image";
 
 export default async function GeneralSponsors() {
-    const data = await getProjects();
-    const heading = data.find((project) => project.slug === "sponsor-heading");
-    const diamond = data.find((project) => project.slug == "diamond");
-    const platinum = data.find((project) => project.slug == "platinum");
-    const gold = data.find((project) => project.slug == "gold");
+    const heading = await getProject(projectSlug.sponsorHeadong);
+    const diamond = await getProject(projectSlug.diamond);
+    const platinum = await getProject(projectSlug.platinum);
+    const gold = await getProject(projectSlug.gold);
 
     return (
         <div className={styles["general-sponsors"]}>

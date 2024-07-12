@@ -1,14 +1,13 @@
-import { getProjects } from "@/sanity/sanity-utils";
+import { getProject } from "@/sanity/sanity-utils";
 import styles from "@/src/app/(site)/(components)/LandingPage/home-page.module.css";
-import { Project } from "@/types/Project";
+import { Project, projectSlug } from "@/types/Project";
 import { PortableText } from "@portabletext/react";
 
 export default async function OurEvents() {
-    const data = await getProjects();
-    const heading = data.find((project) => project.slug === "our-events");
-    const educate = data.find((project) => project.slug === "educate");
-    const social = data.find((project) => project.slug === "social");
-    const network = data.find((project) => project.slug === "network");
+    const heading = await getProject(projectSlug.eventsHeading);
+    const educate = await getProject(projectSlug.educate);
+    const social = await getProject(projectSlug.social);
+    const network = await getProject(projectSlug.network);
 
     return (
         <div className={styles["our-events"]}>

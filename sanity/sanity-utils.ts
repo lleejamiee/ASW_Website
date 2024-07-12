@@ -7,25 +7,6 @@ import { Project } from "@/types/Project";
 
 const client = createClient(clientConfig);
 
-// Returns all the projects
-export async function getProjects(): Promise<Project[]> {
-    return client.fetch(
-        groq`*[_type == "project"]{
-            _id,
-            _createdAt,
-            name,
-            "slug": slug.current,
-            "image": image.asset->url,
-            "gallery": gallery.images[] {
-                "url": asset->url,
-                "altText": altText
-            },
-            url,
-            content
-        }`
-    );
-}
-
 // Returns single project
 export async function getProject(slug: string): Promise<Project> {
     return client.fetch(
@@ -59,6 +40,39 @@ export async function getExecutives(): Promise<Executive[]> {
             url
         }`
     );
+}
+
+// Returns presidents
+export async function getPresidents(): Promise<Executive[]> {
+    const currentPresidents = await client.fetch(
+        groq`*[_type == "executive" && role match "President" && year == dateTime(now()).year]{
+            _id,
+            _createdAt,
+            name,
+            year,
+            "image": image.asset->url,
+            role,
+            url
+        }`
+    );
+
+    if (currentPresidents.lenght === 0) {
+        const lastPresidents = client.fetch(
+            groq`*[_type == "executive" && role match "President" && year == dateTime(now()).year - 1]{
+                _id,
+                _createdAt,
+                name,
+                year,
+                "image": image.asset->url,
+                role,
+                url
+            }`
+        );
+
+        return lastPresidents;
+    }
+
+    return currentPresidents;
 }
 
 // Returns all Events

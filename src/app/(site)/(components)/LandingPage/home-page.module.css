@@ -4,6 +4,7 @@
     background-color: #f5eadfcc;
     gap: 40px;
     max-height: 100vh;
+    align-content: center;
 }
 
 .asw-logo {
@@ -18,7 +19,7 @@
 .introduction-content {
     display: block;
     margin: auto;
-    font-family: "Literaturnaya-Regular";
+    font-family: "Patua-One";
     color: #493725;
     font-size: x-large;
     text-align: center;
@@ -35,7 +36,7 @@
 }
 
 .sponsor-heading {
-    font-family: "NeueMachina-Ultrabold";
+    font-family: "Patua-One";
     font-size: xxx-large;
     color: #493725;
     text-align: center;
@@ -72,7 +73,7 @@
 
 .Diamond {
     text-align: center;
-    font-family: "Literaturnaya-Regular";
+    font-family: "Patua-One";
     font-size: xx-large;
 }
 
@@ -85,7 +86,7 @@
 }
 
 .events-heading {
-    font-family: "Literaturnaya-Bold";
+    font-family: "Patua-One";
     font-size: xxx-large;
     padding-top: 3rem;
     padding-bottom: 50px;
@@ -113,7 +114,7 @@
 }
 
 .event-type-heading {
-    font-family: "Literaturnaya-Regular";
+    font-family: "DMSans";
     font-size: x-large;
     padding-bottom: 10px;
     border-bottom: 1px solid #fffbf5;
@@ -122,7 +123,7 @@
 
 .event-type-content {
     display: block;
-    font-family: "NeueMachina-Regular";
+    font-family: "DMSans";
     padding-bottom: 50px;
 }
 
@@ -133,7 +134,7 @@
     padding: 10px 20px;
     border: solid 2px #493725;
     border-radius: 30px;
-    font-family: "NeueMachina-Regular";
+    font-family: "DMSans";
     text-decoration: none;
     color: black;
 }
