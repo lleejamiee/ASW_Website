@@ -1,8 +1,7 @@
 import styles from "@/src/app/(site)/(components)/team/team-page.module.css";
 import { getExecutives } from "@/sanity/sanity-utils";
 import { Executive } from "@/types/Executive";
-import Image from "next/image";
-import LinkedIn from "@/src/app/(site)/assets/photos/LinkedIn.svg";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default async function TeamMembers() {
     const years: string = "2024";
@@ -48,12 +47,7 @@ function Presidents({ presidents }: { presidents: Executive[] }) {
                             href={president.url}
                             target="_blank"
                         >
-                            <Image
-                                key={president._id}
-                                src={LinkedIn}
-                                alt="LinkedIn"
-                                className={styles["linkedIn-logo"]}
-                            />
+                            <LinkedInIcon sx={{ color: "#EC5B9B" }} />
                         </a>
                     </div>
                 ))}
@@ -78,18 +72,8 @@ function Executives({ executives }: { executives: Executive[] }) {
                     <p key={executive._id} className={styles.role}>
                         {executive.role}
                     </p>
-                    <a
-                        key={executive._id}
-                        href={executive.url}
-                        target="_blank"
-                        className={styles["linkedIn-container"]}
-                    >
-                        <Image
-                            key={executive._id}
-                            src={LinkedIn}
-                            alt="LinkedIn"
-                            className={styles["linkedIn-logo"]}
-                        />
+                    <a key={executive._id} href={executive.url} target="_blank">
+                        <LinkedInIcon sx={{ color: "#EC5B9B" }} />
                     </a>
                 </div>
             ))}

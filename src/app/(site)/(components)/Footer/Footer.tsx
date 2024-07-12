@@ -1,10 +1,8 @@
 import styles from "@/src/app/(site)/(components)/Footer/footer.module.css";
-import Instagram from "@/src/app/(site)/assets/photos/instagram.svg";
-import Facebook from "@/src/app/(site)/assets/photos/Facebook.svg";
-import LinkedIn from "@/src/app/(site)/assets/photos/Square-LinkedIn.svg";
-import Email from "@/src/app/(site)/assets/photos/Email.svg";
-import Image from "next/image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MailIcon from "@mui/icons-material/Mail";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -12,41 +10,44 @@ export default function Footer() {
     return (
         <footer>
             <div className={styles["follow-us"]}>
-                <p>Follow Us</p>
+                <p style={{ fontSize: "larger" }}>Follow Us</p>
                 <div>
                     <a
                         href="https://www.instagram.com/autstemwomen/"
                         target="_blank"
                     >
-                        {<Logo image={Instagram} name="Instagram" />}
+                        <InstagramIcon
+                            sx={{ color: "black" }}
+                            fontSize={"large"}
+                        />
                     </a>
                     <a
                         href="https://www.facebook.com/autstemwomen"
                         target="_blank"
                     >
-                        {<Logo image={Facebook} name="Facebook" />}
+                        <FacebookIcon
+                            sx={{ color: "black" }}
+                            fontSize={"large"}
+                        />
                     </a>
                     <a
                         href="https://nz.linkedin.com/company/aut-stem-women"
                         target="_blank"
                     >
-                        {<Logo image={LinkedIn} name="LinkedIn" />}
+                        <LinkedInIcon
+                            sx={{ color: "black" }}
+                            fontSize={"large"}
+                        />
                     </a>
                     <a href="mailto:stemwomen@outlook.com" target="_blank">
-                        {<Logo image={Email} name="Email" />}
+                        <MailIcon sx={{ color: "black" }} fontSize={"large"} />
                     </a>
                 </div>
-            </div>
-            <div className={styles["powered-by"]}>
-                <p>
-                    Powered by ASW using React, TypeScript, NextJS, Sanity CMS
+
+                <p style={{ fontSize: "small" }}>
+                    &copy; {currentYear} AUT STEM Women
                 </p>
-                <p>&copy; {currentYear} AUT STEM Women</p>
             </div>
         </footer>
     );
-}
-
-function Logo({ image, name }: { image: string | StaticImport; name: string }) {
-    return <Image src={image} alt={name} height={40} width={40} />;
 }

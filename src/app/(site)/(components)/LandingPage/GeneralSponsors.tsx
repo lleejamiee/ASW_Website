@@ -39,6 +39,9 @@ function SponsorTier({
 }) {
     return (
         <>
+            <div className={styles["divider"]}>
+                <Image src={divider} alt="divider" fill={true} />
+            </div>
             <h2 className={styles["Diamond"]}>{sponsorTier.name}</h2>
             <div className={styles["logo-grid"]}>
                 {sponsorTier.gallery.map((item) => (
@@ -56,9 +59,6 @@ function SponsorTier({
                         />
                     </a>
                 ))}
-            </div>
-            <div className={styles["divider"]}>
-                <Image src={divider} alt="divider" fill={true} />
             </div>
         </>
     );

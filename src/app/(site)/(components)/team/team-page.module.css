@@ -1,13 +1,14 @@
 .team-page {
-    background-color: #fbf8f2;
+    background-color: white;
     padding-bottom: 20px;
 }
 
 .heading {
-    font-family: "NeueMachina-Regular";
+    font-family: "Patua-One";
+    font-weight: lighter;
     font-size: xxx-large;
     padding: 40px 50px;
-    color: #493725;
+    color: black;
     margin: 0%;
 }
 
@@ -31,17 +32,27 @@
     justify-content: space-evenly;
 }
 
+.executives-grid a {
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+
 .name {
-    font-family: "NeueMachina-Regular";
+    font-family: "DMSans";
+    color: black;
     font-size: x-large;
     text-align: center;
     margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .role {
-    font-family: "NeueMachina-Light";
+    font-family: "DMSans";
     font-size: large;
     text-align: center;
+    color: black;
 }
 
 .photo {
@@ -49,6 +60,8 @@
     margin: auto;
     width: 55%;
     height: auto;
+    border-radius: 50%;
+    border: 10px solid #EC5B9B
 }
 
 .execs-photo {
@@ -56,13 +69,8 @@
     margin: auto;
     width: 90%;
     height: auto;
-}
-
-.linkedIn-logo {
-    display: block;
-    margin: auto;
-    width: 25px;
-    height: auto;
+    border-radius: 50%;
+    border: 10px solid #EC5B9B
 }
 
 @media only screen and (max-width: 768px) {

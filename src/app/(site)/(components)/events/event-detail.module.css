@@ -1,10 +1,16 @@
 .event-detail {
-    background-color: #fbf8f2;
+    background-color: white;
     padding: 2rem;
 }
 
+.event-detail p {
+    font-family: "DMSans";
+}
+
 .return-button {
-    display: inline-block;
+    font-family: "DMSans";
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: black;
     margin-left: 4rem;
@@ -27,7 +33,6 @@
 
 .right span {
     display: block;
-    padding-top: 5rem;
     font-size: larger;
 }
 
@@ -50,6 +55,7 @@
 }
 
 .name {
+    font-family: "Patua-One";
     margin-top: 0%;
 }
 

@@ -1,7 +1,7 @@
 .introduction {
+    background-color: #f5eadfcc;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: #f5eadfcc;
     gap: 40px;
     max-height: 100vh;
     align-content: center;
@@ -20,14 +20,14 @@
     display: block;
     margin: auto;
     font-family: "Patua-One";
-    color: #493725;
+    color: black;
     font-size: x-large;
     text-align: center;
     padding-right: 5rem;
 }
 
 .general-sponsors {
-    background-color: #fbf8f2;
+    background-color: white;
     max-width: 100%;
     min-height: 100vh;
     padding-bottom: 30px;
@@ -38,10 +38,8 @@
 .sponsor-heading {
     font-family: "Patua-One";
     font-size: xxx-large;
-    color: #493725;
+    color: #5D147B;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
     margin: 0%;
 }
 
@@ -78,7 +76,7 @@
 }
 
 .our-events {
-    background-color: #aba08f;
+    background-color: #e7affd;
     max-width: 100vw;
     min-height: 100vh;
     padding-bottom: 2rem;
@@ -117,7 +115,7 @@
     font-family: "DMSans";
     font-size: x-large;
     padding-bottom: 10px;
-    border-bottom: 1px solid #fffbf5;
+    border-bottom: 1px solid black;
     width: 50%;
 }
 
@@ -132,7 +130,7 @@
     width: fit-content;
     margin-bottom: 2rem;
     padding: 10px 20px;
-    border: solid 2px #493725;
+    border: solid 2px #5D147B;
     border-radius: 30px;
     font-family: "DMSans";
     text-decoration: none;
@@ -140,7 +138,8 @@
 }
 
 .more-events-button:hover {
-    color: #fbf8f2;
+    color: white;
+    background-color: #5D147B;
 }
 
 @media only screen and (max-width: 768px) {

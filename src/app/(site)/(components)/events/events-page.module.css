@@ -1,12 +1,12 @@
 .events-page {
     display: block;
-    background-color: #fbf8f2;
+    background-color: white;
     padding: 2rem;
 }
 
 .events-heading {
-    font-family: "NeueMachina-Regular";
-    color: #493725;
+    font-family: "Patua-One";
+    color: black;
     font-size: xxx-large;
     padding-left: 2rem;
 }
@@ -20,14 +20,15 @@
 
 .year-list {
     display: block;
-    font-family: "NeueMachina-Regular";
+    font-family: "DMSans";
     padding-right: 2rem;
     padding-left: 2rem;
 }
 
 .events-list {
+    font-family: "DMSans";
     padding: 2rem;
-    background-color:antiquewhite;
+    background-color:#fab4e4;
     border-radius: 2rem;
 }
 
@@ -52,7 +53,7 @@
     display: block;
     list-style-type: none;
     padding: 0%;
-    background-color:antiquewhite;
+    background-color:#fab4e4;
     border-radius: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -93,11 +94,11 @@
 
     .list {
         padding: 0%;
-        background-color:#fbf8f2
+        background-color: white;
     }
 
     .events-list {
-        background-color: #fbf8f2;
         padding-top: 0%;
+        background-color: white;
     }
 }
