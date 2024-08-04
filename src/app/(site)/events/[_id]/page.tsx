@@ -7,3 +7,5 @@ export default function page({ params }: { params: { _id: string } }) {
         </>
     );
 }
+
+export const revalidate = 10;
