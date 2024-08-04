@@ -46,3 +46,5 @@ function getYearList(events: Map<string, Event[]>) {
 
     return years.sort().reverse();
 }
+
+export const revalidate = 10;

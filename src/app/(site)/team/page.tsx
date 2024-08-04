@@ -7,3 +7,5 @@ export default function page() {
         </>
     );
 }
+
+export const revalidate = 10;
