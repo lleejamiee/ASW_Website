@@ -44,7 +44,7 @@ function SponsorTier({
             </div>
             <h2 className={styles["Diamond"]}>{sponsorTier.name}</h2>
             <div className={styles["logo-grid"]}>
-                {sponsorTier.gallery.map((item) => (
+                {sponsorTier.gallery && sponsorTier.gallery.map((item) => (
                     <a
                         key={item.url}
                         href={item.altText}

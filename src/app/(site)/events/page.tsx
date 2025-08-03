@@ -16,7 +16,7 @@ export default async function page() {
                         <Years years={yearList} />
                     </div>
                     <div className={styles["events-list"]}>
-                        {yearList.map((year) => (
+                        {yearList && yearList.map((year) => (
                             <Events key={year} events={eventsMap} year={year} />
                         ))}
                     </div>
