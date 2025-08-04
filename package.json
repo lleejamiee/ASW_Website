@@ -13,7 +13,7 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.16.1",
     "@mui/material": "^5.16.1",
-    "@portabletext/react": "^3.0.11",
+    "@portabletext/react": "^3.2.1",
     "@sanity/webhook": "^4.0.1",
     "next": "14.0.4",
     "next-sanity": "^7.0.7",

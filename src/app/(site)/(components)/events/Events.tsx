@@ -8,9 +8,9 @@ export function Events({
     events: Map<string, Event[]>;
     year: string;
 }) {
-    const filteredEvents = events
-        .get(year)
-        ?.sort((a, b) => b.date.localeCompare(a.date));
+    const filteredEvents = events.get(year)
+        ? events.get(year)!.sort((a, b) => b.date?.localeCompare(a.date))
+        : [];
 
     return (
         <>
